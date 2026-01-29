@@ -24,15 +24,63 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Configure nodemailer transporter
-    // Using Gmail SMTP service
-    const transporter = nodemailer.createTransport({
+    // Check environment configuration for email
+    const emailUser = process.env.EMAIL_USER;
+    const emailPass = process.env.EMAIL_PASSWORD;
+    if (!emailUser || !emailPass) {
+      console.error('Email credentials not configured. EMAIL_USER or EMAIL_PASSWORD missing.');
+      return NextResponse.json(
+        { error: 'Email service not configured. Please set EMAIL_USER and EMAIL_PASSWORD.' },
+        { status: 500 }
+      );
+    }
+
+    // Configure nodemailer transporter (Gmail SMTP service)
+    let transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASSWORD,
+        user: emailUser,
+        pass: emailPass,
       },
     });
+
+    // Verify transporter configuration early to provide clearer errors
+    try {
+      await transporter.verify();
+    } catch (verifyError) {
+      console.error('Gmail transporter verification failed:', verifyError);
+
+      // Attempt SendGrid SMTP fallback if available
+      const sendgridKey = process.env.SENDGRID_API_KEY;
+      if (sendgridKey) {
+        console.log('Attempting SendGrid SMTP fallback');
+        transporter = nodemailer.createTransport({
+          host: 'smtp.sendgrid.net',
+          port: 587,
+          secure: false,
+          auth: {
+            user: 'apikey',
+            pass: sendgridKey,
+          },
+        });
+
+        try {
+          await transporter.verify();
+          console.log('SendGrid transporter verified successfully');
+        } catch (sgError) {
+          console.error('SendGrid transporter verification failed:', sgError);
+          return NextResponse.json(
+            { error: 'Email transporter verification failed. Check credentials and provider settings.' },
+            { status: 500 }
+          );
+        }
+      } else {
+        return NextResponse.json(
+          { error: 'Email transporter verification failed. Check credentials and provider settings.' },
+          { status: 500 }
+        );
+      }
+    }
 
     // Email content
     const mailOptions = {
