@@ -1,0 +1,6 @@
+Contact: security@emitools.com
+Expires: 2027-01-24T00:00:00.000Z
+Preferred-Languages: en, hi
+Canonical: https://emitools.com/.well-known/security.txt
+Policy: https://emitools.com/security-policy
+Acknowledgments: https://emitools.com/security-acknowledgments

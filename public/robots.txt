@@ -1,0 +1,49 @@
+# EMI Tools - robots.txt
+# Last Updated: 2026-01-24
+
+# Allow all bots
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /?*
+Disallow: /*?*
+Allow: /?utm
+Allow: /?ref
+
+# Google Specific
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Google Mobile
+User-agent: Googlebot-Mobile
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Other Bots
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckGo
+Allow: /
+
+# Slow Bots
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+# Sitemap Reference
+Sitemap: https://emitools.com/sitemap.xml
+Sitemap: https://emitools.com/sitemap-tools.xml
+Sitemap: https://emitools.com/sitemap-articles.xml
+
+# Visit our homepage
+Host: https://emitools.com
