@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'EMI Calculator - Free Loan EMI Calculator Online for Home, Car & Personal Loans',
   description: 'Calculate EMI for home loans, car loans, personal loans, and more. Free online EMI calculator with detailed amortization schedules and interest breakdown. Accurate instant calculations.',
   keywords: ['EMI calculator', 'loan EMI calculator', 'home loan EMI', 'car loan EMI', 'personal loan EMI', 'education loan calculator', 'gold loan calculator', 'bike loan calculator', 'simple interest calculator', 'compound interest calculator', 'monthly EMI calculator', 'free EMI calculator'],
+  verification: {
+    google: 'h261l0QPo0_lmE5AREo1OuoOZJsjJPKwg5CD8XIvx2U',
+  },
   authors: [{ name: 'EMI Tools', url: 'https://emitools.com' }],
   creator: 'EMI Tools',
   publisher: 'EMI Tools',
