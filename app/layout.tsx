@@ -96,7 +96,7 @@ export const metadata: Metadata = {
     startupImage: '/apple-startup.png',
   },
   verification: {
-    google: 'h261l0QPo0_lmE5AREo1OuoOZJsjJPKwg5CD8XIvx2U',
+    google: 'nBlk1diO030v9sQNDFG2fPVQxyY9NHZhdJeSWJ3UAPI',
     yandex: 'yandex-verification-code-here',
     me: ['https://emitools.com'],
   },
