@@ -133,6 +133,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
 
+        {/* Google AdSense Account */}
+        <meta name="google-adsense-account" content="ca-pub-7888362617210799" />
+
         {/* DNS Prefetch & Preconnect */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
