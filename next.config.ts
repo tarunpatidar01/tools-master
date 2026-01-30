@@ -7,7 +7,8 @@ const nextConfig: NextConfig = {
   },
   // Turbopack configuration
   // Disabled due to Turbopack build instability on local environment
-  turbopack: false,
+  // Removed invalid boolean setting to avoid Next.js config errors
+  // turbopack: false,
   // Optimize for performance
   compress: true,
   // Enable static generation
