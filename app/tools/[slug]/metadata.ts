@@ -1,6 +1,8 @@
 import { getAllTools } from '@/lib/seo';
 import type { Metadata } from 'next';
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://emi-tools-master.vercel.app';
+
 export async function generateStaticParams() {
   const tools = getAllTools();
   return tools.map(tool => ({
@@ -20,8 +22,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
   }
 
-  const canonicalUrl = `https://emitools.com/tools/${slug}`;
-  const ogImageUrl = `https://emitools.com/og-image.jpg`;
+  const canonicalUrl = `${SITE_URL}/tools/${slug}`;
+  const ogImageUrl = `${SITE_URL}/og-image.jpg`;
 
   return {
     title: `${tool.title} - Free Online Calculator | EMI Tools`,
@@ -34,19 +36,20 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       'free online calculator',
       'instant calculation',
     ],
-    authors: [{ name: 'EMI Tools', url: 'https://emitools.com' }],
+    authors: [{ name: 'EMI Tools', url: SITE_URL }],
     creator: 'EMI Tools',
     publisher: 'EMI Tools',
     category: 'Finance',
     classification: 'Financial Calculator',
     referrer: 'strict-origin-when-cross-origin',
-    metadataBase: new URL('https://emitools.com'),
+    metadataBase: new URL(SITE_URL),
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        'en-IN': `https://emitools.com/tools/${slug}?lang=en-in`,
-        'hi-IN': `https://emitools.com/tools/${slug}?lang=hi-in`,
+        'en-IN': `${SITE_URL}/tools/${slug}?lang=en-in`,
+        'hi-IN': `${SITE_URL}/tools/${slug}?lang=hi-in`,
         'en': canonicalUrl,
+        'x-default': canonicalUrl,
       },
     },
     openGraph: {
@@ -66,7 +69,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
           secureUrl: ogImageUrl,
         },
         {
-          url: `https://emitools.com/og-image-square.jpg`,
+          url: `${SITE_URL}/og-image-square.jpg`,
           width: 800,
           height: 800,
           alt: tool.title,
@@ -99,7 +102,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: tool.keyword,
     },
     verification: {
-      google: 'google-verification-code-here',
+      google: process.env.GOOGLE_SITE_VERIFICATION || 'nBlk1diO030v9sQNDFG2fPVQxyY9NHZhdJeSWJ3UAPI',
       yandex: 'yandex-verification-code-here',
     },
   };

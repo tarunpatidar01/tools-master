@@ -41,9 +41,9 @@ User-agent: SemrushBot
 Crawl-delay: 10
 
 # Sitemap Reference
-Sitemap: https://emitools.com/sitemap.xml
-Sitemap: https://emitools.com/sitemap-tools.xml
-Sitemap: https://emitools.com/sitemap-articles.xml
+Sitemap: https://emi-tools-master.vercel.app/sitemap.xml
+Sitemap: https://emi-tools-master.vercel.app/sitemap-tools.xml
+Sitemap: https://emi-tools-master.vercel.app/sitemap-articles.xml
 
 # Visit our homepage
 Host: https://emitools.com

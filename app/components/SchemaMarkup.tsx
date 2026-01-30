@@ -1,5 +1,7 @@
 import React from 'react'
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://emi-tools-master.vercel.app';
+
 export const FAQSchema = () => {
   const faqData = [
     {
@@ -72,14 +74,14 @@ export const SoftwareApplicationSchema = () => {
       reviewCount: '2450',
     },
     image: [
-      'https://emitools.com/og-image.jpg',
-      'https://emitools.com/og-image-square.jpg',
+      `${SITE_URL}/og-image.jpg`,
+      `${SITE_URL}/og-image-square.jpg`,
     ],
     author: {
       '@type': 'Organization',
       name: 'EMI Tools',
-      url: 'https://emitools.com',
-      logo: 'https://emitools.com/logo.png',
+      url: SITE_URL,
+      logo: `${SITE_URL}/logo.png`,
     },
     downloadUrl: 'https://emitools.com',
     fileSize: '5MB',
@@ -108,18 +110,18 @@ export const OrganizationSchema = () => {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    '@id': 'https://emitools.com/#organization',
+    '@id': `${SITE_URL}/#organization`,
     name: 'EMI Tools Calculator',
-    url: 'https://emitools.com',
+    url: SITE_URL,
     logo: {
       '@type': 'ImageObject',
-      url: 'https://emitools.com/logo.png',
+      url: `${SITE_URL}/logo.png`,
       width: 200,
       height: 50,
     },
     image: [
-      'https://emitools.com/og-image.jpg',
-      'https://emitools.com/og-image-square.jpg',
+      `${SITE_URL}/og-image.jpg`,
+      `${SITE_URL}/og-image-square.jpg`,
     ],
     description: 'Free EMI calculator for loans with year-wise breakdown, PDF export, and detailed amortization schedules',
     sameAs: [
@@ -132,7 +134,7 @@ export const OrganizationSchema = () => {
       '@type': 'ContactPoint',
       contactType: 'Customer Support',
       email: 'support@emitools.com',
-      url: 'https://emitools.com/contact',
+      url: `${SITE_URL}/contact`,
       telephone: '+91-XXXXXXXXXX',
       availableLanguage: ['en', 'hi'],
     },
@@ -210,14 +212,14 @@ export const ArticleSchema = ({
     author: {
       '@type': 'Organization',
       name: author,
-      url: 'https://emitools.com',
+      url: SITE_URL,
     },
     publisher: {
       '@type': 'Organization',
       name: 'EMI Tools',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://emitools.com/logo.png',
+        url: `${SITE_URL}/logo.png`,
         width: 200,
         height: 50,
       },
@@ -240,8 +242,8 @@ export const LocalBusinessSchema = () => {
     '@type': 'LocalBusiness',
     name: 'EMI Tools Calculator',
     description: 'Online loan EMI calculator service',
-    image: 'https://emitools.com/og-image.jpg',
-    url: 'https://emitools.com',
+    image: `${SITE_URL}/og-image.jpg`,
+    url: SITE_URL,
     telephone: '+91-XXXXXXXXXX',
     email: 'support@emitools.com',
     address: {

@@ -2,9 +2,11 @@ import './styles/globals.css'
 import type { Metadata, Viewport } from 'next'
 import Footer from '@/app/components/Footer'
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://emi-tools-master.vercel.app';
+
 export const metadata: Metadata = {
-  title: 'EMI Calculator - Free Loan EMI Calculator Online for Home, Car & Personal Loans',
-  description: 'Calculate EMI for home loans, car loans, personal loans, and more. Free online EMI calculator with detailed amortization schedules and interest breakdown. Accurate instant calculations.',
+  title: 'EMI Tools — Free Online EMI Calculator',
+  description: 'Free online EMI calculator for home, car, and personal loans. Instant results with amortization schedules and downloadable reports.',
   keywords: ['EMI calculator', 'loan EMI calculator', 'home loan EMI', 'car loan EMI', 'personal loan EMI', 'education loan calculator', 'gold loan calculator', 'bike loan calculator', 'simple interest calculator', 'compound interest calculator', 'monthly EMI calculator', 'free EMI calculator'],
   authors: [{ name: 'EMI Tools', url: 'https://emitools.com' }],
   creator: 'EMI Tools',
@@ -24,6 +26,7 @@ export const metadata: Metadata = {
       'en-IN': 'https://emitools.com/en',
       'hi-IN': 'https://emitools.com/hi',
       'en': 'https://emitools.com',
+      'x-default': 'https://emitools.com',
     },
   },
   openGraph: {
@@ -96,9 +99,9 @@ export const metadata: Metadata = {
     startupImage: '/apple-startup.png',
   },
   verification: {
-    google: 'nBlk1diO030v9sQNDFG2fPVQxyY9NHZhdJeSWJ3UAPI',
+    google: process.env.GOOGLE_SITE_VERIFICATION || 'nBlk1diO030v9sQNDFG2fPVQxyY9NHZhdJeSWJ3UAPI',
     yandex: 'yandex-verification-code-here',
-    me: ['https://emitools.com'],
+    me: [SITE_URL],
   },
 }
 
@@ -112,12 +115,12 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en-IN">
       <head>
         {/* Charset and Compatibility */}
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-        <meta httpEquiv="content-language" content="en-in" />
+        <meta httpEquiv="content-language" content="en-IN" />
 
         {/* Performance & Security Headers */}
         <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -158,8 +161,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               '@context': 'https://schema.org',
               '@type': 'Organization',
               name: 'EMI Tools',
-              url: 'https://emitools.com',
-              logo: 'https://emitools.com/logo.png',
+              url: SITE_URL,
+              logo: `${SITE_URL}/logo.png`,
               description: 'Free online EMI calculator for loans',
               sameAs: [
                 'https://www.facebook.com/emitools',
@@ -188,12 +191,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebSite',
-              url: 'https://emitools.com',
+              url: SITE_URL,
               name: 'EMI Tools Calculator',
               description: 'Free online EMI calculator for all types of loans',
               potentialAction: {
                 '@type': 'SearchAction',
-                target: 'https://emitools.com/search?q={search_term_string}',
+                target: `${SITE_URL}/search?q={search_term_string}`,
                 'query-input': 'required name=search_term_string',
               },
             }),
@@ -204,9 +207,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxxxxxxxxxx" crossOrigin="anonymous"></script>
       </head>
       <body className="bg-gray-50 text-gray-900">
-        <header className="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-4 shadow-lg sticky top-0 z-50">
+        <header className="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-4 shadow-lg sticky top-0 z-50" role="banner">
           <div className="max-w-7xl mx-auto">
-            <h1 className="text-2xl font-bold">EMI Tools Calculator</h1>
+            <div className="text-2xl font-bold" aria-label="Site title">EMI Tools Calculator</div>
             <p className="text-blue-100 text-sm">Fast & Accurate Loan Calculations</p>
           </div>
         </header>

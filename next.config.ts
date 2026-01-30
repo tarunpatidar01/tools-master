@@ -6,7 +6,8 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: false,
   },
   // Turbopack configuration
-  turbopack: {},
+  // Disabled due to Turbopack build instability on local environment
+  turbopack: false,
   // Optimize for performance
   compress: true,
   // Enable static generation
@@ -79,18 +80,7 @@ const nextConfig: NextConfig = {
     },
   ],
   // Rewrites
-  rewrites: async () => ({
-    beforeFiles: [
-      {
-        source: '/sitemap.xml',
-        destination: '/api/sitemap',
-      },
-      {
-        source: '/robots.txt',
-        destination: '/api/robots',
-      },
-    ],
-  }),
+  rewrites: async () => ([]),
 };
 
 export default nextConfig;
