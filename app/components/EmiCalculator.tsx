@@ -11,27 +11,22 @@ interface EmiCalculatorProps {
 }
 
 function EmiCalculatorComponent({ toolName, initialRate = 8.5 }: EmiCalculatorProps) {
-  const [principal, setPrincipal] = useState<number>(2000000);
-  const [annualRate, setAnnualRate] = useState<number>(initialRate);
-  const [months, setMonths] = useState<number>(240);
+  const getInitialNumber = (key: string, fallback: number) => {
+    try {
+      const params = new URLSearchParams(typeof window !== 'undefined' ? window.location.search : '');
+      return Number(params.get(key)) || fallback;
+    } catch {
+      return fallback;
+    }
+  };
+
+  const [principal, setPrincipal] = useState<number>(() => getInitialNumber('principal', 2000000));
+  const [annualRate, setAnnualRate] = useState<number>(() => getInitialNumber('rate', initialRate));
+  const [months, setMonths] = useState<number>(() => getInitialNumber('months', 240));
   const [showSchedule, setShowSchedule] = useState<boolean>(false);
   const [showMonthly, setShowMonthly] = useState<boolean>(false);
   const [shareLink, setShareLink] = useState<string>('');
   const [showShareModal, setShowShareModal] = useState<boolean>(false);
-
-  // Load URL parameters on mount
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const params = new URLSearchParams(window.location.search);
-      const principal = params.get('principal');
-      const rate = params.get('rate');
-      const monthsParam = params.get('months');
-
-      if (principal) setPrincipal(Number(principal));
-      if (rate) setAnnualRate(Number(rate));
-      if (monthsParam) setMonths(Number(monthsParam));
-    }
-  }, []);
 
   const result = useMemo<EMIResult>(() => {
     const monthlyRate = annualRate / 12;

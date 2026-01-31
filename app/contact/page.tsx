@@ -66,7 +66,7 @@ export default function ContactPage() {
       <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
               <h1 className="text-4xl font-bold mb-2">Contact Us</h1>
-              <p className="text-blue-100">We'd love to hear from you. Get in touch with our team.</p>
+              <p className="text-blue-100">We&apos;d love to hear from you. Get in touch with our team.</p>
             </div>
           </div>
 
@@ -108,9 +108,9 @@ export default function ContactPage() {
               {/* Website */}
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">🌐 Website</h3>
-                <a href="/" className="text-blue-600 hover:text-blue-800 font-semibold text-lg">
+                <Link href="/" className="text-blue-600 hover:text-blue-800 font-semibold text-lg">
                   www.emitools.com
-                </a>
+                </Link>
                 <p className="text-gray-600 text-sm mt-2">
                   Visit our website to access all our financial calculators.
                 </p>
@@ -134,7 +134,7 @@ export default function ContactPage() {
               <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
                 <h4 className="font-bold text-green-900 mb-1">✓ Message Sent Successfully!</h4>
                 <p className="text-green-800 text-sm">
-                  Thank you for contacting us. We'll get back to you shortly at {formData.email}
+                  Thank you for contacting us. We&apos;ll get back to you shortly at {formData.email}
                 </p>
               </div>
             )}
@@ -234,7 +234,7 @@ export default function ContactPage() {
 
               {/* Privacy Notice */}
               <p className="text-gray-600 text-xs">
-                By submitting this form, you agree to our <Link href="/privacy-policy" className="text-blue-600 hover:text-blue-800">Privacy Policy</Link>. We'll only use your information to respond to your inquiry.
+                By submitting this form, you agree to our <Link href="/privacy-policy" className="text-blue-600 hover:text-blue-800">Privacy Policy</Link>. We&apos;ll only use your information to respond to your inquiry.
               </p>
             </form>
           </div>
@@ -259,7 +259,7 @@ export default function ContactPage() {
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
               <h3 className="font-bold text-gray-900 mb-2">Do you store my calculation data?</h3>
               <p className="text-gray-700 text-sm">
-                We don't store your calculation data on our servers. All calculations are performed locally on your device.
+                We don&apos;t store your calculation data on our servers. All calculations are performed locally on your device.
               </p>
             </div>
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">

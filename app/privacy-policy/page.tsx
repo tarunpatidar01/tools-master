@@ -21,7 +21,7 @@ export default function PrivacyPolicyPage() {
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Introduction</h2>
             <p className="text-gray-700 mb-4">
-              EMI Tools Calculator ("Company," "we," "us," or "our") operates the website and mobile application. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.
+              EMI Tools Calculator (&ldquo;Company,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) operates the website and mobile application. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.
             </p>
             <p className="text-gray-700">
               Please read this Privacy Policy carefully. If you do not agree with our policies and practices, please do not use our services. By accessing and using EMI Tools Calculator, you acknowledge that you have read and understood this Privacy Policy.
@@ -142,7 +142,7 @@ export default function PrivacyPolicyPage() {
 
           {/* Children's Privacy */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">9. Children's Privacy</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">9. Children&apos;s Privacy</h2>
             <p className="text-gray-700">
               EMI Tools Calculator is not intended for users under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected information from a child under 13, we will delete such information promptly.
             </p>
@@ -152,7 +152,7 @@ export default function PrivacyPolicyPage() {
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">10. Updates to This Privacy Policy</h2>
             <p className="text-gray-700">
-              We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last updated" date. Your continued use of our services after any modifications indicates your acceptance of the updated Privacy Policy.
+              We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated &quot;Last updated&quot; date. Your continued use of our services after any modifications indicates your acceptance of the updated Privacy Policy.
             </p>
           </section>
 
@@ -167,7 +167,7 @@ export default function PrivacyPolicyPage() {
                 <strong>Email:</strong> <a href="mailto:help.apniwebsite@gmail.com" className="text-blue-600 hover:text-blue-800">help.apniwebsite@gmail.com</a>
               </p>
               <p className="text-gray-700">
-                <strong>Website:</strong> <a href="/" className="text-blue-600 hover:text-blue-800">EMI Tools Calculator</a>
+                <strong>Website:</strong> <Link href="/" className="text-blue-600 hover:text-blue-800">EMI Tools Calculator</Link>
               </p>
             </div>
           </section>

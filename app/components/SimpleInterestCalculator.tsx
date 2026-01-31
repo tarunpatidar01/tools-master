@@ -8,24 +8,19 @@ interface SimpleInterestCalculatorProps {
 }
 
 export default function SimpleInterestCalculator({ toolName = 'Simple Interest Calculator' }: SimpleInterestCalculatorProps) {
-  const [principal, setPrincipal] = useState<number>(100000);
-  const [annualRate, setAnnualRate] = useState<number>(8);
-  const [years, setYears] = useState<number>(5);
-  const [showSchedule, setShowSchedule] = useState<boolean>(false);
-
-  // Load URL parameters on mount
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const params = new URLSearchParams(window.location.search);
-      const p = params.get('principal');
-      const r = params.get('rate');
-      const t = params.get('years');
-
-      if (p) setPrincipal(Number(p));
-      if (r) setAnnualRate(Number(r));
-      if (t) setYears(Number(t));
+  const getInitialNumber = (key: string, fallback: number) => {
+    try {
+      const params = new URLSearchParams(typeof window !== 'undefined' ? window.location.search : '');
+      return Number(params.get(key)) || fallback;
+    } catch {
+      return fallback;
     }
-  }, []);
+  };
+
+  const [principal, setPrincipal] = useState<number>(() => getInitialNumber('principal', 100000));
+  const [annualRate, setAnnualRate] = useState<number>(() => getInitialNumber('rate', 8));
+  const [years, setYears] = useState<number>(() => getInitialNumber('years', 5));
+  const [showSchedule, setShowSchedule] = useState<boolean>(false);
 
   // Simple Interest Calculation: SI = (P * R * T) / 100
   const result = useMemo(() => {

@@ -28,10 +28,15 @@ export default function AdsenseSlot({ slotId, format = 'horizontal', responsive 
 
   React.useEffect(() => {
     try {
-      if (typeof window !== 'undefined' && (window as any).adsbygoogle) {
-        ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
+      if (typeof window !== 'undefined') {
+        const w = window as Window & { adsbygoogle?: Array<Record<string, unknown>> };
+        w.adsbygoogle = w.adsbygoogle || [];
+        if (w.adsbygoogle) {
+          w.adsbygoogle.push({});
+        }
       }
-    } catch (err) {
+    } catch {
+      // AdSense not ready or blocked
       console.log('AdSense not ready');
     }
   }, []);

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { getAllTools, getCategories } from '@/lib/seo';
 
 export default function Sidebar() {
@@ -8,15 +9,21 @@ export default function Sidebar() {
   const categories = getCategories();
   const [collapsedCategories, setCollapsedCategories] = useState<Set<string>>(new Set());
 
+  type Tool = ReturnType<typeof getAllTools>[0];
+
   const groupedTools = categories.reduce((acc, cat) => {
-    acc[cat] = tools.filter(t => t.category === cat);
+    acc[cat] = tools.filter((t) => t.category === cat);
     return acc;
-  }, {} as Record<string, any[]>);
+  }, {} as Record<string, Tool[]>);
 
   const toggleCategory = (cat: string) => {
     setCollapsedCategories(prev => {
       const newSet = new Set(prev);
-      newSet.has(cat) ? newSet.delete(cat) : newSet.add(cat);
+      if (newSet.has(cat)) {
+        newSet.delete(cat);
+      } else {
+        newSet.add(cat);
+      }
       return newSet;
     });
   };
@@ -51,16 +58,16 @@ export default function Sidebar() {
 
               {!isCollapsed && (
                 <div className="ml-2 space-y-1 mt-2">
-                  {categoryTools.map(tool => (
-                    <a
+                  {categoryTools.map((tool) => (
+                    <Link
                       key={tool.slug}
                       href={`/tools/${tool.slug}`}
                       className="w-full text-left px-3 py-2 rounded text-sm transition break-words text-gray-300 hover:bg-gray-800 block"
                       title={tool.keyword}
                     >
                       {tool.keyword}
-                    </a>
-                  ))}
+                    </Link>
+                  ))} 
                 </div>
               )}
             </div>

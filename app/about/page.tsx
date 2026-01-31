@@ -181,14 +181,14 @@ export default function AboutPage() {
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
           <p className="text-gray-700 text-lg mb-6">
-            Have questions, suggestions, or need assistance? We'd love to hear from you!
+            Have questions, suggestions, or need assistance? We&apos;d love to hear from you!
           </p>
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
             <p className="text-gray-700 mb-3">
               <strong>Email:</strong> <a href="mailto:help.apniwebsite@gmail.com" className="text-blue-600 hover:text-blue-800">help.apniwebsite@gmail.com</a>
             </p>
             <p className="text-gray-700">
-              <strong>Website:</strong> <a href="/" className="text-blue-600 hover:text-blue-800">EMI Tools Calculator</a>
+              <strong>Website:</strong> <Link href="/" className="text-blue-600 hover:text-blue-800">EMI Tools Calculator</Link>
             </p>
           </div>
         </section>

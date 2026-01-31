@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { searchTools } from '@/lib/seo';
 
 interface ToolSearchProps {
@@ -9,17 +10,20 @@ interface ToolSearchProps {
 }
 
 export default function ToolSearch({ isOpen, onClose }: ToolSearchProps) {
+  interface ToolSummary { id: string; slug: string; keyword: string; monthlySearches: number; }
+
   const [query, setQuery] = useState('');
-  const [results, setResults] = useState<any[]>([]);
+  const [results, setResults] = useState<ToolSummary[]>([]);
+  const router = useRouter();
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const q = e.target.value;
     setQuery(q);
-    setResults(q.trim().length > 0 ? searchTools(q) : []);
+    setResults(q.trim().length > 0 ? (searchTools(q) as ToolSummary[]) : []);
   };
 
   const handleSelect = (slug: string) => {
-    window.location.href = `/tools/${slug}`;
+    router.push(`/tools/${slug}`);
   };
 
   if (!isOpen) return null;
@@ -55,7 +59,7 @@ export default function ToolSearch({ isOpen, onClose }: ToolSearchProps) {
 
         {query && results.length === 0 && (
           <div className="p-4 text-center text-gray-500">
-            No tools found matching "{query}"
+            No tools found matching &quot;{query}&quot;
           </div>
         )}
       </div>

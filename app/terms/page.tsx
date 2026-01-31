@@ -36,7 +36,7 @@ export default function TermsPage() {
               <li>Use the materials for any commercial purpose or for any public display</li>
               <li>Attempt to decompile or reverse engineer any software contained on the website</li>
               <li>Remove any copyright or other proprietary notations from the materials</li>
-              <li>Transfer the materials to another person or "mirror" the materials on any other server</li>
+              <li>Transfer the materials to another person or &quot;mirror&quot; the materials on any other server</li>
               <li>Violate any applicable laws or regulations</li>
             </ul>
           </section>
@@ -45,7 +45,7 @@ export default function TermsPage() {
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">3. Disclaimer of Warranties</h2>
             <p className="text-gray-700 mb-4">
-              The materials on EMI Tools Calculator are provided on an 'as is' basis. EMI Tools Calculator makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
+              The materials on EMI Tools Calculator are provided on an as-is basis. EMI Tools Calculator makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
             </p>
             <p className="text-gray-700 mb-4">
               <strong>Important Disclaimer:</strong> All calculations provided by EMI Tools Calculator are for educational and informational purposes only. The results are estimates and approximations based on the information you provide.
@@ -82,7 +82,7 @@ export default function TermsPage() {
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">6. Links</h2>
             <p className="text-gray-700">
-              EMI Tools Calculator has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by EMI Tools Calculator of the site. Use of any such linked website is at the user's own risk.
+              EMI Tools Calculator has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by EMI Tools Calculator of the site. Use of any such linked website is at the user&apos;s own risk.
             </p>
           </section>
 
@@ -178,7 +178,7 @@ export default function TermsPage() {
                 <strong>Email:</strong> <a href="mailto:help.apniwebsite@gmail.com" className="text-blue-600 hover:text-blue-800">help.apniwebsite@gmail.com</a>
               </p>
               <p className="text-gray-700">
-                <strong>Website:</strong> <a href="/" className="text-blue-600 hover:text-blue-800">EMI Tools Calculator</a>
+                <strong>Website:</strong> <Link href="/" className="text-blue-600 hover:text-blue-800">EMI Tools Calculator</Link>
               </p>
             </div>
           </section>

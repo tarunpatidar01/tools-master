@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import Sidebar from '@/app/components/Sidebar';
 import ToolSearch from '@/app/components/ToolSearch';
 import LanguageToggle from '@/app/components/LanguageToggle';
@@ -134,7 +135,7 @@ export default function HomePage() {
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 min-h-[600px]">
                 {tools && tools.length > 0 ? (
                   tools.map((tool) => (
-                    <a
+                    <Link
                       key={tool.id}
                       href={`/tools/${tool.slug}`}
                       className="bg-white border border-gray-300 hover:border-blue-600 hover:shadow-lg rounded-lg p-4 text-left transition hover:bg-blue-50"
@@ -142,11 +143,11 @@ export default function HomePage() {
                     >
                       <h3 className="font-semibold text-gray-900 text-sm leading-tight">{tool.keyword}</h3>
                       <p className="text-xs text-gray-500 mt-2 bg-gray-100 inline-block px-2 py-1 rounded">{tool.category}</p>
-                    </a>
+                    </Link>
                   ))
                 ) : (
                   <p className="text-gray-600 col-span-full">Loading {tools.length} calculators...</p>
-                )}
+                )} 
               </div>
             </div>
           </div>
@@ -157,26 +158,26 @@ export default function HomePage() {
             <div className="mb-16 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Quick Links</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-                <a href="/blog" className="bg-white border border-gray-200 hover:border-blue-500 hover:shadow-md rounded-lg p-4 text-center transition">
+                <Link href="/blog" className="bg-white border border-gray-200 hover:border-blue-500 hover:shadow-md rounded-lg p-4 text-center transition">
                   <div className="text-2xl mb-2">📚</div>
                   <h3 className="font-semibold text-gray-900 text-sm">Blog / Tools</h3>
-                </a>
-                <a href="/about" className="bg-white border border-gray-200 hover:border-blue-500 hover:shadow-md rounded-lg p-4 text-center transition">
+                </Link>
+                <Link href="/about" className="bg-white border border-gray-200 hover:border-blue-500 hover:shadow-md rounded-lg p-4 text-center transition">
                   <div className="text-2xl mb-2">ℹ️</div>
                   <h3 className="font-semibold text-gray-900 text-sm">About Us</h3>
-                </a>
-                <a href="/contact" className="bg-white border border-gray-200 hover:border-blue-500 hover:shadow-md rounded-lg p-4 text-center transition">
+                </Link>
+                <Link href="/contact" className="bg-white border border-gray-200 hover:border-blue-500 hover:shadow-md rounded-lg p-4 text-center transition">
                   <div className="text-2xl mb-2">📧</div>
                   <h3 className="font-semibold text-gray-900 text-sm">Contact Us</h3>
-                </a>
-                <a href="/privacy-policy" className="bg-white border border-gray-200 hover:border-blue-500 hover:shadow-md rounded-lg p-4 text-center transition">
+                </Link>
+                <Link href="/privacy-policy" className="bg-white border border-gray-200 hover:border-blue-500 hover:shadow-md rounded-lg p-4 text-center transition">
                   <div className="text-2xl mb-2">🔒</div>
                   <h3 className="font-semibold text-gray-900 text-sm">Privacy Policy</h3>
-                </a>
-                <a href="/terms" className="bg-white border border-gray-200 hover:border-blue-500 hover:shadow-md rounded-lg p-4 text-center transition">
+                </Link>
+                <Link href="/terms" className="bg-white border border-gray-200 hover:border-blue-500 hover:shadow-md rounded-lg p-4 text-center transition">
                   <div className="text-2xl mb-2">⚖️</div>
                   <h3 className="font-semibold text-gray-900 text-sm">Terms & Conditions</h3>
-                </a>
+                </Link>
               </div>
             </div>
 

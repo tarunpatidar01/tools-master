@@ -24,7 +24,7 @@ export default function RdCalculator({ toolName }: RdCalculatorProps) {
 
     // Calculate year-wise
     const yearlyData = [];
-    let balance = 0;
+    const balance = 0;
 
     for (let year = 1; year <= Math.ceil(months / 12); year++) {
       const yearEndMonth = Math.min(year * 12, months);

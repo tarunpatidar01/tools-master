@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useMemo, useState, useCallback, useEffect } from 'react';
+import React, { useMemo, useState } from 'react';
 import { formatCurrency } from '@/lib/emi';
 
 interface CompoundInterestCalculatorProps {
@@ -10,20 +10,20 @@ interface CompoundInterestCalculatorProps {
 export default function CompoundInterestCalculator({
   toolName = 'Compound Interest Calculator',
 }: CompoundInterestCalculatorProps) {
-  const [principal, setPrincipal] = useState(100000);
-  const [annualRate, setAnnualRate] = useState(8);
-  const [years, setYears] = useState(5);
-  const [compoundFrequency, setCompoundFrequency] = useState(1);
-  const [showSchedule, setShowSchedule] = useState(false);
+  const getInitialNumber = (key: string, fallback: number) => {
+    try {
+      const params = new URLSearchParams(typeof window !== 'undefined' ? window.location.search : '');
+      return Number(params.get(key)) || fallback;
+    } catch {
+      return fallback;
+    }
+  };
 
-  /* ---------------- Load from URL ---------------- */
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    setPrincipal(Number(params.get('principal')) || 100000);
-    setAnnualRate(Number(params.get('rate')) || 8);
-    setYears(Number(params.get('years')) || 5);
-    setCompoundFrequency(Number(params.get('frequency')) || 1);
-  }, []);
+  const [principal, setPrincipal] = useState<number>(() => getInitialNumber('principal', 100000));
+  const [annualRate, setAnnualRate] = useState<number>(() => getInitialNumber('rate', 8));
+  const [years, setYears] = useState<number>(() => getInitialNumber('years', 5));
+  const [compoundFrequency, setCompoundFrequency] = useState<number>(() => getInitialNumber('frequency', 1));
+  const [showSchedule, setShowSchedule] = useState<boolean>(false);
 
   /* ---------------- Sync URL ---------------- */
   useEffect(() => {
@@ -209,36 +209,53 @@ export default function CompoundInterestCalculator({
 
 /* ---------- Small UI Helpers ---------- */
 
-function Input(props: any) {
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  label: string;
+  value: number;
+  min?: number;
+  max?: number;
+  step?: number | string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+function Input({ label, ...rest }: InputProps) {
   return (
     <div>
       <label className="block text-sm font-semibold mb-2">
-        {props.label}
+        {label}
       </label>
       <input
         type="number"
-        {...props}
+        {...(rest as React.InputHTMLAttributes<HTMLInputElement>)}
         className="w-full px-4 py-2 border rounded-lg"
       />
       <input
         type="range"
-        {...props}
+        {...(rest as React.InputHTMLAttributes<HTMLInputElement>)}
         className="w-full mt-2"
       />
     </div>
   );
 }
 
-function Result({ title, value, color = 'blue' }: any) {
-  const colors: any = {
-    blue: 'bg-blue-50 border-blue-200 text-blue-900',
-    green: 'bg-green-50 border-green-200 text-green-900',
-    purple: 'bg-purple-50 border-purple-200 text-purple-900',
-    orange: 'bg-orange-50 border-orange-200 text-orange-900',
-  };
+type Color = 'blue' | 'green' | 'purple' | 'orange';
 
+interface ResultProps {
+  title: string;
+  value: string | number;
+  color?: Color;
+}
+
+const COLOR_CLASSES: Record<Color, string> = {
+  blue: 'bg-blue-50 border-blue-200 text-blue-900',
+  green: 'bg-green-50 border-green-200 text-green-900',
+  purple: 'bg-purple-50 border-purple-200 text-purple-900',
+  orange: 'bg-orange-50 border-orange-200 text-orange-900',
+};
+
+function Result({ title, value, color = 'blue' }: ResultProps) {
   return (
-    <div className={`border rounded-lg p-4 ${colors[color]}`}>
+    <div className={`border rounded-lg p-4 ${COLOR_CLASSES[color]}`}>
       <div className="text-xs font-semibold uppercase mb-1">
         {title}
       </div>
