@@ -10,7 +10,7 @@ interface ToolSearchProps {
 }
 
 export default function ToolSearch({ isOpen, onClose }: ToolSearchProps) {
-  interface ToolSummary { id: string; slug: string; keyword: string; monthlySearches: number; }
+  interface ToolSummary { id: number; slug: string; keyword: string; monthlySearches: number; }
 
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<ToolSummary[]>([]);

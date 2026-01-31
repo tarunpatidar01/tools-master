@@ -1,6 +1,7 @@
 import './styles/globals.css'
 import type { Metadata, Viewport } from 'next'
 import Footer from '@/app/components/Footer'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://emi-tools-master.vercel.app';
 
@@ -218,6 +219,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </header>
         <main className="p-4 max-w-7xl mx-auto min-h-screen">{children}</main>
         <Footer />
+        {/* Vercel Speed Insights (renders site performance card) */}
+        <SpeedInsights />
       </body>
     </html>
   )
