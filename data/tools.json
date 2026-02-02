@@ -977,8 +977,8 @@
           "content": "Loan eligibility is the maximum amount a lender will approve based on your financial profile including income, existing debts, employment type, and credit score. Understanding your loan eligibility helps you plan your borrowing strategy effectively."
         },
         {
-          "heading": "How to Use the Calculator?",
-          "content": "Enter your monthly income, existing loan EMI, employment type, and select the loan tenure. The calculator instantly shows your maximum eligible loan amount based on current lending criteria and debt-to-income ratios."
+          "heading": "How to Use this Tool",
+          "content": "Enter your monthly income, existing loan EMI, employment type, and select the loan tenure. This tool instantly shows your maximum eligible loan amount based on current lending criteria and debt-to-income ratios."
         },
         {
           "heading": "Eligibility Factors",
@@ -1009,8 +1009,8 @@
           "content": "Personal loans offer quick approval within 24-48 hours. Minimal documentation required. Loan amounts from Rs. 25,000 to Rs. 25 lakh. Flexible tenures from 12 to 60 months. Competitive interest rates for excellent credit scores. No restrictions on loan usage. Easy EMI structure with online payment options."
         },
         {
-          "heading": "Using Personal Loan Calculator",
-          "content": "Enter the loan amount you need, select the interest rate offered by lender, and choose your preferred tenure. The calculator instantly shows your monthly EMI, total interest payable, and complete repayment schedule. Compare different combinations to find the best option for your budget."
+          "heading": "Using this Tool",
+          "content": "Enter the loan amount you need, select the interest rate offered by lender, and choose your preferred tenure. The tool instantly shows your monthly EMI, total interest payable, and complete repayment schedule. Compare different combinations to find the best option for your budget."
         }
       ]
     }
@@ -1065,8 +1065,8 @@
           "content": "SIP reduces investment risk through rupee cost averaging. Inculcates disciplined investing habit. Low minimum investment, starting from Rs. 500. Can start with small amounts and increase gradually. Less volatile than lump sum investments. Flexible - can pause or increase anytime. Helps achieve long-term financial goals."
         },
         {
-          "heading": "How to Use SIP Calculator",
-          "content": "Enter your monthly investment amount, expected annual return rate, and investment tenure in years. The calculator shows your future value, total invested amount, and expected gains. Compare different return rates to understand the impact of market performance on your investment growth."
+          "heading": "How to Use this Tool",
+          "content": "Enter your monthly investment amount, expected annual return rate, and investment tenure in years. The tool shows your future value, total invested amount, and expected gains. Compare different return rates to understand the impact of market performance on your investment growth."
         }
       ]
     }
@@ -1093,8 +1093,8 @@
           "content": "Lumpsum is a single large investment while SIP is regular small investments. Lumpsum offers higher returns in bull markets but higher losses in bear markets. SIP reduces market timing risk through rupee cost averaging. Lumpsum requires timing skill while SIP is more passive. Combine both for optimal portfolio construction."
         },
         {
-          "heading": "Using the Calculator",
-          "content": "Enter your investment amount, expected annual return rate, and investment tenure. The calculator compounds your returns annually and shows the future value. Understand how your one-time investment grows over different time periods and return rates."
+          "heading": "How to Use the Tool",
+          "content": "Enter your investment amount, expected annual return rate, and investment tenure. This tool compounds your returns annually and shows the future value. Understand how your one-time investment grows over different time periods and return rates."
         }
       ]
     }
@@ -1233,8 +1233,8 @@
           "content": "Flexible contribution - no fixed mandatory amount. Tax deduction under Section 80C up to Rs. 1.5 lakh. Additional deduction under Section 80CCD(1B) up to Rs. 50,000. Investment options: Equity, Corporate Debt, Government Securities, and Alternative Investments. Low charges and transparent portfolio. Portable across jobs."
         },
         {
-          "heading": "Using NPS Calculator",
-          "content": "Enter your current age, retirement age, monthly contribution, and expected annual return rate based on asset allocation. The calculator shows your retirement corpus, expected pension amount from annuity, and total income. Adjust contributions to meet retirement goals."
+          "heading": "Using this Tool",
+          "content": "Enter your current age, retirement age, monthly contribution, and expected annual return rate based on asset allocation. The tool shows your retirement corpus, expected pension amount from annuity, and total income. Adjust contributions to meet retirement goals."
         }
       ]
     }
@@ -1289,8 +1289,8 @@
           "content": "5% GST on essential items like food, medicines, books. 12% GST on processed foods, hotel services, restaurant services. 18% GST on electronics, apparel, cosmetics, services. 28% GST on luxury items like cars, high-end electronics. Know the GST rate for your product to calculate accurate tax liability."
         },
         {
-          "heading": "Using GST Calculator",
-          "content": "Enter your base price and select the applicable GST rate. The calculator shows total price including GST and GST amount. Use reverse GST mode if you have price including GST and need to calculate tax component. Helpful for businesses and consumers to understand tax implications."
+          "heading": "Using this Tool",
+          "content": "Enter your base price and select the applicable GST rate. This tool shows total price including GST and GST amount. Use reverse GST mode if you have price including GST and need to calculate tax component. Helpful for businesses and consumers to understand tax implications."
         }
       ]
     }
@@ -1345,8 +1345,8 @@
           "content": "Gratuity = (Basic Salary + Dearness Allowance) × Last Month / 26 × Years of Service. Last Month refers to the last drawn salary or average of last 10 months salary, whichever is higher. For employees covered under the Payment of Gratuity Act, maximum gratuity is Rs. 20 lakh. Gratuity is fully tax-exempt under certain conditions."
         },
         {
-          "heading": "Using Gratuity Calculator",
-          "content": "Enter your basic salary, dearness allowance, years of completed service, and separation date. The calculator shows your gratuity amount based on the legal formula. Helps you understand retirement benefits and plan post-retirement finances."
+          "heading": "Using this Tool",
+          "content": "Enter your basic salary, dearness allowance, years of completed service, and separation date. This tool shows your gratuity amount based on the legal formula. Helps you understand retirement benefits and plan post-retirement finances."
         }
       ]
     }
