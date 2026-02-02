@@ -53,13 +53,27 @@ export const metadata: Metadata = {
         alt: 'EMI Tools - Loan Calculator',
         type: 'image/jpeg',
       },
+      {
+        url: 'https://emitools.com/og-image-emi-calculator.svg',
+        width: 1200,
+        height: 630,
+        alt: 'EMI calculator - EMI Tools preview image',
+        type: 'image/svg+xml',
+      },
+      {
+        url: 'https://emitools.com/og-image-emi-calculator-square.svg',
+        width: 800,
+        height: 800,
+        alt: 'EMI calculator - square preview',
+        type: 'image/svg+xml',
+      },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'EMI Calculator - Free Loan EMI Calculation | Instant Results',
     description: 'Calculate EMI for all types of loans instantly with our free online calculator. Accurate, reliable, and trusted.',
-    images: ['https://emitools.com/og-image.jpg'],
+    images: ['https://emitools.com/og-image.jpg','https://emitools.com/og-image-emi-calculator.svg'],
     creator: '@emitools',
     site: '@emitools',
     siteId: '1234567890',
@@ -147,6 +161,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* Preload Critical Resources */}
         <link rel="preload" as="image" href="/og-image.jpg" />
+        {/* Default OG/Twitter image alt for better image SEO */}
+        <meta property="og:image:alt" content="EMI calculator - Free online EMI calculator" />
+        <meta name="twitter:image:alt" content="EMI calculator - Free online EMI calculator" />
 
         {/* Alternate Language Links */}
         <link rel="alternate" hrefLang="en-IN" href="https://emitools.com/en" />

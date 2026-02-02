@@ -85,6 +85,12 @@ export default async function ToolPage({ params }: ToolPageProps) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
+      {/* Open Graph / Twitter image alt meta tags for better image SEO */}
+      <meta property="og:image" content={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://emi-tools-master.vercel.app'}/og-image-emi-calculator.svg`} />
+      <meta property="og:image:alt" content={`${tool.title} - EMI calculator`} />
+      <meta name="twitter:image" content={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://emi-tools-master.vercel.app'}/og-image-emi-calculator.svg`} />
+      <meta name="twitter:image:alt" content={`${tool.title} - EMI calculator`} />
+
       {/* Accessibility: Skip link */}
       <a href="#main" className="sr-only focus:not-sr-only">Skip to content</a>
 

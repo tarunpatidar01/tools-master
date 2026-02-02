@@ -76,6 +76,8 @@ export const SoftwareApplicationSchema = () => {
     image: [
       `${SITE_URL}/og-image.jpg`,
       `${SITE_URL}/og-image-square.jpg`,
+      `${SITE_URL}/og-image-emi-calculator.svg`,
+      `${SITE_URL}/og-image-emi-calculator-square.svg`,
     ],
     author: {
       '@type': 'Organization',
@@ -242,7 +244,7 @@ export const LocalBusinessSchema = () => {
     '@type': 'LocalBusiness',
     name: 'EMI Tools Calculator',
     description: 'Online loan EMI calculator service',
-    image: `${SITE_URL}/og-image.jpg`,
+    image: [`${SITE_URL}/og-image.jpg`, `${SITE_URL}/og-image-emi-calculator.svg`],
     url: SITE_URL,
     telephone: '+91-XXXXXXXXXX',
     email: 'support@emitools.com',

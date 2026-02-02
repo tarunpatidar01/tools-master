@@ -24,6 +24,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const canonicalUrl = `${SITE_URL}/tools/${slug}`;
   const ogImageUrl = `${SITE_URL}/og-image.jpg`;
+  const ogEmiImage = `${SITE_URL}/og-image-emi-calculator.svg`;
+  const ogEmiSquare = `${SITE_URL}/og-image-emi-calculator-square.svg`;
 
   return {
     title: `${tool.title} - Free Online Calculator | EMI Tools`,
@@ -64,7 +66,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
           url: ogImageUrl,
           width: 1200,
           height: 630,
-          alt: tool.title,
+          alt: `${tool.title} - EMI calculator`,
           type: 'image/jpeg',
           secureUrl: ogImageUrl,
         },
@@ -72,8 +74,22 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
           url: `${SITE_URL}/og-image-square.jpg`,
           width: 800,
           height: 800,
-          alt: tool.title,
+          alt: `${tool.title} - EMI calculator`,
           type: 'image/jpeg',
+        },
+        {
+          url: ogEmiImage,
+          width: 1200,
+          height: 630,
+          alt: `${tool.title} - EMI calculator preview`,
+          type: 'image/svg+xml',
+        },
+        {
+          url: ogEmiSquare,
+          width: 800,
+          height: 800,
+          alt: `${tool.title} - EMI calculator square preview`,
+          type: 'image/svg+xml',
         },
       ],
     },
@@ -81,7 +97,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       card: 'summary_large_image',
       title: `${tool.title} - Free Calculator`,
       description: tool.description,
-      images: [ogImageUrl],
+      images: [ogImageUrl, ogEmiImage],
       creator: '@emitools',
       site: '@emitools',
       siteId: '1234567890',
