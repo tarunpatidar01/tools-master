@@ -4,6 +4,7 @@ import { Suspense } from 'react';
 import Link from 'next/link';
 import { getToolBySlug } from '@/lib/seo';
 import ToolPageClient from './ToolPageClient';
+import SocialShare from '@/app/components/SocialShare';
 
 interface ToolPageProps {
   params: Promise<{
@@ -77,10 +78,9 @@ export default async function ToolPage({ params }: ToolPageProps) {
     <>
       {/* SEO Structured Data (server-rendered) */}
       <link rel="canonical" href={canonicalUrl} />
-      <link rel="alternate" hrefLang="en-IN" href={`${canonicalUrl}?lang=en-in`} />
+      <link rel="alternate" hrefLang="en-IN" href={canonicalUrl} />
       <link rel="alternate" hrefLang="hi-IN" href={`${canonicalUrl}?lang=hi-in`} />
-      <link rel="alternate" hrefLang="en" href={canonicalUrl} />
-      <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
+      <link rel="alternate" hrefLang="x-default" href={SITE_URL} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
@@ -104,6 +104,26 @@ export default async function ToolPage({ params }: ToolPageProps) {
           <li aria-current="page" className="font-semibold text-gray-900">{tool.title}</li>
         </ol>
       </nav>
+
+      {/* Social Share for this tool */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <SocialShare title={tool.title} text={tool.description} url={canonicalUrl} />
+
+        {/* Resources & Embed for tool */}
+        <section aria-labelledby="resources" className="mt-6 bg-gray-50 border border-gray-100 rounded p-4">
+          <h2 id="resources" className="text-lg font-semibold mb-2">Resources & References</h2>
+          <ul className="list-disc pl-5 text-sm text-gray-700 space-y-2">
+            <li><a href="https://www.investopedia.com/terms/e/emi.asp" target="_blank" rel="noopener noreferrer">What is EMI? — Investopedia</a></li>
+            <li><a href="https://rbi.org.in/" target="_blank" rel="noopener noreferrer">Reserve Bank of India — Financial Education</a></li>
+            <li><a href="https://www.sebi.gov.in/investors/" target="_blank" rel="noopener noreferrer">SEBI — Investor Education</a></li>
+          </ul>
+
+          <div className="mt-3 bg-white border border-gray-100 rounded p-3">
+            <h3 className="font-semibold text-sm mb-2">Embed this tool</h3>
+            <pre className="text-xs bg-gray-100 p-2 rounded overflow-auto"><code>{`<iframe src="${canonicalUrl}" width="600" height="700" style="border:0;" loading="lazy"></iframe>`}</code></pre>
+          </div>
+        </section>
+      </div>
 
       <main id="main">
         <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading calculator...</div>}>

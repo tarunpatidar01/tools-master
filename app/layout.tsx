@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'EMI Tools — Free Online EMI Calculator',
   description: 'Free online EMI calculator for home, car, and personal loans. Instant results with amortization schedules and downloadable reports.',
   keywords: ['EMI calculator', 'loan EMI calculator', 'home loan EMI', 'car loan EMI', 'personal loan EMI', 'education loan calculator', 'gold loan calculator', 'bike loan calculator', 'simple interest calculator', 'compound interest calculator', 'monthly EMI calculator', 'free EMI calculator'],
-  authors: [{ name: 'EMI Tools', url: 'https://emitools.com' }],
+  authors: [{ name: 'EMI Tools', url: SITE_URL }],
   creator: 'EMI Tools',
   publisher: 'EMI Tools',
   formatDetection: {
@@ -17,51 +17,50 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://emitools.com'),
+  metadataBase: new URL(SITE_URL),
   category: 'Finance',
   classification: 'Financial Calculator',
   referrer: 'strict-origin-when-cross-origin',
   alternates: {
-    canonical: 'https://emitools.com',
+    canonical: SITE_URL,
     languages: {
-      'en-IN': 'https://emitools.com/en',
-      'hi-IN': 'https://emitools.com/hi',
-      'en': 'https://emitools.com',
-      'x-default': 'https://emitools.com',
+      'en-IN': SITE_URL,
+      'hi-IN': `${SITE_URL}/hi`,
+      'x-default': SITE_URL,
     },
   },
   openGraph: {
     title: 'EMI Calculator - Free Loan EMI Calculation Tool | Instant Results',
     description: 'Calculate EMI for home loans, car loans, personal loans online. Get instant EMI with amortization schedule and interest breakdown. Trusted by 100,000+ users.',
     type: 'website',
-    url: 'https://emitools.com',
+    url: SITE_URL,
     siteName: 'EMI Tools Calculator',
     locale: 'en_IN',
     images: [
       {
-        url: 'https://emitools.com/og-image.jpg',
+        url: `${SITE_URL}/og-image.jpg`,
         width: 1200,
         height: 630,
         alt: 'EMI Calculator - Free Loan EMI Calculation Tool',
         type: 'image/jpeg',
-        secureUrl: 'https://emitools.com/og-image.jpg',
+        secureUrl: `${SITE_URL}/og-image.jpg`,
       },
       {
-        url: 'https://emitools.com/og-image-square.jpg',
+        url: `${SITE_URL}/og-image-square.jpg`,
         width: 800,
         height: 800,
         alt: 'EMI Tools - Loan Calculator',
         type: 'image/jpeg',
       },
       {
-        url: 'https://emitools.com/og-image-emi-calculator.svg',
+        url: `${SITE_URL}/og-image-emi-calculator.svg`,
         width: 1200,
         height: 630,
         alt: 'EMI calculator - EMI Tools preview image',
         type: 'image/svg+xml',
       },
       {
-        url: 'https://emitools.com/og-image-emi-calculator-square.svg',
+        url: `${SITE_URL}/og-image-emi-calculator-square.svg`,
         width: 800,
         height: 800,
         alt: 'EMI calculator - square preview',
@@ -73,7 +72,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'EMI Calculator - Free Loan EMI Calculation | Instant Results',
     description: 'Calculate EMI for all types of loans instantly with our free online calculator. Accurate, reliable, and trusted.',
-    images: ['https://emitools.com/og-image.jpg','https://emitools.com/og-image-emi-calculator.svg'],
+    images: [`${SITE_URL}/og-image.jpg`,`${SITE_URL}/og-image-emi-calculator.svg`],
     creator: '@emitools',
     site: '@emitools',
     siteId: '1234567890',
@@ -166,13 +165,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="twitter:image:alt" content="EMI calculator - Free online EMI calculator" />
 
         {/* Alternate Language Links */}
-        <link rel="alternate" hrefLang="en-IN" href="https://emitools.com/en" />
-        <link rel="alternate" hrefLang="hi-IN" href="https://emitools.com/hi" />
-        <link rel="alternate" hrefLang="en" href="https://emitools.com" />
-        <link rel="alternate" hrefLang="x-default" href="https://emitools.com" />
+        <link rel="alternate" hrefLang="en-IN" href={SITE_URL} />
+        <link rel="alternate" hrefLang="hi-IN" href={`${SITE_URL}/hi`} />
+        <link rel="alternate" hrefLang="x-default" href={SITE_URL} />
+
+        {/* Self-referential canonical */}
+        <link rel="canonical" href={SITE_URL} />
 
         {/* Sitemap Link */}
-        <link rel="sitemap" type="application/xml" href="https://emitools.com/sitemap.xml" />
+        <link rel="sitemap" type="application/xml" href={`${SITE_URL}/sitemap.xml`} />
 
         {/* JSON+LD Structured Data */}
         <script
@@ -194,7 +195,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 '@type': 'ContactPoint',
                 contactType: 'Customer Support',
                 email: 'support@emitools.com',
-                url: 'https://emitools.com/contact',
+                url: `${SITE_URL}/contact`,
               },
               address: {
                 '@type': 'PostalAddress',

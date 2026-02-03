@@ -4,7 +4,7 @@ import { MetadataRoute } from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {
   const tools = getAllTools();
   
-  const baseUrl = 'https://emitools.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://emi-tools-master.vercel.app';
   
   // Main pages
   const mainPages: MetadataRoute.Sitemap = [

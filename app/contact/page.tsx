@@ -109,10 +109,10 @@ export default function ContactPage() {
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">🌐 Website</h3>
                 <Link href="/" className="text-blue-600 hover:text-blue-800 font-semibold text-lg">
-                  www.emitools.com
+                  Visit our website
                 </Link>
                 <p className="text-gray-600 text-sm mt-2">
-                  Visit our website to access all our financial calculators.
+                  Access all our financial calculators and tools from the homepage.
                 </p>
               </div>
 

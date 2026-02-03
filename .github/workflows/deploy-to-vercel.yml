@@ -38,4 +38,4 @@ jobs:
 
       - name: Deployment notice
         run: |
-          echo "Deployment triggered. If successful, your site will be live at https://emitools.com"
+          echo "Deployment triggered. If successful, your site will be live at the configured site URL"

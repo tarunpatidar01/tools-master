@@ -55,7 +55,7 @@ export const SoftwareApplicationSchema = () => {
     '@type': 'SoftwareApplication',
     name: 'EMI Tools - Loan EMI Calculator',
     description: 'Free online EMI calculator for home loans, car loans, personal loans with year-wise breakdown, PDF export and amortization schedule',
-    url: 'https://emitools.com',
+    url: SITE_URL,
     applicationCategory: 'FinanceApplication',
     applicationSubCategory: 'LoanCalculator',
     offers: {
@@ -63,7 +63,7 @@ export const SoftwareApplicationSchema = () => {
       price: '0',
       priceCurrency: 'INR',
       availability: 'https://schema.org/InStock',
-      url: 'https://emitools.com',
+      url: SITE_URL,
     },
     aggregateRating: {
       '@type': 'AggregateRating',
@@ -85,7 +85,7 @@ export const SoftwareApplicationSchema = () => {
       url: SITE_URL,
       logo: `${SITE_URL}/logo.png`,
     },
-    downloadUrl: 'https://emitools.com',
+    downloadUrl: SITE_URL,
     fileSize: '5MB',
     operatingSystem: 'Web',
     inLanguage: ['en-IN', 'hi-IN'],

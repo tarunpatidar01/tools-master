@@ -14,8 +14,14 @@
       "sections": [
         {
           "heading": "What is EMI?",
-          "content": "EMI stands for Equated Monthly Installment. It is a fixed amount of money you pay to your lender every month to repay your loan. The EMI is calculated based on the principal amount borrowed, the interest rate, and the loan tenure. Understanding your EMI helps in financial planning and ensures you know exactly how much to pay monthly."
+          "content": "EMI stands for Equated Monthly Installment. It is a fixed amount of money you pay to your lender every month to repay your loan. The EMI is calculated based on the principal amount borrowed, the interest rate, and the loan tenure. Understanding your EMI helps in financial planning and ensures you know exactly how much to pay monthly. Use this estimator to compare monthly payment scenarios and plan your budget effectively."
         },
+      ],
+      "faq": [
+        { "question": "How accurate is the EMI estimate?", "answer": "The estimate uses standard EMI formulas and current interest rates for guidance; exact amounts may vary based on lender fees and rounding." },
+        { "question": "Can I include processing fees in the EMI calculation?", "answer": "Yes, include one-time charges in the loan amount to see their impact on monthly payments and total interest." },
+        { "question": "Does this tool handle prepayment or extra payments?", "answer": "You can simulate extra payments to see how prepayment reduces future interest and shortens the loan tenure." }
+      ],
         {
           "heading": "How to Use the EMI Calculator?",
           "content": "Using our EMI calculator is simple and straightforward. Enter the loan amount, select the interest rate offered by your bank, and set the tenure in months. The calculator will instantly display your monthly EMI, total interest payable, and the total amount you need to repay. You can also adjust the values to compare different loan scenarios."
@@ -78,8 +84,14 @@
       "sections": [
         {
           "heading": "What is a Home Loan?",
-          "content": "A home loan is a financial product offered by banks and financial institutions to help you purchase a residential property. The loan is secured against the property itself, making it a low-interest borrowing option. Home loans typically have longer tenures ranging from 5 to 30 years, allowing buyers to manage the large cost of property purchase through manageable monthly installments."
+          "content": "A home loan is a financial product offered by banks and financial institutions to help you purchase a residential property. The loan is secured against the property itself, making it a low-interest borrowing option. Home loans typically have longer tenures ranging from 5 to 30 years, allowing buyers to manage the large cost of property purchase through manageable monthly installments. Use this home loan estimator to compare EMIs, interest savings, and choose a repayment plan that fits your budget."
         },
+      ],
+      "faq": [
+        { "question": "How does down payment affect EMI?", "answer": "A higher down payment reduces the principal amount and therefore lowers monthly EMI and total interest paid over the loan tenure." },
+        { "question": "Can I switch between fixed and floating rates?", "answer": "Yes, consult your lender about converting rate types — this affects future EMIs and total interest." },
+        { "question": "What documents are needed for a home loan?", "answer": "Typically identity, address, income proofs, property documents, and KYC; requirements vary by lender." }
+      ],
         {
           "heading": "Understanding Home Loan EMI",
           "content": "Your home loan EMI consists of two components: principal repayment and interest payment. In the initial years, a larger portion goes towards interest, while in later years, more goes towards principal. Our calculator shows the exact breakdown, helping you understand how your monthly payment is distributed between principal and interest."
@@ -142,8 +154,14 @@
       "sections": [
         {
           "heading": "What is a Car Loan?",
-          "content": "A car loan is an auto financing option that allows you to purchase a vehicle by borrowing money from banks or financial institutions. The vehicle serves as collateral for the loan. Car loans typically have shorter tenures of 3 to 7 years compared to home loans, making them easier to repay while keeping the monthly commitment manageable."
+          "content": "A car loan is an auto financing option that allows you to purchase a vehicle by borrowing money from banks or financial institutions. The vehicle serves as collateral for the loan. Car loans typically have shorter tenures of 3 to 7 years compared to home loans, making them easier to repay while keeping the monthly commitment manageable. Use this auto loan estimator to compare down payments, tenure options, and monthly EMI for different models."
         },
+      ],
+      "faq": [
+        { "question": "Can I prepay a car loan?", "answer": "Most lenders allow prepayment after a lock-in period; check for applicable penalties and savings calculations." },
+        { "question": "Does the calculator account for insurance and registration?", "answer": "The tool focuses on EMI for the loan; include insurance/registration separately when planning total cost of ownership." },
+        { "question": "Are used car loans different?", "answer": "Yes — used car loans often have higher rates and shorter tenures; use the estimator to compare scenarios." }
+      ],
         {
           "heading": "Car Loan EMI Components",
           "content": "Your car loan EMI consists of principal repayment and interest charges. In the first few months, the interest component is higher, gradually decreasing as you pay off the principal. Our calculator provides a detailed amortization schedule showing exactly how much of each payment goes towards principal and interest, helping you track your loan repayment progress."
@@ -1002,8 +1020,14 @@
       "sections": [
         {
           "heading": "What is a Personal Loan?",
-          "content": "A personal loan is an unsecured loan provided by banks and financial institutions for personal use. Unlike home or car loans, personal loans don't require collateral. They offer flexible usage for expenses like education, travel, medical emergencies, or debt consolidation. Interest rates range from 10% to 18% depending on creditworthiness."
+          "content": "A personal loan is an unsecured loan provided by banks and financial institutions for personal use. Unlike home or car loans, personal loans don't require collateral. They offer flexible usage for expenses like education, travel, medical emergencies, or debt consolidation. Interest rates range from 10% to 18% depending on creditworthiness. Use this loan calculator to estimate your EMI, total interest, and compare tenures quickly."
         },
+      ],
+      "faq": [
+        { "question": "Can I prepay a personal loan?", "answer": "Many lenders allow prepayment but some may charge a small fee; check your loan terms before prepaying." },
+        { "question": "How does credit score affect rate?", "answer": "Higher credit scores usually secure lower interest rates and better loan terms." },
+        { "question": "Are processing fees included in the EMI?", "answer": "Processing fees are usually charged upfront; include them in the loan amount if you want a full-cost view." }
+      ],
         {
           "heading": "Personal Loan Features",
           "content": "Personal loans offer quick approval within 24-48 hours. Minimal documentation required. Loan amounts from Rs. 25,000 to Rs. 25 lakh. Flexible tenures from 12 to 60 months. Competitive interest rates for excellent credit scores. No restrictions on loan usage. Easy EMI structure with online payment options."
@@ -1058,8 +1082,14 @@
       "sections": [
         {
           "heading": "What is SIP?",
-          "content": "Systematic Investment Plan (SIP) is a method of investing a fixed amount regularly in mutual funds. Instead of investing a lump sum, you invest a small fixed amount monthly, which helps in averaging the cost of investment and reducing market volatility impact. SIP encourages disciplined investing and wealth creation over time."
+          "content": "Systematic Investment Plan (SIP) is a method of investing a fixed amount regularly in mutual funds. Instead of investing a lump sum, you invest a small fixed amount monthly, which helps in averaging the cost of investment and reducing market volatility impact. SIP encourages disciplined investing and wealth creation over time. Use this SIP calculator to model different return rates and investment horizons to meet long-term goals."
         },
+      ],
+      "faq": [
+        { "question": "What rate should I assume for SIP returns?", "answer": "Use historical averages for the fund category, but adjust expectations based on fund risk and market conditions." },
+        { "question": "Can I pause or stop SIP?", "answer": "Most funds allow you to pause or stop SIPs; check fund specific rules and minimums." },
+        { "question": "Does SIP benefit from compounding?", "answer": "Yes — regular investments compound over time leading to significant long-term growth." }
+      ],
         {
           "heading": "Benefits of SIP",
           "content": "SIP reduces investment risk through rupee cost averaging. Inculcates disciplined investing habit. Low minimum investment, starting from Rs. 500. Can start with small amounts and increase gradually. Less volatile than lump sum investments. Flexible - can pause or increase anytime. Helps achieve long-term financial goals."
@@ -1142,8 +1172,14 @@
       "sections": [
         {
           "heading": "What is Fixed Deposit?",
-          "content": "Fixed Deposit (FD) is a financial instrument offered by banks and financial institutions. You deposit a lump sum for a fixed period (7 days to 10 years) at a fixed interest rate. FDs are extremely safe, backed by DICGC insurance up to Rs. 5 lakh. Ideal for risk-averse investors seeking guaranteed returns."
+          "content": "Fixed Deposit (FD) is a financial instrument offered by banks and financial institutions. You deposit a lump sum for a fixed period (7 days to 10 years) at a fixed interest rate. FDs are extremely safe, backed by DICGC insurance up to Rs. 5 lakh. Ideal for risk-averse investors seeking guaranteed returns. Use this FD calculator to compare maturity values across different compounding frequencies and tenures."
         },
+      ],
+      "faq": [
+        { "question": "How is FD interest compounded?", "answer": "Interest is compounded based on the bank's frequency (monthly, quarterly, etc.); this affects final maturity value." },
+        { "question": "Are FDs insured?", "answer": "Deposits up to specified limits are insured by DICGC; verify your bank's coverage and limits." },
+        { "question": "Can I withdraw FD early?", "answer": "Early withdrawal is possible but may incur penalties and reduced interest rates depending on the bank." }
+      ],
         {
           "heading": "FD Interest Rates",
           "content": "Current FD interest rates range from 5% to 7.5% per annum depending on tenure and bank. Senior citizens get additional 0.5% to 1% interest. Shorter tenures (7 days to 3 months) offer lower rates. Longer tenures (5-10 years) offer higher rates. Private banks sometimes offer higher rates than public banks."
@@ -1198,8 +1234,14 @@
       "sections": [
         {
           "heading": "What is PPF?",
-          "content": "Public Provident Fund (PPF) is a long-term savings scheme backed by the Government of India. It offers guaranteed returns and tax benefits. Minimum investment is Rs. 500 per year, maximum is Rs. 1.5 lakh annually. Account matures after 15 years with optional extension for further 5-year blocks. Investment under Section 80C provides tax deduction."
+          "content": "Public Provident Fund (PPF) is a long-term savings scheme backed by the Government of India. It offers guaranteed returns and tax benefits. Minimum investment is Rs. 500 per year, maximum is Rs. 1.5 lakh annually. Account matures after 15 years with optional extension for further 5-year blocks. Investment under Section 80C provides tax deduction. Use this PPF calculator to estimate year-wise balances and long-term retirement growth."
         },
+      ],
+      "faq": [
+        { "question": "Can I contribute irregular amounts to PPF?", "answer": "PPF allows flexible contributions within the minimum and maximum annual limits; plan contributions for tax optimization." },
+        { "question": "Is PPF interest taxable?", "answer": "PPF interest is tax-free and compounds annually, making it attractive for long-term investors." },
+        { "question": "Can I take a loan against my PPF balance?", "answer": "Yes, loans are permitted against PPF balances after certain years subject to rules; check current scheme provisions." }
+      ],
         {
           "heading": "PPF Benefits",
           "content": "Guaranteed returns currently at 7.1% per annum. Tax-free interest income. Investment eligible for tax deduction under Section 80C. High safety - government-backed scheme. Loan facility available from 4th year at 50% of outstanding balance. Partial withdrawal from 7th year onwards. No limit on number of PPF accounts."
@@ -1254,8 +1296,14 @@
       "sections": [
         {
           "heading": "Income Tax Basics",
-          "content": "Income tax is a direct tax levied by the Government of India on income earned during a financial year (April 1 to March 31). Tax rates differ for different income slabs. Certain deductions like Section 80C and exemptions reduce your tax liability. Understanding your tax obligation helps in better financial planning."
+          "content": "Income tax is a direct tax levied by the Government of India on income earned during a financial year (April 1 to March 31). Tax rates differ for different income slabs. Certain deductions like Section 80C and exemptions reduce your tax liability. Understanding your tax obligation helps in better financial planning. Use this tax estimator to check different deduction options and their effect on take-home pay."
         },
+      ],
+      "faq": [
+        { "question": "Can I use this to compare tax regimes?", "answer": "Yes — compare new vs old tax regimes by toggling applicable deductions to see which gives lower liability." },
+        { "question": "Are tax rates updated for the current financial year?", "answer": "Rates are updated periodically; check the site notes or contact support for the most recent slab changes." },
+        { "question": "Does the calculator include surcharge and cess?", "answer": "Yes — the calculation includes applicable health and education cess and surcharges based on income levels." }
+      ],
         {
           "heading": "Tax Slabs for FY 2024-25",
           "content": "For individuals: Up to Rs. 2.5 lakh - No tax. Rs. 2.5 lakh to Rs. 5 lakh - 5%. Rs. 5 lakh to Rs. 10 lakh - 20%. Above Rs. 10 lakh - 30%. Senior citizens above 60 years get benefits. Higher exemption limit of Rs. 3 lakh for senior citizens. Super senior citizens (80+) get exemption up to Rs. 5 lakh."
@@ -1282,8 +1330,14 @@
       "sections": [
         {
           "heading": "What is GST?",
-          "content": "Goods and Services Tax (GST) is an indirect tax replaced previous taxes like VAT, excise duty, and service tax. GST is applicable on supply of goods and services in India. There are four GST slabs: 5%, 12%, 18%, and 28% depending on the product category. GST simplifies the tax system and reduces the cascade effect of multiple taxes."
+          "content": "Goods and Services Tax (GST) is an indirect tax replaced previous taxes like VAT, excise duty, and service tax. GST is applicable on supply of goods and services in India. There are four GST slabs: 5%, 12%, 18%, and 28% depending on the product category. GST simplifies the tax system and reduces the cascade effect of multiple taxes. Use this GST calculator to compute taxed price, reverse GST, and net margin after tax."
         },
+      ],
+      "faq": [
+        { "question": "Can I calculate reverse GST?", "answer": "Yes — switch to reverse mode to find the pre-tax price from a tax-inclusive amount." },
+        { "question": "Does it include all GST slabs?", "answer": "The tool supports the most common slabs; for special rates check official notifications." },
+        { "question": "Is the GST calculator suitable for businesses?", "answer": "Yes — it helps small businesses quickly calculate tax-inclusive and tax-exclusive prices for invoices." }
+      ],
         {
           "heading": "GST Slabs and Categories",
           "content": "5% GST on essential items like food, medicines, books. 12% GST on processed foods, hotel services, restaurant services. 18% GST on electronics, apparel, cosmetics, services. 28% GST on luxury items like cars, high-end electronics. Know the GST rate for your product to calculate accurate tax liability."
@@ -1310,8 +1364,14 @@
       "sections": [
         {
           "heading": "Understanding CTC",
-          "content": "Cost to Company (CTC) is the total amount your employer spends for your employment annually. It includes salary, bonuses, allowances, benefits, and employer contributions. CTC is different from in-hand salary which is what you actually receive after deductions. Understanding CTC breakdown helps in negotiating better salaries."
+          "content": "Cost to Company (CTC) is the total amount your employer spends for your employment annually. It includes salary, bonuses, allowances, benefits, and employer contributions. CTC is different from in-hand salary which is what you actually receive after deductions. Understanding CTC breakdown helps in negotiating better salaries. Use this salary estimator to model different components and see net take-home pay under various scenarios."
         },
+      ],
+      "faq": [
+        { "question": "Does the calculator include provident fund deductions?", "answer": "Yes — the tool accounts for common deductions like EPF to estimate net in-hand salary." },
+        { "question": "Can I model different tax exemptions?", "answer": "You can toggle standard deductions and some exemptions to see their effect on net pay." },
+        { "question": "Is state professional tax included?", "answer": "Where applicable, professional tax is considered; rates vary by state." }
+      ],
         {
           "heading": "Salary Components",
           "content": "CTC includes: Basic Salary, Dearness Allowance (DA), House Rent Allowance (HRA), Special Allowances, Performance Bonus, Medical Insurance, Gratuity, Provident Fund contribution. Not all components are taxable. Some components are part of calculation for different deductions."

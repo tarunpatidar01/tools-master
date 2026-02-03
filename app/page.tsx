@@ -6,9 +6,12 @@ import Sidebar from '@/app/components/Sidebar';
 import ToolSearch from '@/app/components/ToolSearch';
 import LanguageToggle from '@/app/components/LanguageToggle';
 import { FAQSchema, SoftwareApplicationSchema, OrganizationSchema, BreadcrumbSchema, LocalBusinessSchema } from '@/app/components/SchemaMarkup';
+import SocialShare from '@/app/components/SocialShare';
 import { getAllTools } from '@/lib/seo';
 import en from '@/i18n/en.json';
 import hi from '@/i18n/hi.json';
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://emi-tools-master.vercel.app';
 
 const FAQ_DATA = [
   { q: "What is EMI?", a: "EMI (Equated Monthly Installment) is a fixed amount of money you pay to the lender each month. It includes both principal amount and interest components spread over the loan tenure." },
@@ -107,6 +110,9 @@ export default function HomePage() {
               </button>
             </div>
 
+            {/* Social Share */}
+            <SocialShare title={t.home.title} text={t.home.description} />
+
             {/* Features Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
               <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition">
@@ -158,46 +164,62 @@ export default function HomePage() {
             <div className="mb-16 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Quick Links</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-                <Link href="/blog" className="bg-white border border-gray-200 hover:border-blue-500 hover:shadow-md rounded-lg p-4 text-center transition">
+                <Link href="/blog" className="bg-white border border-gray-200 hover:border-blue-500 hover:shadow-md rounded-lg p-4 text-center transition" aria-label="Blog: Guides and Tools">
                   <div className="text-2xl mb-2">📚</div>
-                  <h3 className="font-semibold text-gray-900 text-sm">Blog / Tools</h3>
+                  <p className="font-semibold text-gray-900 text-sm">Blog: Guides & Tools</p>
                 </Link>
-                <Link href="/about" className="bg-white border border-gray-200 hover:border-blue-500 hover:shadow-md rounded-lg p-4 text-center transition">
+                <Link href="/about" className="bg-white border border-gray-200 hover:border-blue-500 hover:shadow-md rounded-lg p-4 text-center transition" aria-label="About EMI Tools">
                   <div className="text-2xl mb-2">ℹ️</div>
-                  <h3 className="font-semibold text-gray-900 text-sm">About Us</h3>
+                  <p className="font-semibold text-gray-900 text-sm">About EMI Tools</p>
                 </Link>
-                <Link href="/contact" className="bg-white border border-gray-200 hover:border-blue-500 hover:shadow-md rounded-lg p-4 text-center transition">
+                <Link href="/contact" className="bg-white border border-gray-200 hover:border-blue-500 hover:shadow-md rounded-lg p-4 text-center transition" aria-label="Contact EMI Tools">
                   <div className="text-2xl mb-2">📧</div>
-                  <h3 className="font-semibold text-gray-900 text-sm">Contact Us</h3>
+                  <p className="font-semibold text-gray-900 text-sm">Contact EMI Tools</p>
                 </Link>
-                <Link href="/privacy-policy" className="bg-white border border-gray-200 hover:border-blue-500 hover:shadow-md rounded-lg p-4 text-center transition">
+                <Link href="/privacy-policy" className="bg-white border border-gray-200 hover:border-blue-500 hover:shadow-md rounded-lg p-4 text-center transition" aria-label="Privacy Policy - EMI Tools">
                   <div className="text-2xl mb-2">🔒</div>
-                  <h3 className="font-semibold text-gray-900 text-sm">Privacy Policy</h3>
+                  <p className="font-semibold text-gray-900 text-sm">Privacy Policy — EMI Tools</p>
                 </Link>
-                <Link href="/terms" className="bg-white border border-gray-200 hover:border-blue-500 hover:shadow-md rounded-lg p-4 text-center transition">
+                <Link href="/terms" className="bg-white border border-gray-200 hover:border-blue-500 hover:shadow-md rounded-lg p-4 text-center transition" aria-label="Terms and Conditions - EMI Tools">
                   <div className="text-2xl mb-2">⚖️</div>
-                  <h3 className="font-semibold text-gray-900 text-sm">Terms & Conditions</h3>
+                  <p className="font-semibold text-gray-900 text-sm">Terms & Conditions — EMI Tools</p>
                 </Link>
               </div>
             </div>
 
-            {/* FAQ Section */}
+            {/* How It Works + Resources */}
             <div className="mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-8">How Does It Work?</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="font-bold text-lg text-gray-900 mb-3">1. Enter Loan Details</h3>
-                  <p className="text-gray-600 mb-4">Input the loan amount, interest rate, and tenure using sliders or direct input fields</p>
-                  
-                  <h3 className="font-bold text-lg text-gray-900 mb-3 mt-6">2. Get Instant Results</h3>
-                  <p className="text-gray-600 mb-4">View your monthly EMI, total interest, and total payment amount instantly</p>
+                  <p className="text-gray-900 font-bold mb-2"><strong>1. Enter Loan Details</strong></p>
+                  <p className="text-gray-600 mb-4">Input the loan amount, interest rate, and tenure using sliders or direct input fields.</p>
+
+                  <p className="text-gray-900 font-bold mb-2"><strong>2. Get Instant Results</strong></p>
+                  <p className="text-gray-600 mb-4">View your monthly EMI, total interest, and total payment amount instantly.</p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-gray-900 mb-3">3. Analyze Payment Schedule</h3>
-                  <p className="text-gray-600 mb-4">Review detailed payment schedules and visualizations of principal vs interest breakdown</p>
-                  
-                  <h3 className="font-bold text-lg text-gray-900 mb-3 mt-6">4. Download & Share</h3>
-                  <p className="text-gray-600 mb-4">Download your calculation as PDF/Excel or share a link with pre-filled values</p>
+                  <p className="text-gray-900 font-bold mb-2"><strong>3. Analyze Payment Schedule</strong></p>
+                  <p className="text-gray-600 mb-4">Review detailed payment schedules and visualizations of principal vs interest breakdown.</p>
+
+                  <p className="text-gray-900 font-bold mb-2"><strong>4. Download & Share</strong></p>
+                  <p className="text-gray-600 mb-4">Download your calculation as PDF/Excel or share a link with pre-filled values.</p>
+                </div>
+              </div>
+
+              {/* Resources & References */}
+              <div className="mt-8 bg-gray-50 border border-gray-200 rounded p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Resources & References</h3>
+                <ul className="list-disc pl-5 text-sm text-gray-700 space-y-2">
+                  <li><a href="https://www.investopedia.com/terms/e/emi.asp" target="_blank" rel="noopener noreferrer">What is EMI? — Investopedia</a></li>
+                  <li><a href="https://rbi.org.in/" target="_blank" rel="noopener noreferrer">Reserve Bank of India — Financial Education</a></li>
+                  <li><a href="https://www.investopedia.com/articles/personal-finance/071016/how-calculate-your-emis.asp" target="_blank" rel="noopener noreferrer">How to calculate EMI — Investopedia deep-dive</a></li>
+                </ul>
+
+                <div className="mt-4 bg-white border border-gray-100 rounded p-3">
+                  <h4 className="font-semibold text-sm mb-2">Embed Our Calculator</h4>
+                  <p className="text-xs text-gray-600 mb-2">Add this small iframe to your site to embed our calculator.</p>
+                  <pre className="text-xs bg-gray-100 p-2 rounded overflow-auto"><code>{`<iframe src="${process.env.NEXT_PUBLIC_SITE_URL || 'https://emi-tools-master.vercel.app'}/tools/emi-calculator" width="600" height="700" style="border:0;" loading="lazy"></iframe>`}</code></pre>
                 </div>
               </div>
             </div>
@@ -228,7 +250,7 @@ export default function HomePage() {
       <FAQSchema />
       <SoftwareApplicationSchema />
       <OrganizationSchema />
-      <BreadcrumbSchema items={[{ name: 'Home', url: 'https://emitools.com' }]} />
+      <BreadcrumbSchema items={[{ name: 'Home', url: SITE_URL }]} />
       <LocalBusinessSchema />
     </>
   );

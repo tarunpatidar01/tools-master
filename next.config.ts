@@ -20,7 +20,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: '**.emitools.com',
+        hostname: '**.vercel.app',
       },
     ],
   },
