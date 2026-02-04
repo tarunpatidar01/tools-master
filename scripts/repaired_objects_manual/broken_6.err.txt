@@ -1,0 +1,24 @@
+ERR:Unexpected token ']', ..."},
+      ]" is not valid JSON
+
+SOURCE:
+{
+    "id": 27,
+    "keyword": "GST Calculator",
+    "hindi": "जीएसटी कैलकुलेटर",
+    "monthlySearches": 38000,
+    "category": "Tax",
+    "slug": "gst-calculator",
+    "title": "GST Calculator – Calculate GST Amount on Price",
+    "description": "Calculate GST easily. Get price with tax, tax amount, and reverse GST calculations instantly.",
+    "content": {
+      "h1": "GST Calculator",
+      "h2": "Calculate GST on Your Products and Services",
+      "sections": [
+        {
+          "heading": "What is GST?",
+          "content": "Goods and Services Tax (GST) is an indirect tax replaced previous taxes like VAT, excise duty, and service tax. GST is applicable on supply of goods and services in India. There are four GST slabs: 5%, 12%, 18%, and 28% depending on the product category. GST simplifies the tax system and reduces the cascade effect of multiple taxes. Use this GST calculator to compute taxed price, reverse GST, and net margin after tax."
+        },
+      ]
+    }
+  }

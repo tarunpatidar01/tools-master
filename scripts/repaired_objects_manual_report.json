@@ -1,0 +1,42 @@
+[
+  {
+    "file": "broken_0.json.txt",
+    "status": "fixed",
+    "note": true
+  },
+  {
+    "file": "broken_1.json.txt",
+    "status": "fixed",
+    "note": true
+  },
+  {
+    "file": "broken_2.json.txt",
+    "status": "fixed",
+    "note": true
+  },
+  {
+    "file": "broken_3.json.txt",
+    "status": "fixed",
+    "note": true
+  },
+  {
+    "file": "broken_4.json.txt",
+    "status": "fixed",
+    "note": true
+  },
+  {
+    "file": "broken_5.json.txt",
+    "status": "fixed",
+    "note": true
+  },
+  {
+    "file": "broken_6.json.txt",
+    "status": "failed",
+    "err": "Unexpected token ']', ...\"},\r\n      ]\" is not valid JSON"
+  },
+  {
+    "file": "broken_7.json.txt",
+    "status": "fixed",
+    "note": true
+  }
+]

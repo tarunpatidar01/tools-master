@@ -1,0 +1,20 @@
+{
+    "id": 3,
+    "keyword": "Car Loan EMI Calculator",
+    "hindi": "कार लोन ईएमआई कैलकुलेटर",
+    "monthlySearches": 27000,
+    "category": "Vehicle",
+    "slug": "car-loan-emi-calculator",
+    "title": "Car Loan EMI Calculator – Calculate Auto Loan Payment Online",
+    "description": "Free car loan EMI calculator to estimate your monthly car payment instantly. Calculate EMI for different car models, down payments, and interest rates easily.",
+    "content": {
+      "h1": "Car Loan EMI Calculator",
+      "h2": "Calculate Your Car Loan Monthly Payment Instantly",
+      "sections": [
+        {
+          "heading": "What is a Car Loan?",
+          "content": "A car loan is an auto financing option that allows you to purchase a vehicle by borrowing money from banks or financial institutions. The vehicle serves as collateral for the loan. Car loans typically have shorter tenures of 3 to 7 years compared to home loans, making them easier to repay while keeping the monthly c (truncated)"
+          }
+      ]
+    }
+  }

@@ -1,0 +1,20 @@
+{
+    "id": 19,
+    "keyword": "SIP Calculator",
+    "hindi": "एसआईपी कैलकुलेटर",
+    "monthlySearches": 28000,
+    "category": "Investment",
+    "slug": "sip-calculator",
+    "title": "SIP Calculator – Calculate Systematic Investment Plan Returns",
+    "description": "Calculate your SIP returns instantly. Get future value, total investment, and gains. Understand wealth creation through SIP.",
+    "content": {
+      "h1": "SIP Calculator",
+      "h2": "Calculate Your SIP Returns and Wealth Creation",
+      "sections": [
+        {
+          "heading": "What is SIP?",
+          "content": "Systematic Investment Plan (SIP) is a method of investing a fixed amount regularly in mutual funds. Instead of investing a lump sum, you invest a small fixed amount monthly, which helps in averaging the cost of investment and reducing market volatility impact. SIP encourages disciplined investing and wealth creation over time. Use this SIP calculator to model different return rates and i (truncated)"
+          }
+      ]
+    }
+  }

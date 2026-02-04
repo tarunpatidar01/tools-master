@@ -1,0 +1,20 @@
+{
+    "id": 17,
+    "keyword": "Personal Loan Calculator",
+    "hindi": "व्यक्तिगत लोन कैलकुलेटर",
+    "monthlySearches": 32000,
+    "category": "Loan",
+    "slug": "personal-loan-calculator",
+    "title": "Personal Loan Calculator – Calculate EMI & Interest",
+    "description": "Calculate personal loan EMI, total interest, and repayment schedule instantly. Compare different loan amounts and tenures.",
+    "content": {
+      "h1": "Personal Loan Calculator",
+      "h2": "Calculate Your Personal Loan EMI",
+      "sections": [
+        {
+          "heading": "What is a Personal Loan?",
+          "content": "A personal loan is an unsecured loan provided by banks and financial institutions for personal use. Unlike home or car loans, personal loans don't require collateral. They offer flexible usage for expenses like education, travel, medical emergencies, or debt consolidation. Interest rates range from 10% to 18% depending on creditworthiness. Use this loan calculator to est (truncated)"
+          }
+      ]
+    }
+  }

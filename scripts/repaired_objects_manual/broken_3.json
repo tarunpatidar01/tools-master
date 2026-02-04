@@ -1,0 +1,20 @@
+{
+    "id": 22,
+    "keyword": "FD Calculator",
+    "hindi": "एफडी कैलकुलेटर",
+    "monthlySearches": 35000,
+    "category": "Savings",
+    "slug": "fd-calculator",
+    "title": "FD Calculator – Calculate Fixed Deposit Maturity Amount",
+    "description": "Calculate fixed deposit maturity value and interest earned. Get FD returns instantly for different interest rates and tenures.",
+    "content": {
+      "h1": "Fixed Deposit Calculator",
+      "h2": "Calculate Your FD Maturity Value",
+      "sections": [
+        {
+          "heading": "What is Fixed Deposit?",
+          "content": "Fixed Deposit (FD) is a financial instrument offered by banks and financial institutions. You deposit a lump sum for a fixed period (7 days to 10 years) at a fixed interest rate. FDs are extremely safe, backed by DICGC insurance up to Rs. 5 lakh. Ideal for risk-averse investors seeking guaranteed returns. Use this FD calculator to compare maturity values across different compounding frequenci (truncated)"
+          }
+      ]
+    }
+  }

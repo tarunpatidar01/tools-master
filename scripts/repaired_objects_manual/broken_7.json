@@ -1,0 +1,20 @@
+{
+    "id": 28,
+    "keyword": "Salary Calculator",
+    "hindi": "सैलरी कैलकुलेटर",
+    "monthlySearches": 42000,
+    "category": "Salary",
+    "slug": "salary-calculator",
+    "title": "Salary Calculator – Calculate In-Hand Salary from CTC",
+    "description": "Calculate in-hand salary from CTC. Get net salary after deductions and taxes. Breakdown of salary components.",
+    "content": {
+      "h1": "Salary Calculator – CTC to In-Hand",
+      "h2": "Calculate Your Net In-Hand Salary",
+      "sections": [
+        {
+          "heading": "Understanding CTC",
+          "content": "Cost to Company (CTC) is the total amount your employer spends for your employment annually. It includes salary, bonuses, allowances, benefits, and employer contributions. CTC is different from in-hand salary which is what you actually receive after deductions. Understanding CTC breakdown helps in negotiating better salaries. Use this salary estimator to model different components and see net take (truncated)"
+          }
+      ]
+    }
+  }

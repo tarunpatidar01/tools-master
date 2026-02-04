@@ -1,0 +1,20 @@
+{
+    "id": 26,
+    "keyword": "Income Tax Calculator",
+    "hindi": "आय कर कैलकुलेटर",
+    "monthlySearches": 45000,
+    "category": "Tax",
+    "slug": "income-tax-calculator",
+    "title": "Income Tax Calculator – Calculate Tax on Your Income",
+    "description": "Calculate income tax liability with deductions and exemptions. Get detailed tax calculation for FY 2024-25.",
+    "content": {
+      "h1": "Income Tax Calculator",
+      "h2": "Calculate Your Income Tax Liability",
+      "sections": [
+        {
+          "heading": "Income Tax Basics",
+          "content": "Income tax is a direct tax levied by the Government of India on income earned during a financial year (April 1 to March 31). Tax rates differ for different income slabs. Certain deductions like Section 80C and exemptions reduce your tax liability. Understanding your tax obligation helps in better financial planning. Use this tax estimator to check different deduction options and their effect on take-home p (truncated)"
+          }
+      ]
+    }
+  }

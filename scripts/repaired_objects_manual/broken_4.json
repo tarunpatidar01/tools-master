@@ -1,0 +1,20 @@
+{
+    "id": 24,
+    "keyword": "PPF Calculator",
+    "hindi": "पीपीएफ कैलकुलेटर",
+    "monthlySearches": 25000,
+    "category": "Savings",
+    "slug": "ppf-calculator",
+    "title": "PPF Calculator – Calculate Public Provident Fund Returns",
+    "description": "Calculate PPF maturity value and annual interest. Get detailed PPF investment growth for long-term wealth creation.",
+    "content": {
+      "h1": "Public Provident Fund Calculator",
+      "h2": "Calculate Your PPF Returns and Growth",
+      "sections": [
+        {
+          "heading": "What is PPF?",
+          "content": "Public Provident Fund (PPF) is a long-term savings scheme backed by the Government of India. It offers guaranteed returns and tax benefits. Minimum investment is Rs. 500 per year, maximum is Rs. 1.5 lakh annually. Account matures after 15 years with optional extension for further 5-year blocks. Investment under Section 80C provides tax deduction. Use this PPF calculator to estimate year-wise bal (truncated)"
+          }
+      ]
+    }
+  }
