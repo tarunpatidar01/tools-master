@@ -1,0 +1,6 @@
+const fs=require('fs'); const s=fs.readFileSync('data/tools.json.repaired_id2_v1','utf8');
+let out=[]; let broken=[]; let inStr=false, esc=false; let depth=0; let start=-1; for(let i=0;i<s.length;i++){ const ch=s[i]; if(inStr){ if(esc){ esc=false; continue;} if(ch==='\\'){ esc=true; continue;} if(ch==='"'){ inStr=false; continue;} } else { if(ch==='"'){ inStr=true; continue;} if(ch==='{'){ if(depth===0){ start=i; } depth++; } else if(ch==='}'){ depth--; if(depth===0 && start!==-1){ const objStr = s.slice(start, i+1); try{ const obj = JSON.parse(objStr); out.push(obj); }catch(e){ broken.push({start, end: i+1, err: e.message, snippet: objStr.slice(0,1000)}); } start=-1; } } }
+}
+fs.mkdirSync('scripts/broken_objects', {recursive:true}); fs.writeFileSync('data/tools.json.extracted.json', JSON.stringify(out, null, 2)); console.log('Extracted', out.length, 'objects. Broken:', broken.length);
+broken.forEach((b, idx)=>{ fs.writeFileSync(`scripts/broken_objects/broken_${idx}.json.txt`, b.snippet); fs.writeFileSync(`scripts/broken_objects/broken_${idx}.meta.txt`, `start:${b.start} end:${b.end} err:${b.err}`); });
+if(broken.length>0) console.log('WROTE broken objects to scripts/broken_objects/');

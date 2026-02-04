@@ -1,0 +1,5 @@
+# Ignore helper scripts and large backups used during repair
+scripts/
+data/*.bak
+scripts/broken_objects/
+scripts/repaired_objects/

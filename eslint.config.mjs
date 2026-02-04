@@ -12,6 +12,10 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Ignore repair and helper scripts & backup artifacts
+    "scripts/**",
+    "data/*.bak",
+    "scripts/broken_objects/**",
   ]),
 ]);
 

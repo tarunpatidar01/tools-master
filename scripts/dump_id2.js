@@ -1,0 +1,1 @@
+const fs=require('fs'); const s=fs.readFileSync('data/tools.json.bak','utf8'); const idx=s.indexOf('"id": 2'); if(idx===-1){ console.error('id2 not found'); process.exit(1);} const snippet = s.slice(Math.max(0, idx-300), idx+4000); fs.writeFileSync('scripts/id2_snippet.txt', snippet, 'utf8'); console.log('WROTE scripts/id2_snippet.txt');
