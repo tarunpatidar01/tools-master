@@ -54,7 +54,7 @@ export default function ContactPage() {
       });
       setLoading(false);
       setTimeout(() => setSubmitted(false), 5000);
-    } catch (err) {
+    } catch {
       setError('Failed to send message. Please try again later.');
       setLoading(false);
     }

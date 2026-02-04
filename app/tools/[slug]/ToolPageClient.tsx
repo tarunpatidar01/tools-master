@@ -5,8 +5,6 @@ import dynamic from 'next/dynamic';
 import Sidebar from '@/app/components/Sidebar';
 import LanguageToggle from '@/app/components/LanguageToggle';
 import ToolSearch from '@/app/components/ToolSearch';
-import en from '@/i18n/en.json';
-import hi from '@/i18n/hi.json';
 
 // Lazy load all calculator components (kept business logic unchanged)
 const EmiCalculator = dynamic(() => import('@/app/components/EmiCalculator'), { ssr: true });
@@ -76,7 +74,6 @@ function ToolPageClientComponent({ tool, faqList = [] }: ToolPageClientProps) {
   const [showSearch, setShowSearch] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
   
-  const t = language === 'en' ? en : hi;
 
   // Decide which calculator component to render based on slug (business logic preserved)
   // eslint-disable-next-line react-hooks/preserve-manual-memoization

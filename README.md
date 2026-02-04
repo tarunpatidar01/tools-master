@@ -113,6 +113,14 @@ Where:
 - Canonical URLs
 - hreflang tags for multilingual support
 
+## Deployment (short)
+
+1. Create a GitHub repository and add it as the remote: `git remote add origin https://github.com/<yourname>/<repo>.git`.
+2. Commit and push: `git add -A && git commit -m "chore: lint/fix, build and CI" && git push -u origin main`.
+3. Deploy with Vercel (recommended): import repository at https://vercel.com/import. Vercel will run the build and auto-deploy on push.
+
+> Note: A full dataset was backed up to `data/tools.json.bak` and the app uses a minimal dataset during automated checks. Restore/replace as needed before publishing.
+
 ## License
 
 MIT

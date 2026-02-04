@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 type Props = {
   url?: string;
@@ -9,11 +9,7 @@ type Props = {
 };
 
 export default function SocialShare({ url, title, text }: Props) {
-  const [currentUrl, setCurrentUrl] = useState(url || '');
-
-  useEffect(() => {
-    if (!url && typeof window !== 'undefined') setCurrentUrl(window.location.href);
-  }, [url]);
+  const currentUrl = url || (typeof window !== 'undefined' ? window.location.href : '');
 
   const shareText = text || title || '';
 

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useMemo, useState } from 'react';
-import { formatCurrency, formatNumber } from '@/lib/emi';
+import { formatCurrency } from '@/lib/emi';
 
 interface SipCalculatorProps {
   toolName?: string;

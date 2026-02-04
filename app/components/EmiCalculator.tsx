@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useMemo, useState, useCallback, useEffect } from 'react';
-import { calculateEMI, formatCurrency, formatNumber, EMIResult } from '@/lib/emi';
+import React, { useMemo, useState, useCallback } from 'react';
+import { calculateEMI, formatCurrency, EMIResult } from '@/lib/emi';
 import jsPDF from 'jspdf';
 import * as XLSX from 'xlsx';
 
@@ -24,7 +24,6 @@ function EmiCalculatorComponent({ toolName, initialRate = 8.5 }: EmiCalculatorPr
   const [annualRate, setAnnualRate] = useState<number>(() => getInitialNumber('rate', initialRate));
   const [months, setMonths] = useState<number>(() => getInitialNumber('months', 240));
   const [showSchedule, setShowSchedule] = useState<boolean>(false);
-  const [showMonthly, setShowMonthly] = useState<boolean>(false);
   const [shareLink, setShareLink] = useState<string>('');
   const [showShareModal, setShowShareModal] = useState<boolean>(false);
 

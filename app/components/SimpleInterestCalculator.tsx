@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useMemo, useState, useCallback, useEffect } from 'react';
-import { formatCurrency, formatNumber } from '@/lib/emi';
+import React, { useMemo, useState, useCallback } from 'react';
+import { formatCurrency } from '@/lib/emi';
 
 interface SimpleInterestCalculatorProps {
   toolName?: string;

@@ -22,7 +22,6 @@ export default function FdCalculator({ toolName }: FdCalculatorProps) {
     };
     const n = frequencyMap[compoundingFrequency];
     const r = annualRate / 100 / n;
-    const t = months / 12;
     const periods = Math.round(months / (12 / n));
 
     const maturityAmount = principal * Math.pow(1 + r, periods);
@@ -31,10 +30,8 @@ export default function FdCalculator({ toolName }: FdCalculatorProps) {
     // Calculate monthly breakdown
     const monthlyData = [];
     let balance = principal;
-    let monthCounter = 0;
 
     for (let i = 1; i <= months; i++) {
-      monthCounter++;
       const monthlyRateApplied = (i % (12 / n) === 0) ? r : 0;
       const interestThisMonth = balance * monthlyRateApplied;
       balance += interestThisMonth;
