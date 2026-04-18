@@ -25,6 +25,7 @@ const GstCalculator = dynamic(() => import('@/app/components/GstCalculator'), { 
 const SalaryCalculator = dynamic(() => import('@/app/components/SalaryCalculator'), { ssr: true });
 const GratuityCalculator = dynamic(() => import('@/app/components/GratuityCalculator'), { ssr: true });
 const HraCalculator = dynamic(() => import('@/app/components/HraCalculator'), { ssr: true });
+const IFSCLookup = dynamic(() => import('@/app/components/IFSCLookup'), { ssr: true });
 
 type FAQItem = { question: string; answer: string };
 
@@ -66,6 +67,7 @@ const CALCULATOR_MAP = {
   'salary': SalaryCalculator,
   'gratuity': GratuityCalculator,
   'hra': HraCalculator,
+  'ifsc': IFSCLookup,
 } as const;
 
 function ToolPageClientComponent({ tool, faqList = [] }: ToolPageClientProps) {
