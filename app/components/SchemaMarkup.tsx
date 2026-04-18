@@ -10,19 +10,19 @@ export const FAQSchema = () => {
     },
     {
       question: 'Can I pay off my loan early?',
-      answer: 'Yes, you can pay off your loan early. However, some lenders may charge a prepayment penalty. Contact your lender to understand their prepayment policy and calculate the savings.',
+      answer: 'Yes, you can pay off your loan early. RBI has prohibited prepayment penalties on floating-rate loans to individual borrowers. Fixed-rate loans may still carry a 2% to 5% charge. Prepaying early in the tenure saves the most interest.',
     },
     {
-      question: 'How does reducing balance method work?',
-      answer: 'In the reducing balance method, interest is calculated on the outstanding principal amount each month. As you pay EMI, the principal decreases, so the interest component decreases while the principal component increases.',
+      question: 'How does the reducing balance method work?',
+      answer: 'In the reducing balance method, interest is calculated on the outstanding principal amount each month. As you pay EMI, the principal decreases, so the interest component decreases while the principal component grows.',
     },
     {
-      question: 'What is the difference between Principal and Interest?',
+      question: 'What is the difference between principal and interest?',
       answer: 'Principal is the original amount you borrowed. Interest is the additional amount the lender charges for lending you money. Your EMI includes both principal and interest components.',
     },
     {
       question: 'Can this calculator be used for different loan types?',
-      answer: 'Yes! This EMI calculator can be used for any loan type including home loans, car loans, personal loans, education loans, and more. Just enter your loan details and get instant calculations.',
+      answer: 'Yes. This EMI calculator works for home loans, car loans, personal loans, education loans, and any other loan using the standard reducing-balance formula.',
     },
   ]
 
@@ -52,8 +52,8 @@ export const FAQSchema = () => {
 export const SoftwareApplicationSchema = () => {
   const schema = {
     '@context': 'https://schema.org/',
-    '@type': 'SoftwareApplication',
-    name: 'EMI Tools - Loan EMI Calculator',
+    '@type': 'WebApplication',
+    name: 'EMI Tools — Loan EMI Calculator',
     description: 'Free online EMI calculator for home loans, car loans, personal loans with year-wise breakdown, PDF export and amortization schedule',
     url: SITE_URL,
     applicationCategory: 'FinanceApplication',
@@ -65,39 +65,20 @@ export const SoftwareApplicationSchema = () => {
       availability: 'https://schema.org/InStock',
       url: SITE_URL,
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      ratingCount: '2450',
-      bestRating: '5',
-      worstRating: '1',
-      reviewCount: '2450',
-    },
     image: [
       `${SITE_URL}/og-image.jpg`,
-      `${SITE_URL}/og-image-square.jpg`,
       `${SITE_URL}/og-image-emi-calculator.svg`,
-      `${SITE_URL}/og-image-emi-calculator-square.svg`,
     ],
     author: {
       '@type': 'Organization',
       name: 'EMI Tools',
       url: SITE_URL,
-      logo: `${SITE_URL}/logo.png`,
     },
-    downloadUrl: SITE_URL,
-    fileSize: '5MB',
     operatingSystem: 'Web',
-    inLanguage: ['en-IN', 'hi-IN'],
-    creator: {
-      '@type': 'Organization',
-      name: 'EMI Tools',
-    },
+    browserRequirements: 'Requires a modern browser with JavaScript enabled',
+    inLanguage: 'en-IN',
     datePublished: '2025-01-01',
-    dateModified: '2026-01-24',
-    softwareRequirements: 'Modern web browser',
-    accessibilityFeature: ['alternativeText', 'captions'],
-    accessibilityHazard: 'none',
+    dateModified: new Date().toISOString().slice(0, 10),
   }
 
   return (
@@ -113,48 +94,22 @@ export const OrganizationSchema = () => {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     '@id': `${SITE_URL}/#organization`,
-    name: 'EMI Tools Calculator',
+    name: 'EMI Tools',
     url: SITE_URL,
     logo: {
       '@type': 'ImageObject',
-      url: `${SITE_URL}/logo.png`,
-      width: 200,
-      height: 50,
+      url: `${SITE_URL}/apple-touch-icon.png`,
     },
-    image: [
-      `${SITE_URL}/og-image.jpg`,
-      `${SITE_URL}/og-image-square.jpg`,
-    ],
+    image: `${SITE_URL}/og-image.jpg`,
     description: 'Free EMI calculator for loans with year-wise breakdown, PDF export, and detailed amortization schedules',
-    sameAs: [
-      'https://www.facebook.com/emitools',
-      'https://twitter.com/emitools',
-      'https://www.linkedin.com/company/emitools',
-      'https://www.youtube.com/emitools',
-    ],
-    contact: {
+    contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'Customer Support',
-      email: 'support@emitools.com',
       url: `${SITE_URL}/contact`,
-      telephone: '+91-XXXXXXXXXX',
       availableLanguage: ['en', 'hi'],
     },
-    address: {
-      '@type': 'PostalAddress',
-      addressCountry: 'IN',
-      addressLocality: 'India',
-    },
-    foundingDate: '2025-01-01',
-    foundingLocation: 'India',
-    areaServed: ['IN', 'US', 'GB', 'AU'],
-    knowsAbout: ['EMI Calculation', 'Loan Management', 'Financial Planning'],
-    department: [
-      {
-        '@type': 'Organization',
-        name: 'Customer Support',
-      },
-    ],
+    areaServed: 'IN',
+    knowsAbout: ['EMI Calculation', 'Loan Management', 'Financial Planning', 'Tax Planning', 'Indian Banking'],
   }
 
   return (
@@ -221,9 +176,7 @@ export const ArticleSchema = ({
       name: 'EMI Tools',
       logo: {
         '@type': 'ImageObject',
-        url: `${SITE_URL}/logo.png`,
-        width: 200,
-        height: 50,
+        url: `${SITE_URL}/apple-touch-icon.png`,
       },
     },
     datePublished: datePublished,
@@ -238,31 +191,28 @@ export const ArticleSchema = ({
   )
 }
 
-export const LocalBusinessSchema = () => {
+export const HowToSchema = ({
+  name,
+  description,
+  steps,
+}: {
+  name: string
+  description: string
+  steps: { name: string; text: string }[]
+}) => {
   const schema = {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: 'EMI Tools Calculator',
-    description: 'Online loan EMI calculator service',
-    image: [`${SITE_URL}/og-image.jpg`, `${SITE_URL}/og-image-emi-calculator.svg`],
-    url: SITE_URL,
-    telephone: '+91-XXXXXXXXXX',
-    email: 'support@emitools.com',
-    address: {
-      '@type': 'PostalAddress',
-      addressCountry: 'IN',
-    },
-    areaServed: {
-      '@type': 'Country',
-      name: 'India',
-    },
-    priceRange: '$',
-    sameAs: [
-      'https://www.facebook.com/emitools',
-      'https://twitter.com/emitools',
-    ],
+    '@type': 'HowTo',
+    name,
+    description,
+    totalTime: 'PT1M',
+    step: steps.map((s, i) => ({
+      '@type': 'HowToStep',
+      position: i + 1,
+      name: s.name,
+      text: s.text,
+    })),
   }
-
   return (
     <script
       type="application/ld+json"
@@ -270,3 +220,6 @@ export const LocalBusinessSchema = () => {
     />
   )
 }
+
+// LocalBusinessSchema was removed — EMI Tools is an online service, not a local business.
+// Using LocalBusiness incorrectly can trigger structured-data penalties in Google Search Console.

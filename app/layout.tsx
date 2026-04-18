@@ -25,7 +25,6 @@ export const metadata: Metadata = {
     canonical: SITE_URL,
     languages: {
       'en-IN': SITE_URL,
-      'hi-IN': `${SITE_URL}/hi`,
       'x-default': SITE_URL,
     },
   },
@@ -161,7 +160,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* Alternate Language Links */}
         <link rel="alternate" hrefLang="en-IN" href={SITE_URL} />
-        <link rel="alternate" hrefLang="hi-IN" href={`${SITE_URL}/hi`} />
         <link rel="alternate" hrefLang="x-default" href={SITE_URL} />
 
         {/* Self-referential canonical */}

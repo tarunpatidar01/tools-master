@@ -48,9 +48,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        'en-IN': `${SITE_URL}/tools/${slug}?lang=en-in`,
-        'hi-IN': `${SITE_URL}/tools/${slug}?lang=hi-in`,
-        'en': canonicalUrl,
+        'en-IN': canonicalUrl,
         'x-default': canonicalUrl,
       },
     },
@@ -98,10 +96,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: `${tool.title} - Free Calculator`,
       description: tool.description,
       images: [ogImageUrl, ogEmiImage],
-      creator: '@emitools',
-      site: '@emitools',
-      siteId: '1234567890',
-      creatorId: '0987654321',
     },
     robots: {
       index: true,
@@ -119,7 +113,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     },
     verification: {
       google: process.env.GOOGLE_SITE_VERIFICATION || 'nBlk1diO030v9sQNDFG2fPVQxyY9NHZhdJeSWJ3UAPI',
-      yandex: 'yandex-verification-code-here',
     },
   };
 }

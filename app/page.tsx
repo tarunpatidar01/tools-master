@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Sidebar from '@/app/components/Sidebar';
 import ToolSearch from '@/app/components/ToolSearch';
 import LanguageToggle from '@/app/components/LanguageToggle';
-import { FAQSchema, SoftwareApplicationSchema, OrganizationSchema, BreadcrumbSchema, LocalBusinessSchema } from '@/app/components/SchemaMarkup';
+import { FAQSchema, SoftwareApplicationSchema, OrganizationSchema, BreadcrumbSchema } from '@/app/components/SchemaMarkup';
 import SocialShare from '@/app/components/SocialShare';
 import { getAllTools } from '@/lib/seo';
 import en from '@/i18n/en.json';
@@ -255,7 +255,6 @@ export default function HomePage() {
       <SoftwareApplicationSchema />
       <OrganizationSchema />
       <BreadcrumbSchema items={[{ name: 'Home', url: SITE_URL }]} />
-      <LocalBusinessSchema />
     </>
   );
 }

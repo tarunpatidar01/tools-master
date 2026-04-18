@@ -17,5 +17,12 @@ export const searchTools = (query: string) => {
   ));
 };
 
-export const getCategories = () => 
+export const getCategories = () =>
   Array.from(new Set(tools.map(tool => tool.category))).sort();
+
+export const getRelatedTools = (slug: string, limit = 6) => {
+  const current = tools.find(t => t.slug === slug);
+  if (!current) return [];
+  return sortBySearches(tools.filter(t => t.slug !== slug && t.category === current.category))
+    .slice(0, limit);
+};

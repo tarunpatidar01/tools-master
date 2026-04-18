@@ -23,6 +23,46 @@
         {
           "heading": "EMI Calculation Formula",
           "content": "The EMI is calculated using the reducing balance method with the formula: EMI = P × R × (1 + R)^N / ((1 + R)^N − 1), where P is the principal, R is the monthly interest rate, and N is the number of months. This formula ensures you pay interest only on the remaining balance each month."
+        },
+        {
+          "heading": "Why your EMI matters — planning, not just paying",
+          "content": "The EMI you commit to decides how much of your income is locked for the next 3, 5, or 20 years. Most financial advisors recommend keeping all EMIs combined under 40% of net monthly income, and home-loan EMI specifically under 30%. Before any loan, run three scenarios in this calculator: optimistic (current income), conservative (80% income), and crisis (50% income). If the EMI still fits the crisis scenario, the loan is safe. If it only fits the optimistic scenario, you are one job loss away from default."
+        },
+        {
+          "heading": "Interest rate — the biggest lever",
+          "content": "Interest rate has the largest impact on total cost. On a Rs. 30 lakh home loan for 20 years, the difference between 8% and 9% is roughly Rs. 4.3 lakh in total interest — enough to buy a small car. Even 0.25% matters. When comparing loans, always look at the Annual Percentage Rate (APR) that includes processing fees and insurance, not just the headline interest rate. A 8.5% loan with 1% fee often costs more than an 8.75% loan with zero fee."
+        },
+        {
+          "heading": "Tenure — the hidden trap",
+          "content": "Lenders love long tenures because they maximize interest revenue. A 30-year home loan has a barely-lower EMI than a 20-year loan but costs 70% to 100% more in total interest. Example: Rs. 30 lakh at 8.5% — 20-year EMI is Rs. 26,035 with total interest of Rs. 32.5 lakh; 30-year EMI is Rs. 23,070 with total interest of Rs. 53 lakh. The Rs. 3,000 monthly saving costs you Rs. 20.5 lakh over the loan. Choose the shortest tenure your budget can support."
+        },
+        {
+          "heading": "Amortization — why early EMIs are mostly interest",
+          "content": "In the first year of a 20-year home loan at 8.5%, roughly 82% of each EMI goes to interest and only 18% reduces principal. By year 10, the split is nearly 50-50. By year 19, almost the full EMI is principal. This front-loaded interest structure is why prepayments in the first 5 to 7 years save dramatically more interest than later prepayments. Our calculator shows this breakdown month by month so you can plan prepayments strategically."
+        },
+        {
+          "heading": "How prepayments save massive interest",
+          "content": "A one-time Rs. 2 lakh prepayment on a Rs. 30 lakh, 20-year, 8.5% home loan in year 2 saves about Rs. 4.5 lakh in total interest and shortens the loan by 2 years. The same prepayment in year 15 saves only Rs. 40,000. Annual prepayment of just one extra EMI typically cuts 4 to 5 years off a 20-year loan. Use our calculator to test different prepayment schedules and see exact interest savings."
+        },
+        {
+          "heading": "Fixed vs floating interest rates",
+          "content": "Fixed-rate loans lock the rate for the full tenure (or a portion). Floating-rate loans reset every 3 months based on the lender's external benchmark (usually the RBI repo rate). Fixed rates are typically 1% to 2% higher than floating at the start. In a rising-rate environment, fixed looks attractive; in a falling-rate environment, floating wins. Most home loans in India are floating. Short-term personal and car loans are usually fixed."
+        },
+        {
+          "heading": "Processing fees and hidden costs",
+          "content": "Typical processing fee on a home loan is 0.25% to 1% of the loan amount. Car and personal loans charge 1% to 3%. Additional costs can include legal appraisal fees, stamp duty on the mortgage deed, insurance premium, and convenience charges. Always ask the lender for the total outgo before disbursement — the real cost can be 1% to 2% higher than the interest rate alone suggests."
+        },
+        {
+          "heading": "Credit score — the rate you are offered",
+          "content": "Your CIBIL score directly affects the interest rate you get. A score above 800 usually gets the lowest advertised rate. 750 to 800 gets standard pricing. 700 to 750 may add 0.5% to 1%. Below 700, many banks decline, and NBFCs charge 2% to 4% extra. Before applying, check your score for free (CIBIL, Equifax, Experian provide one free report per year) and fix any errors. Bringing your score from 720 to 780 can save Rs. 3 to 5 lakh on a typical home loan."
+        },
+        {
+          "heading": "Top-up, balance transfer, and refinance",
+          "content": "If you are in the first half of your loan tenure and another bank offers a 0.5% lower rate, a balance transfer can save lakhs even after paying the transfer fees. A top-up loan is an additional loan against an existing home loan at nearly the same rate — cheaper than a personal loan. Refinancing into a lower-rate loan 5 to 10 years into a 20-year mortgage is one of the highest-ROI financial moves most homeowners can make."
+        },
+        {
+          "heading": "Calculator limitations and real-world adjustments",
+          "content": "This calculator uses standard formulas, but real EMIs can differ slightly due to lender-specific compounding conventions, rounding rules, and the exact date of disbursement. For under-construction properties, pre-EMI interest during construction adds to your cash outflow. For step-up loans (EMI increases yearly), use the step-up variant. For loans with moratoriums, interest accrues during the moratorium and is capitalized. Always match the calculator output against the lender's Sanction Letter before signing."
         }
       ],
       "faq": [
@@ -180,6 +220,24 @@
           "heading": "Personal Loan for Debt Consolidation",
           "content": "Use personal loans to consolidate multiple high-interest debts like credit cards. A personal loan at 12% can replace credit card debt at 24-36%, significantly reducing total interest and monthly commitment. Consolidating multiple debts into one EMI simplifies financial management. Calculate potential savings using our EMI calculator."
         }
+      ],
+      "faq": [
+        {
+          "question": "Is the Personal Loan EMI Calculator free to use?",
+          "answer": "Yes, the Personal Loan EMI Calculator is 100% free with no signup, no hidden charges, and no usage limits. It works on mobile and desktop."
+        },
+        {
+          "question": "How accurate is this Personal Loan EMI Calculator?",
+          "answer": "Results are calculated using standard formulas used by Indian banks and financial institutions. The output is accurate for planning and comparison, though actual amounts may vary slightly based on bank-specific rounding, processing fees, and other charges."
+        },
+        {
+          "question": "Do I need to download any software?",
+          "answer": "No. The Personal Loan EMI Calculator runs entirely in your browser. There is no app to install, no signup, and nothing to download. Your inputs stay on your device."
+        },
+        {
+          "question": "Can I use the Personal Loan EMI Calculator on mobile?",
+          "answer": "Yes, the tool is fully responsive and designed to work on any smartphone or tablet as well as desktops. All features including charts and detailed breakdowns work on mobile."
+        }
       ]
     }
   },
@@ -243,6 +301,24 @@
         {
           "heading": "SBI Customer Service",
           "content": "SBI is known for excellent customer service with branches across India. You can visit your nearest SBI branch for any loan-related queries. SBI provides online support through their website and mobile app. Customer care is available 24/7 for assistance. SBI has a strong reputation for transparent dealings and customer satisfaction."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Is the SBI EMI Calculator free to use?",
+          "answer": "Yes, the SBI EMI Calculator is 100% free with no signup, no hidden charges, and no usage limits. It works on mobile and desktop."
+        },
+        {
+          "question": "How accurate is this SBI EMI Calculator?",
+          "answer": "Results are calculated using standard formulas used by Indian banks and financial institutions. The output is accurate for planning and comparison, though actual amounts may vary slightly based on bank-specific rounding, processing fees, and other charges."
+        },
+        {
+          "question": "Do I need to download any software?",
+          "answer": "No. The SBI EMI Calculator runs entirely in your browser. There is no app to install, no signup, and nothing to download. Your inputs stay on your device."
+        },
+        {
+          "question": "Can I use the SBI EMI Calculator on mobile?",
+          "answer": "Yes, the tool is fully responsive and designed to work on any smartphone or tablet as well as desktops. All features including charts and detailed breakdowns work on mobile."
         }
       ]
     }
@@ -308,6 +384,24 @@
           "heading": "Education Loan vs Scholarship",
           "content": "Scholarships are grants that don't require repayment, making them superior to loans. Apply for scholarships first. Education loans are the next option to cover remaining expenses. Many students use a combination of scholarships and loans to manage education costs efficiently. Calculate remaining expenses and borrow only necessary amount."
         }
+      ],
+      "faq": [
+        {
+          "question": "Is the Education Loan EMI Calculator free to use?",
+          "answer": "Yes, the Education Loan EMI Calculator is 100% free with no signup, no hidden charges, and no usage limits. It works on mobile and desktop."
+        },
+        {
+          "question": "How accurate is this Education Loan EMI Calculator?",
+          "answer": "Results are calculated using standard formulas used by Indian banks and financial institutions. The output is accurate for planning and comparison, though actual amounts may vary slightly based on bank-specific rounding, processing fees, and other charges."
+        },
+        {
+          "question": "Do I need to download any software?",
+          "answer": "No. The Education Loan EMI Calculator runs entirely in your browser. There is no app to install, no signup, and nothing to download. Your inputs stay on your device."
+        },
+        {
+          "question": "Can I use the Education Loan EMI Calculator on mobile?",
+          "answer": "Yes, the tool is fully responsive and designed to work on any smartphone or tablet as well as desktops. All features including charts and detailed breakdowns work on mobile."
+        }
       ]
     }
   },
@@ -371,6 +465,24 @@
         {
           "heading": "Digital Gold Loans",
           "content": "Some fintech companies and NBFCs offer digital gold loans through mobile apps. These provide faster processing and disbursement. Interest rates are competitive but may be slightly higher than traditional banks. Digital platforms offer convenience and transparency. Check ratings and credentials before applying with digital lenders."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Is the Gold Loan EMI Calculator free to use?",
+          "answer": "Yes, the Gold Loan EMI Calculator is 100% free with no signup, no hidden charges, and no usage limits. It works on mobile and desktop."
+        },
+        {
+          "question": "How accurate is this Gold Loan EMI Calculator?",
+          "answer": "Results are calculated using standard formulas used by Indian banks and financial institutions. The output is accurate for planning and comparison, though actual amounts may vary slightly based on bank-specific rounding, processing fees, and other charges."
+        },
+        {
+          "question": "Do I need to download any software?",
+          "answer": "No. The Gold Loan EMI Calculator runs entirely in your browser. There is no app to install, no signup, and nothing to download. Your inputs stay on your device."
+        },
+        {
+          "question": "Can I use the Gold Loan EMI Calculator on mobile?",
+          "answer": "Yes, the tool is fully responsive and designed to work on any smartphone or tablet as well as desktops. All features including charts and detailed breakdowns work on mobile."
         }
       ]
     }
@@ -436,6 +548,24 @@
           "heading": "Fuel Efficiency Impact",
           "content": "Vehicle fuel efficiency directly impacts ownership costs. Fuel-efficient vehicles have lower running costs. While fuel-efficient vehicles may have slightly higher purchase price, long-term savings are significant. Electric vehicles have lowest running costs but higher initial cost. Consider fuel costs along with EMI in your decision."
         }
+      ],
+      "faq": [
+        {
+          "question": "Is the Vehicle Loan Calculator free to use?",
+          "answer": "Yes, the Vehicle Loan Calculator is 100% free with no signup, no hidden charges, and no usage limits. It works on mobile and desktop."
+        },
+        {
+          "question": "How accurate is this Vehicle Loan Calculator?",
+          "answer": "Results are calculated using standard formulas used by Indian banks and financial institutions. The output is accurate for planning and comparison, though actual amounts may vary slightly based on bank-specific rounding, processing fees, and other charges."
+        },
+        {
+          "question": "Do I need to download any software?",
+          "answer": "No. The Vehicle Loan Calculator runs entirely in your browser. There is no app to install, no signup, and nothing to download. Your inputs stay on your device."
+        },
+        {
+          "question": "Can I use the Vehicle Loan Calculator on mobile?",
+          "answer": "Yes, the tool is fully responsive and designed to work on any smartphone or tablet as well as desktops. All features including charts and detailed breakdowns work on mobile."
+        }
       ]
     }
   },
@@ -499,6 +629,24 @@
         {
           "heading": "Axis Bank Customer Benefits",
           "content": "Axis Bank salary account customers get preferential interest rates and waived processing fees. Credit card holders get priority in loan approval and better rates. Existing deposit customers get attractive offers on new loans. Bundling loans with Axis Bank accounts maximizes benefits and savings."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Is the Axis Bank Loan EMI Calculator free to use?",
+          "answer": "Yes, the Axis Bank Loan EMI Calculator is 100% free with no signup, no hidden charges, and no usage limits. It works on mobile and desktop."
+        },
+        {
+          "question": "How accurate is this Axis Bank Loan EMI Calculator?",
+          "answer": "Results are calculated using standard formulas used by Indian banks and financial institutions. The output is accurate for planning and comparison, though actual amounts may vary slightly based on bank-specific rounding, processing fees, and other charges."
+        },
+        {
+          "question": "Do I need to download any software?",
+          "answer": "No. The Axis Bank Loan EMI Calculator runs entirely in your browser. There is no app to install, no signup, and nothing to download. Your inputs stay on your device."
+        },
+        {
+          "question": "Can I use the Axis Bank Loan EMI Calculator on mobile?",
+          "answer": "Yes, the tool is fully responsive and designed to work on any smartphone or tablet as well as desktops. All features including charts and detailed breakdowns work on mobile."
         }
       ]
     }
@@ -564,6 +712,20 @@
           "heading": "Practical Simple Interest Examples",
           "content": "Example 1: Loan of Rs. 50,000 at 10% p.a. for 3 years. SI = 50,000 × 10 × 3 / 100 = Rs. 15,000. Total = Rs. 65,000. Example 2: FD of Rs. 1 lakh at 6% p.a. for 2 years. SI = 1,00,000 × 6 × 2 / 100 = Rs. 12,000. Maturity = Rs. 1,12,000."
         }
+      ],
+      "faq": [
+        {
+          "question": "What is simple interest?",
+          "answer": "Simple interest is calculated only on the original principal throughout the term. Formula: SI = P × R × T ÷ 100, where P is principal, R is annual rate, and T is time in years."
+        },
+        {
+          "question": "Where is simple interest used?",
+          "answer": "Simple interest is common in short-term loans, some government securities, cash credit facilities, and certain student loans. Most consumer loans in India use reducing balance (compound) interest."
+        },
+        {
+          "question": "Is simple interest better than compound interest for borrowers?",
+          "answer": "Yes — for the same rate and tenure, simple interest costs less than compound interest. But few modern loans use simple interest, so this mostly applies to short-term or specialty products."
+        }
       ]
     }
   },
@@ -627,6 +789,20 @@
         {
           "heading": "Practical Compound Interest Examples",
           "content": "Example 1: Invest Rs. 10,000 at 8% p.a. compounded annually for 10 years. A = 10,000(1.08)^10 = Rs. 21,589. CI = Rs. 11,589. Example 2: Borrow Rs. 1 lakh at 15% p.a. compounded monthly for 5 years. A = 100,000(1.0125)^60 = Rs. 2,11,383. Total interest = Rs. 1,11,383."
+        }
+      ],
+      "faq": [
+        {
+          "question": "What is compound interest?",
+          "answer": "Compound interest is interest on the principal plus all previously accumulated interest. Formula: A = P × (1 + r/n)^(n × t), where P is principal, r is annual rate, n is compounding frequency, and t is years."
+        },
+        {
+          "question": "How does compounding frequency affect returns?",
+          "answer": "More frequent compounding (monthly vs yearly) produces higher returns for the same annual rate. An 8% rate compounded monthly yields an effective 8.30% annual return, compared to 8% with yearly compounding."
+        },
+        {
+          "question": "Why is compound interest called the eighth wonder?",
+          "answer": "Because it produces exponential (not linear) growth. Rs. 10,000 invested at 12% grows to Rs. 31,000 in 10 years, Rs. 97,000 in 20 years, and Rs. 3 lakh in 30 years — tripling in each successive decade."
         }
       ]
     }
@@ -692,6 +868,24 @@
           "heading": "Advantages of Bike Loans",
           "content": "Quick approval and disbursement within 24-48 hours. Minimal documentation compared to car loans. Lower interest rates than personal loans. Flexible tenure options. Fixed EMI makes budgeting easy. Penalty-free prepayment possible. Bike loans are ideal for affordable personal transportation."
         }
+      ],
+      "faq": [
+        {
+          "question": "Is the Bike Loan EMI Calculator free to use?",
+          "answer": "Yes, the Bike Loan EMI Calculator is 100% free with no signup, no hidden charges, and no usage limits. It works on mobile and desktop."
+        },
+        {
+          "question": "How accurate is this Bike Loan EMI Calculator?",
+          "answer": "Results are calculated using standard formulas used by Indian banks and financial institutions. The output is accurate for planning and comparison, though actual amounts may vary slightly based on bank-specific rounding, processing fees, and other charges."
+        },
+        {
+          "question": "Do I need to download any software?",
+          "answer": "No. The Bike Loan EMI Calculator runs entirely in your browser. There is no app to install, no signup, and nothing to download. Your inputs stay on your device."
+        },
+        {
+          "question": "Can I use the Bike Loan EMI Calculator on mobile?",
+          "answer": "Yes, the tool is fully responsive and designed to work on any smartphone or tablet as well as desktops. All features including charts and detailed breakdowns work on mobile."
+        }
       ]
     }
   },
@@ -755,6 +949,24 @@
         {
           "heading": "HDFC Bank Loan Products Comparison",
           "content": "HDFC Bank offers tailored solutions for different financial needs. Home loans for property purchase, car loans for vehicles, personal loans for flexible usage, education loans for studies. Each product has specific terms, rates, and features. Assess your requirement and choose the appropriate product for best value."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Is the HDFC Bank Loan EMI Calculator free to use?",
+          "answer": "Yes, the HDFC Bank Loan EMI Calculator is 100% free with no signup, no hidden charges, and no usage limits. It works on mobile and desktop."
+        },
+        {
+          "question": "How accurate is this HDFC Bank Loan EMI Calculator?",
+          "answer": "Results are calculated using standard formulas used by Indian banks and financial institutions. The output is accurate for planning and comparison, though actual amounts may vary slightly based on bank-specific rounding, processing fees, and other charges."
+        },
+        {
+          "question": "Do I need to download any software?",
+          "answer": "No. The HDFC Bank Loan EMI Calculator runs entirely in your browser. There is no app to install, no signup, and nothing to download. Your inputs stay on your device."
+        },
+        {
+          "question": "Can I use the HDFC Bank Loan EMI Calculator on mobile?",
+          "answer": "Yes, the tool is fully responsive and designed to work on any smartphone or tablet as well as desktops. All features including charts and detailed breakdowns work on mobile."
         }
       ]
     }
@@ -820,6 +1032,24 @@
           "heading": "ICICI Bank Loan Products",
           "content": "ICICI Bank offers diverse loan products for different requirements. Home loans for property purchase, car loans for vehicles, personal loans for flexible usage, education loans for higher studies. Business loans for entrepreneurship. Carefully assess your need and choose appropriate product for optimal benefits."
         }
+      ],
+      "faq": [
+        {
+          "question": "Is the ICICI Bank Loan EMI Calculator free to use?",
+          "answer": "Yes, the ICICI Bank Loan EMI Calculator is 100% free with no signup, no hidden charges, and no usage limits. It works on mobile and desktop."
+        },
+        {
+          "question": "How accurate is this ICICI Bank Loan EMI Calculator?",
+          "answer": "Results are calculated using standard formulas used by Indian banks and financial institutions. The output is accurate for planning and comparison, though actual amounts may vary slightly based on bank-specific rounding, processing fees, and other charges."
+        },
+        {
+          "question": "Do I need to download any software?",
+          "answer": "No. The ICICI Bank Loan EMI Calculator runs entirely in your browser. There is no app to install, no signup, and nothing to download. Your inputs stay on your device."
+        },
+        {
+          "question": "Can I use the ICICI Bank Loan EMI Calculator on mobile?",
+          "answer": "Yes, the tool is fully responsive and designed to work on any smartphone or tablet as well as desktops. All features including charts and detailed breakdowns work on mobile."
+        }
       ]
     }
   },
@@ -884,6 +1114,24 @@
           "heading": "Improving Loan Eligibility",
           "content": "Improve credit score to 750+ by paying bills on time. Reduce existing loan obligations. Increase monthly income through salary increase or additional income. Add co-applicant with good income and credit. Maintain low credit card utilization below 30%. Wait before applying after defaulting on previous loans."
         }
+      ],
+      "faq": [
+        {
+          "question": "Is the Loan Amount Calculator free to use?",
+          "answer": "Yes, the Loan Amount Calculator is 100% free with no signup, no hidden charges, and no usage limits. It works on mobile and desktop."
+        },
+        {
+          "question": "How accurate is this Loan Amount Calculator?",
+          "answer": "Results are calculated using standard formulas used by Indian banks and financial institutions. The output is accurate for planning and comparison, though actual amounts may vary slightly based on bank-specific rounding, processing fees, and other charges."
+        },
+        {
+          "question": "Do I need to download any software?",
+          "answer": "No. The Loan Amount Calculator runs entirely in your browser. There is no app to install, no signup, and nothing to download. Your inputs stay on your device."
+        },
+        {
+          "question": "Can I use the Loan Amount Calculator on mobile?",
+          "answer": "Yes, the tool is fully responsive and designed to work on any smartphone or tablet as well as desktops. All features including charts and detailed breakdowns work on mobile."
+        }
       ]
     }
   },
@@ -911,6 +1159,24 @@
         {
           "heading": "Eligibility Factors",
           "content": "Your loan eligibility depends on monthly income, existing debt obligations, age, employment type, credit score, and property value. Banks typically allow EMI up to 40-50% of monthly income. Lower existing debts increase your borrowing capacity."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Is the Loan Eligibility Calculator free to use?",
+          "answer": "Yes, the Loan Eligibility Calculator is 100% free with no signup, no hidden charges, and no usage limits. It works on mobile and desktop."
+        },
+        {
+          "question": "How accurate is this Loan Eligibility Calculator?",
+          "answer": "Results are calculated using standard formulas used by Indian banks and financial institutions. The output is accurate for planning and comparison, though actual amounts may vary slightly based on bank-specific rounding, processing fees, and other charges."
+        },
+        {
+          "question": "Do I need to download any software?",
+          "answer": "No. The Loan Eligibility Calculator runs entirely in your browser. There is no app to install, no signup, and nothing to download. Your inputs stay on your device."
+        },
+        {
+          "question": "Can I use the Loan Eligibility Calculator on mobile?",
+          "answer": "Yes, the tool is fully responsive and designed to work on any smartphone or tablet as well as desktops. All features including charts and detailed breakdowns work on mobile."
         }
       ]
     }
@@ -940,6 +1206,24 @@
           "heading": "How EMI is Calculated",
           "content": "Credit card EMI is calculated using the reducing balance method similar to regular loans. The interest rate varies from 12% to 18% annually depending on the card issuer. Promotional offers may provide zero-interest EMI for limited periods. Calculate your exact EMI using our credit card EMI calculator for accurate estimates."
         }
+      ],
+      "faq": [
+        {
+          "question": "Is the Credit Card EMI Calculator free to use?",
+          "answer": "Yes, the Credit Card EMI Calculator is 100% free with no signup, no hidden charges, and no usage limits. It works on mobile and desktop."
+        },
+        {
+          "question": "How accurate is this Credit Card EMI Calculator?",
+          "answer": "Results are calculated using standard formulas used by Indian banks and financial institutions. The output is accurate for planning and comparison, though actual amounts may vary slightly based on bank-specific rounding, processing fees, and other charges."
+        },
+        {
+          "question": "Do I need to download any software?",
+          "answer": "No. The Credit Card EMI Calculator runs entirely in your browser. There is no app to install, no signup, and nothing to download. Your inputs stay on your device."
+        },
+        {
+          "question": "Can I use the Credit Card EMI Calculator on mobile?",
+          "answer": "Yes, the tool is fully responsive and designed to work on any smartphone or tablet as well as desktops. All features including charts and detailed breakdowns work on mobile."
+        }
       ]
     }
   },
@@ -967,6 +1251,24 @@
         {
           "heading": "How to Use the Tool",
           "content": "Enter your investment amount, expected annual return rate, and investment tenure. This tool compounds your returns annually and shows the future value. Understand how your one-time investment grows over different time periods and return rates."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Is the Lumpsum Investment Calculator free to use?",
+          "answer": "Yes, the Lumpsum Investment Calculator is 100% free with no signup, no hidden charges, and no usage limits. It works on mobile and desktop."
+        },
+        {
+          "question": "How accurate is this Lumpsum Investment Calculator?",
+          "answer": "Results are calculated using standard formulas used by Indian banks and financial institutions. The output is accurate for planning and comparison, though actual amounts may vary slightly based on bank-specific rounding, processing fees, and other charges."
+        },
+        {
+          "question": "Do I need to download any software?",
+          "answer": "No. The Lumpsum Investment Calculator runs entirely in your browser. There is no app to install, no signup, and nothing to download. Your inputs stay on your device."
+        },
+        {
+          "question": "Can I use the Lumpsum Investment Calculator on mobile?",
+          "answer": "Yes, the tool is fully responsive and designed to work on any smartphone or tablet as well as desktops. All features including charts and detailed breakdowns work on mobile."
         }
       ]
     }
@@ -996,6 +1298,24 @@
           "heading": "Calculating Fund Returns",
           "content": "Enter your investment amount or monthly SIP, expected annual return based on fund type, and investment period. The calculator shows projected future value, total gains, and CAGR (Compound Annual Growth Rate). Adjust return rates based on historical fund performance for realistic estimates."
         }
+      ],
+      "faq": [
+        {
+          "question": "Is the Mutual Fund Return Calculator free to use?",
+          "answer": "Yes, the Mutual Fund Return Calculator is 100% free with no signup, no hidden charges, and no usage limits. It works on mobile and desktop."
+        },
+        {
+          "question": "How accurate is this Mutual Fund Return Calculator?",
+          "answer": "Results are calculated using standard formulas used by Indian banks and financial institutions. The output is accurate for planning and comparison, though actual amounts may vary slightly based on bank-specific rounding, processing fees, and other charges."
+        },
+        {
+          "question": "Do I need to download any software?",
+          "answer": "No. The Mutual Fund Return Calculator runs entirely in your browser. There is no app to install, no signup, and nothing to download. Your inputs stay on your device."
+        },
+        {
+          "question": "Can I use the Mutual Fund Return Calculator on mobile?",
+          "answer": "Yes, the tool is fully responsive and designed to work on any smartphone or tablet as well as desktops. All features including charts and detailed breakdowns work on mobile."
+        }
       ]
     }
   },
@@ -1023,6 +1343,24 @@
         {
           "heading": "How to Calculate RD Returns",
           "content": "Enter your monthly deposit amount, interest rate, and tenure period. The calculator compounds interest on each deposit and shows total maturity value. Understanding expected returns helps in planning your financial goals through consistent savings."
+        }
+      ],
+      "faq": [
+        {
+          "question": "What is a Recurring Deposit (RD)?",
+          "answer": "An RD is a savings scheme where you deposit a fixed amount every month for a chosen tenure (6 months to 10 years) and receive the principal plus compounded interest at maturity."
+        },
+        {
+          "question": "How is RD interest calculated?",
+          "answer": "RD interest is compounded quarterly on each monthly installment. Maturity value = sum of ((each installment × (1 + r/4)^(4 × remaining years))). Our calculator automates this for any RD amount, rate, and tenure."
+        },
+        {
+          "question": "Is RD better than FD?",
+          "answer": "RDs suit people with monthly surplus wanting to build a corpus; FDs suit those with a lump sum. Effective RD returns are slightly lower than FDs because most of your money is invested for less time."
+        },
+        {
+          "question": "Can I withdraw RD early?",
+          "answer": "Yes, with a penalty. Early closure usually reduces the interest rate by 0.5% to 1%. Some banks allow partial withdrawal; most require full closure."
         }
       ]
     }
@@ -1052,6 +1390,24 @@
           "heading": "Using this Tool",
           "content": "Enter your current age, retirement age, monthly contribution, and expected annual return rate based on asset allocation. The tool shows your retirement corpus, expected pension amount from annuity, and total income. Adjust contributions to meet retirement goals."
         }
+      ],
+      "faq": [
+        {
+          "question": "What is NPS?",
+          "answer": "NPS (National Pension System) is a government-backed retirement savings scheme regulated by PFRDA. It invests contributions across equity, corporate debt, and government securities based on your chosen allocation."
+        },
+        {
+          "question": "What is the tax benefit of NPS?",
+          "answer": "NPS contributions qualify under Section 80C (within the Rs. 1.5 lakh limit) plus an additional Rs. 50,000 deduction under Section 80CCD(1B). Employer NPS contributions up to 10% of basic salary qualify under 80CCD(2), over and above."
+        },
+        {
+          "question": "When can I withdraw from NPS?",
+          "answer": "At age 60, you can withdraw up to 60% of the corpus tax-free as lump sum; the remaining 40% must be used to buy an annuity. Partial early withdrawal is allowed after 3 years for specified purposes (education, housing, medical)."
+        },
+        {
+          "question": "What return does NPS offer?",
+          "answer": "Long-term NPS returns depend on your asset allocation. Equity-heavy portfolios (up to 75% equity) have historically returned 10% to 12% annually. Government-security-heavy portfolios return 7% to 9%."
+        }
       ]
     }
   },
@@ -1080,6 +1436,24 @@
           "heading": "Using this Tool",
           "content": "Enter your basic salary, dearness allowance, years of completed service, and separation date. This tool shows your gratuity amount based on the legal formula. Helps you understand retirement benefits and plan post-retirement finances."
         }
+      ],
+      "faq": [
+        {
+          "question": "Is the Gratuity Calculator free to use?",
+          "answer": "Yes, the Gratuity Calculator is 100% free with no signup, no hidden charges, and no usage limits. It works on mobile and desktop."
+        },
+        {
+          "question": "How accurate is this Gratuity Calculator?",
+          "answer": "Results are calculated using standard formulas used by Indian banks and financial institutions. The output is accurate for planning and comparison, though actual amounts may vary slightly based on bank-specific rounding, processing fees, and other charges."
+        },
+        {
+          "question": "Do I need to download any software?",
+          "answer": "No. The Gratuity Calculator runs entirely in your browser. There is no app to install, no signup, and nothing to download. Your inputs stay on your device."
+        },
+        {
+          "question": "Can I use the Gratuity Calculator on mobile?",
+          "answer": "Yes, the tool is fully responsive and designed to work on any smartphone or tablet as well as desktops. All features including charts and detailed breakdowns work on mobile."
+        }
       ]
     }
   },
@@ -1107,6 +1481,24 @@
         {
           "heading": "Calculating HRA Exemption",
           "content": "Enter your basic salary, dearness allowance, HRA received, actual monthly rent, and city type. The calculator shows your HRA exemption amount and taxable HRA. Helps in understanding your tax liability and planning deductions effectively."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Is the HRA Calculator free to use?",
+          "answer": "Yes, the HRA Calculator is 100% free with no signup, no hidden charges, and no usage limits. It works on mobile and desktop."
+        },
+        {
+          "question": "How accurate is this HRA Calculator?",
+          "answer": "Results are calculated using standard formulas used by Indian banks and financial institutions. The output is accurate for planning and comparison, though actual amounts may vary slightly based on bank-specific rounding, processing fees, and other charges."
+        },
+        {
+          "question": "Do I need to download any software?",
+          "answer": "No. The HRA Calculator runs entirely in your browser. There is no app to install, no signup, and nothing to download. Your inputs stay on your device."
+        },
+        {
+          "question": "Can I use the HRA Calculator on mobile?",
+          "answer": "Yes, the tool is fully responsive and designed to work on any smartphone or tablet as well as desktops. All features including charts and detailed breakdowns work on mobile."
         }
       ]
     }
@@ -1168,6 +1560,24 @@
           "heading": "Tax Benefits on Car Loan",
           "content": "Car loans do not offer tax benefits for salaried individuals using the car for personal purposes. However, self-employed professionals, freelancers, and business owners can claim interest paid on a car loan as a business expense, and also claim depreciation on the vehicle under the Income Tax Act. This effectively reduces the cost of owning the car. Consult a chartered accountant for exact eligibility in your case."
         }
+      ],
+      "faq": [
+        {
+          "question": "What is the minimum down payment for a car loan?",
+          "answer": "Most banks require 10% to 20% of the on-road price as down payment. Some banks offer 100% financing to salaried customers with strong credit profiles, but at a slightly higher interest rate."
+        },
+        {
+          "question": "What is the typical car loan interest rate?",
+          "answer": "Car loan rates in 2026 range from 8.5% to 12% per annum. Public-sector banks offer the lowest rates starting around 8.75%, while NBFCs charge 11% to 14%."
+        },
+        {
+          "question": "Can I prepay my car loan without penalty?",
+          "answer": "RBI has restricted prepayment penalties on floating-rate loans to individual borrowers. Fixed-rate car loans may still carry a 2% to 5% prepayment charge. Most banks allow partial prepayment after 6 months."
+        },
+        {
+          "question": "Is a car loan EMI tax-deductible?",
+          "answer": "Not for salaried individuals using the car for personal purposes. Self-employed professionals can claim the interest as a business expense and also claim depreciation on the vehicle, reducing the effective cost substantially."
+        }
       ]
     }
   },
@@ -1227,6 +1637,24 @@
         {
           "heading": "Personal Loan vs Credit Card EMI vs Gold Loan",
           "content": "Personal loans at 10.5%–18% are cheaper than credit card EMIs at 24%–42%. Gold loans at 8.5%–14% are even cheaper because they are secured against gold. For an emergency that you can repay in 3–6 months, a credit card can be fine. For 1 to 5-year needs, a personal loan is usually best. If you have gold, a gold loan gives the lowest rate with fast disbursal."
+        }
+      ],
+      "faq": [
+        {
+          "question": "What is the interest rate for a personal loan?",
+          "answer": "Personal loan rates range from 10.5% to 24% per annum. Top banks like SBI, HDFC, ICICI, and Axis offer 10.5% to 15% for salaried applicants with a credit score above 750. NBFCs and fintech lenders charge 15% to 24%."
+        },
+        {
+          "question": "What is the maximum personal loan tenure?",
+          "answer": "Personal loans typically offer tenures of 12 to 60 months (sometimes up to 7 years). A shorter tenure means higher EMI but substantially lower total interest."
+        },
+        {
+          "question": "Can I get a personal loan with a low credit score?",
+          "answer": "A credit score above 750 gets the best rates. Scores between 700 and 750 get standard rates. Below 700, most banks reject the application or offer loans at a 2% to 4% higher rate via NBFCs."
+        },
+        {
+          "question": "Are there prepayment charges on personal loans?",
+          "answer": "RBI has prohibited prepayment penalties on floating-rate personal loans to individuals. Fixed-rate loans may still carry a 2% to 5% charge. Prepaying early in the tenure saves the most interest."
         }
       ]
     }
@@ -1288,6 +1716,24 @@
           "heading": "Long-Term Wealth Creation with SIP",
           "content": "The real power of SIP shows up after 10 years. A Rs. 5,000 monthly SIP at 12% becomes about Rs. 11.6 lakh in 10 years, Rs. 50 lakh in 20 years, and Rs. 1.7 crore in 30 years — your total contribution is only Rs. 18 lakh. The lesson: time in the market matters far more than timing the market. Start as early as possible, stay consistent, and let compounding do the heavy lifting."
         }
+      ],
+      "faq": [
+        {
+          "question": "What is the minimum SIP amount?",
+          "answer": "Most mutual fund SIPs start at Rs. 500 per month. Some funds allow SIPs as low as Rs. 100. There is no upper limit."
+        },
+        {
+          "question": "What return should I assume in a SIP calculator?",
+          "answer": "For equity mutual fund SIPs, use 11% to 13% as a long-term expected return. For debt fund SIPs, use 6% to 8%. For hybrid funds, 9% to 11%. Past returns are not guaranteed."
+        },
+        {
+          "question": "How is SIP different from lump sum investing?",
+          "answer": "A SIP invests a fixed amount monthly, averaging cost over time (rupee-cost averaging). A lump sum invests everything at once, which earns more if markets rise but loses more if they fall. SIPs are better for volatile markets and disciplined investing."
+        },
+        {
+          "question": "Are SIP returns taxable?",
+          "answer": "Equity mutual fund gains held beyond 12 months are taxed at 12.5% LTCG beyond Rs. 1.25 lakh per year. Short-term gains are taxed at 20%. Debt fund SIP gains are taxed at your income-tax slab rate."
+        }
       ]
     }
   },
@@ -1347,6 +1793,24 @@
         {
           "heading": "How to Maximize FD Returns",
           "content": "Ladder your FDs — split the total amount into FDs of different maturities (1, 2, 3, 5 years) so one FD matures every year, giving liquidity without breaking others. Use cumulative FDs for compounding. Compare rates across banks and small finance banks before investing. Submit 15G/15H where eligible to avoid TDS. Renew maturing FDs promptly rather than letting them auto-renew at the default rate."
+        }
+      ],
+      "faq": [
+        {
+          "question": "What is the current FD interest rate in India?",
+          "answer": "Regular FD rates in 2026 range from 5.5% to 7.5% for tenures of 1 to 5 years. Senior citizens earn an extra 0.25% to 0.75%. Small finance banks offer 7.5% to 9% on select tenures."
+        },
+        {
+          "question": "How is FD interest compounded?",
+          "answer": "Most bank FDs in India compound interest quarterly. A cumulative FD reinvests the interest and pays the total at maturity. A non-cumulative FD pays interest monthly, quarterly, half-yearly, or yearly without reinvesting."
+        },
+        {
+          "question": "Is FD interest tax-free?",
+          "answer": "No. FD interest is fully taxable as Income from Other Sources. Banks deduct 10% TDS if total FD interest across their branches exceeds Rs. 40,000 per year (Rs. 50,000 for senior citizens under Section 80TTB)."
+        },
+        {
+          "question": "Can I break my FD before maturity?",
+          "answer": "Yes, most banks allow premature withdrawal after 7 days with a penalty of 0.5% to 1% on the applicable rate. Tax-saving 5-year FDs under Section 80C cannot be broken before maturity."
         }
       ]
     }
@@ -1408,6 +1872,24 @@
           "heading": "How to Maximize PPF Returns",
           "content": "Deposit before the 5th of April every year so your entire annual contribution earns interest for the full year. Try to contribute the full Rs. 1.5 lakh each year to maximize 80C and compounding. Extend the account in 5-year blocks beyond 15 years to continue tax-free compounding. Combine PPF with EPF, NPS, and ELSS for a balanced retirement portfolio."
         }
+      ],
+      "faq": [
+        {
+          "question": "What is the current PPF interest rate?",
+          "answer": "PPF currently pays 7.1% per annum, compounded yearly. The rate is reviewed every quarter by the government."
+        },
+        {
+          "question": "What is the PPF maturity period?",
+          "answer": "PPF matures after 15 full financial years. After maturity, you can extend the account in 5-year blocks with or without contributions."
+        },
+        {
+          "question": "What are the tax benefits of PPF?",
+          "answer": "PPF enjoys Exempt-Exempt-Exempt (EEE) status. Contributions up to Rs. 1.5 lakh per year qualify for Section 80C deduction (old regime), annual interest is tax-free, and the maturity amount is fully tax-free."
+        },
+        {
+          "question": "Can I withdraw from PPF before maturity?",
+          "answer": "Partial withdrawal is allowed from the 7th financial year onwards, up to 50% of the balance at the end of the 4th year preceding the withdrawal year."
+        }
       ]
     }
   },
@@ -1467,6 +1949,24 @@
         {
           "heading": "How to Choose the Right Regime",
           "content": "The new regime is usually better if your deductions (80C + 80D + HRA + home loan interest + NPS) together are below about Rs. 2.5–3 lakh. The old regime wins for taxpayers maximizing all deductions. Use this calculator to compute tax under both regimes with your exact numbers before you declare your choice to your employer at the start of the financial year."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which tax regime should I choose — old or new?",
+          "answer": "The new regime is better if your total deductions (80C + 80D + HRA + home loan interest + NPS) are below about Rs. 2.5 to 3 lakh. The old regime wins if you claim all available deductions. Use our calculator to compute tax under both."
+        },
+        {
+          "question": "What is the Section 87A tax rebate?",
+          "answer": "Under the new regime, total tax is zero for income up to Rs. 7 lakh due to the Section 87A rebate. Under the old regime, the rebate applies up to Rs. 5 lakh of total income."
+        },
+        {
+          "question": "Is the standard deduction available under the new regime?",
+          "answer": "Yes, from FY 2024-25 onwards, salaried taxpayers can claim a Rs. 75,000 standard deduction under the new regime (Rs. 50,000 under the old regime)."
+        },
+        {
+          "question": "Can I switch between tax regimes every year?",
+          "answer": "Salaried individuals without business income can switch between old and new regimes every financial year. Those with business or professional income can switch only once and then must stick with the choice."
         }
       ]
     }
@@ -1528,6 +2028,24 @@
           "heading": "Penalties for GST Non-Compliance",
           "content": "Late filing of returns attracts Rs. 50 per day (Rs. 20 for nil returns) up to a maximum of Rs. 5,000. Late payment of tax attracts 18% interest per annum. Fraudulent claims of ITC or tax evasion can attract a penalty of 100% of the tax involved plus prosecution. Always reconcile books with GSTR-2B and file on time to avoid notices and blocked returns."
         }
+      ],
+      "faq": [
+        {
+          "question": "What are the GST slab rates in India?",
+          "answer": "GST has five main slabs: 0% (essentials), 5% (packaged food, economy air tickets), 12% (processed food), 18% (most goods and services), and 28% (luxury and sin goods). A cess may apply on top of 28% for certain items."
+        },
+        {
+          "question": "How do I calculate GST on a price?",
+          "answer": "For forward calculation (base to inclusive): GST amount = base × rate ÷ 100, total = base + GST. For reverse (inclusive to base): base = inclusive × 100 ÷ (100 + rate). Our calculator handles both modes."
+        },
+        {
+          "question": "What is the difference between CGST, SGST, and IGST?",
+          "answer": "For intra-state sales, GST splits equally into Central GST (CGST) and State GST (SGST). For inter-state sales, a single Integrated GST (IGST) is charged. An 18% intra-state invoice is 9% CGST + 9% SGST."
+        },
+        {
+          "question": "When is GST registration mandatory?",
+          "answer": "Registration is mandatory if annual turnover exceeds Rs. 40 lakh for goods (Rs. 20 lakh for special-category states) or Rs. 20 lakh for services. It is also mandatory for inter-state suppliers and e-commerce sellers regardless of turnover."
+        }
       ]
     }
   },
@@ -1587,6 +2105,24 @@
         {
           "heading": "Tax-Free and Tax-Friendly Components",
           "content": "Components that reduce tax without reducing value include: employer NPS contribution up to 10% of basic (14% for government employees) under 80CCD(2), LTA for domestic travel twice in a block of 4 years (old regime only), telephone and internet reimbursements, food coupons up to Rs. 50 per meal (Rs. 26,400/year), and a company-leased car in the employer's name. Opt for these in your salary structure to maximize take-home."
+        }
+      ],
+      "faq": [
+        {
+          "question": "What is the difference between CTC and in-hand salary?",
+          "answer": "CTC (Cost to Company) is the total annual cost including salary, bonuses, employer PF contribution, gratuity, and insurance. In-hand salary is the monthly amount credited to your bank account after employee PF, professional tax, and income tax (TDS)."
+        },
+        {
+          "question": "How much is typically deducted from gross salary?",
+          "answer": "Typical deductions are employee PF (12% of basic), professional tax (Rs. 200 per month in most states), and income tax via TDS. Together these can reduce gross salary by 15% to 25% depending on your tax slab and declared investments."
+        },
+        {
+          "question": "How do I maximize my in-hand salary?",
+          "answer": "Choose tax-friendly salary components like employer NPS contribution, meal coupons, telephone/internet reimbursements, LTA (old regime), and a company-leased car. Compare both tax regimes before declaring your preferred regime at the start of the year."
+        },
+        {
+          "question": "Is HRA taxable?",
+          "answer": "HRA is partially exempt under the old regime: the minimum of (actual HRA, 50% of basic in metros or 40% in non-metros, or rent paid minus 10% of basic) is exempt. Under the new regime, HRA is fully taxable."
         }
       ]
     }
