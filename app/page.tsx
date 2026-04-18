@@ -134,7 +134,7 @@ export default function HomePage() {
           </div>
 
           {/* All Tools Section */}
-          <div className="bg-gradient-to-r from-blue-50 to-blue-100 border-y border-gray-200 py-16 my-12">
+          <div id="all-tools" className="bg-gradient-to-r from-blue-50 to-blue-100 border-y border-gray-200 py-16 my-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-2">All Tools & Calculators ({tools.length})</h2>
               <p className="text-gray-600 mb-8">Complete collection of {tools.length} financial calculators</p>
@@ -163,10 +163,14 @@ export default function HomePage() {
             {/* Quick Links Section */}
             <div className="mb-16 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Quick Links</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
                 <Link href="/blog" className="bg-white border border-gray-200 hover:border-blue-500 hover:shadow-md rounded-lg p-4 text-center transition" aria-label="Blog: Guides and Tools">
                   <div className="text-2xl mb-2">📚</div>
-                  <p className="font-semibold text-gray-900 text-sm">Blog: Guides & Tools</p>
+                  <p className="font-semibold text-gray-900 text-sm">Blog & Guides</p>
+                </Link>
+                <Link href="/#all-tools" className="bg-white border border-gray-200 hover:border-blue-500 hover:shadow-md rounded-lg p-4 text-center transition" aria-label="All calculators and tools">
+                  <div className="text-2xl mb-2">🧮</div>
+                  <p className="font-semibold text-gray-900 text-sm">All Calculators</p>
                 </Link>
                 <Link href="/about" className="bg-white border border-gray-200 hover:border-blue-500 hover:shadow-md rounded-lg p-4 text-center transition" aria-label="About EMI Tools">
                   <div className="text-2xl mb-2">ℹ️</div>
@@ -178,11 +182,11 @@ export default function HomePage() {
                 </Link>
                 <Link href="/privacy-policy" className="bg-white border border-gray-200 hover:border-blue-500 hover:shadow-md rounded-lg p-4 text-center transition" aria-label="Privacy Policy - EMI Tools">
                   <div className="text-2xl mb-2">🔒</div>
-                  <p className="font-semibold text-gray-900 text-sm">Privacy Policy — EMI Tools</p>
+                  <p className="font-semibold text-gray-900 text-sm">Privacy Policy</p>
                 </Link>
                 <Link href="/terms" className="bg-white border border-gray-200 hover:border-blue-500 hover:shadow-md rounded-lg p-4 text-center transition" aria-label="Terms and Conditions - EMI Tools">
                   <div className="text-2xl mb-2">⚖️</div>
-                  <p className="font-semibold text-gray-900 text-sm">Terms & Conditions — EMI Tools</p>
+                  <p className="font-semibold text-gray-900 text-sm">Terms & Conditions</p>
                 </Link>
               </div>
             </div>

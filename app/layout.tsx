@@ -73,10 +73,6 @@ export const metadata: Metadata = {
     title: 'EMI Calculator - Free Loan EMI Calculation | Instant Results',
     description: 'Calculate EMI for all types of loans instantly with our free online calculator. Accurate, reliable, and trusted.',
     images: [`${SITE_URL}/og-image.jpg`,`${SITE_URL}/og-image-emi-calculator.svg`],
-    creator: '@emitools',
-    site: '@emitools',
-    siteId: '1234567890',
-    creatorId: '0987654321',
   },
   robots: {
     index: true,
@@ -114,7 +110,6 @@ export const metadata: Metadata = {
   },
   verification: {
     google: process.env.GOOGLE_SITE_VERIFICATION || 'nBlk1diO030v9sQNDFG2fPVQxyY9NHZhdJeSWJ3UAPI',
-    yandex: 'yandex-verification-code-here',
     me: [SITE_URL],
   },
 }
@@ -186,15 +181,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               url: SITE_URL,
               logo: `${SITE_URL}/logo.png`,
               description: 'Free online EMI calculator for loans',
-              sameAs: [
-                'https://www.facebook.com/emitools',
-                'https://twitter.com/emitools',
-                'https://www.linkedin.com/company/emitools',
-              ],
               contactPoint: {
                 '@type': 'ContactPoint',
                 contactType: 'Customer Support',
-                email: 'support@emitools.com',
                 url: `${SITE_URL}/contact`,
               },
               address: {
@@ -226,7 +215,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
 
         {/* AdSense */}
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxxxxxxxxxx" crossOrigin="anonymous"></script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7888362617210799" crossOrigin="anonymous"></script>
       </head>
       <body className="bg-gray-50 text-gray-900">
         <header className="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-4 shadow-lg sticky top-0 z-50" role="banner">

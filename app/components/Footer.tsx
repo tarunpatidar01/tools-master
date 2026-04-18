@@ -18,6 +18,7 @@ export default function Footer() {
   ];
 
   const helpLinks = [
+    { name: 'Blog & Guides', href: '/blog' },
     { name: 'About Us', href: '/about' },
     { name: 'Contact Us', href: '/contact' },
     { name: 'Privacy Policy', href: '/privacy-policy' },

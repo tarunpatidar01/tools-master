@@ -42,8 +42,6 @@ Crawl-delay: 10
 
 # Sitemap Reference
 Sitemap: https://emi-tools-master.vercel.app/sitemap.xml
-Sitemap: https://emi-tools-master.vercel.app/sitemap-tools.xml
-Sitemap: https://emi-tools-master.vercel.app/sitemap-articles.xml
 
 # Visit our homepage
 Host: https://emi-tools-master.vercel.app
