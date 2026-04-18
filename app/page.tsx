@@ -1,260 +1,429 @@
 'use client';
 
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import Link from 'next/link';
-import Sidebar from '@/app/components/Sidebar';
+import {
+  Zap,
+  BarChart3,
+  GitCompareArrows,
+  BookOpen,
+  Info,
+  Mail,
+  Shield,
+  Scale,
+  Search,
+  ArrowRight,
+  Home,
+  Car,
+  Wallet,
+  TrendingUp,
+  Landmark,
+  Receipt,
+  Briefcase,
+  Building2,
+  CheckCircle2,
+} from 'lucide-react';
 import ToolSearch from '@/app/components/ToolSearch';
-import LanguageToggle from '@/app/components/LanguageToggle';
-import { FAQSchema, SoftwareApplicationSchema, OrganizationSchema, BreadcrumbSchema } from '@/app/components/SchemaMarkup';
-import SocialShare from '@/app/components/SocialShare';
-import { getAllTools } from '@/lib/seo';
-import en from '@/i18n/en.json';
-import hi from '@/i18n/hi.json';
+import {
+  FAQSchema,
+  SoftwareApplicationSchema,
+  OrganizationSchema,
+  BreadcrumbSchema,
+} from '@/app/components/SchemaMarkup';
+import { getAllTools, getCategories } from '@/lib/seo';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://emi-tools-master.vercel.app';
 
 const FAQ_DATA = [
-  { q: "What is EMI?", a: "EMI (Equated Monthly Installment) is a fixed amount of money you pay to the lender each month. It includes both principal amount and interest components spread over the loan tenure." },
-  { q: "How does our calculator work?", a: "Our calculator uses the standard reducing balance EMI formula to calculate accurate monthly payments based on principal, interest rate, and tenure. Results update in real-time as you adjust values." },
-  { q: "Can I download my calculation?", a: "Yes! You can download your complete calculation as PDF or Excel file, or generate a shareable link with all pre-filled values." },
-  { q: "Is this calculator free?", a: "Absolutely! All our calculators and tools are completely free to use. No registration or hidden fees required." },
+  {
+    q: 'What is EMI?',
+    a: 'EMI (Equated Monthly Installment) is a fixed amount you pay to the lender every month. It includes principal repayment and interest on the outstanding balance, spread evenly across the loan tenure.',
+  },
+  {
+    q: 'How accurate is this calculator?',
+    a: 'Our calculators use the standard reducing-balance formula used by every bank in India. Results match the lender sanction letter within rupees; small differences come from bank rounding and processing fees.',
+  },
+  {
+    q: 'Can I download the calculation?',
+    a: 'Yes. Every tool lets you download the full amortization schedule as PDF or Excel, and also share a URL with pre-filled values for collaboration.',
+  },
+  {
+    q: 'Is everything really free?',
+    a: 'Yes. All 31 calculators and tools are 100% free, with no signup, no limits, and no paid tier. Your inputs stay on your device — we do not store calculations.',
+  },
 ];
+
+const FEATURE_ICONS: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
+  Loan: Wallet,
+  Vehicle: Car,
+  Investment: TrendingUp,
+  Savings: Landmark,
+  Tax: Receipt,
+  Salary: Briefcase,
+  Banking: Building2,
+};
+
+const CATEGORY_FEATURED: Record<string, string[]> = {
+  Loan: ['emi-calculator', 'home-loan-emi-calculator', 'personal-loan-calculator'],
+  Vehicle: ['car-loan-emi-calculator', 'bike-loan-emi-calculator'],
+  Investment: ['sip-calculator', 'lumpsum-investment-calculator', 'mutual-fund-return-calculator'],
+  Savings: ['fd-calculator', 'rd-calculator', 'ppf-calculator'],
+  Tax: ['income-tax-calculator', 'gst-calculator', 'hra-calculator'],
+  Salary: ['salary-calculator', 'gratuity-calculator'],
+  Banking: ['ifsc-code-finder'],
+};
 
 export default function HomePage() {
   const [showSearch, setShowSearch] = useState(false);
-  const [language, setLanguage] = useState<'en' | 'hi'>('en');
-  const [showSidebar, setShowSidebar] = useState(false);
-  
-  const tools = getAllTools();
-  const t = language === 'en' ? en : hi;
+
+  const tools = useMemo(() => getAllTools(), []);
+  const categories = useMemo(() => getCategories(), []);
+
+  const toolsByCategory = useMemo(() => {
+    const groups: Record<string, ReturnType<typeof getAllTools>> = {};
+    categories.forEach((c) => {
+      groups[c] = tools.filter((t) => t.category === c);
+    });
+    return groups;
+  }, [categories, tools]);
 
   return (
     <>
-      <div className="flex flex-col lg:flex-row min-h-screen bg-white">
-        {/* Sidebar */}
-        <div className={`${showSidebar ? 'block' : 'hidden'} lg:block w-full lg:w-64 lg:sticky lg:top-0 lg:max-h-screen lg:overflow-y-auto bg-gray-50 border-r border-gray-200`}>
-          <div className="p-6">
-            <h2 className="text-xl font-bold text-gray-900 mb-6">Tools & Calculators</h2>
-            <Sidebar />
-          </div>
-          {showSidebar && (
-            <button
-              onClick={() => setShowSidebar(false)}
-              className="lg:hidden w-full p-4 bg-gray-900 text-white text-center font-semibold hover:bg-gray-800"
-            >
-              Close
-            </button>
-          )}
-        </div>
-
-        {/* Main Content */}
-        <main className="flex-1 overflow-y-auto">
-          {/* Header/Navigation */}
-          <div className="bg-white border-b border-gray-200 sticky top-0 z-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-              <button
-                onClick={() => setShowSidebar(!showSidebar)}
-                className="lg:hidden p-2 hover:bg-gray-100 rounded-lg"
-                title="Toggle Sidebar"
-              >
-                ☰
-              </button>
-              
-              <div className="flex-1 mx-4 hidden md:block">
-                <div className="relative">
-                  <input
-                    type="text"
-                    placeholder={t.home.searchPlaceholder}
-                    onClick={() => setShowSearch(true)}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer text-sm"
-                    readOnly
-                  />
-                  <span className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400">🔍</span>
-                </div>
-              </div>
-
-              <button
-                onClick={() => setShowSearch(true)}
-                className="md:hidden p-2 hover:bg-gray-100 rounded-lg"
-                title="Search Tools"
-              >
-                🔍
-              </button>
-              
-              <LanguageToggle currentLanguage={language} onChange={setLanguage} />
+      {/* Hero */}
+      <section className="gradient-bg border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-2 chip chip-brand mb-5">
+              <Zap size={12} strokeWidth={2.5} /> Trusted by Indian borrowers since 2025
             </div>
-          </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.05]">
+              The complete toolkit for
+              <br />
+              <span className="bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">
+                loans, tax, and investments.
+              </span>
+            </h1>
+            <p className="mt-5 text-lg text-slate-600 leading-relaxed max-w-2xl">
+              {tools.length} free calculators used by thousands every day. Real-time results, year-wise
+              amortization, tax-regime comparison, and branch-level IFSC lookup — all in one place.
+            </p>
 
-          {/* Page Content */}
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            {/* Hero Section */}
-            <div className="mb-12">
-              <h1 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
-                {t.home.title}
-              </h1>
-              <p className="text-lg font-semibold text-gray-700 mb-8 max-w-2xl">
-                {t.home.description}
+            <div className="mt-8 flex flex-col sm:flex-row gap-3">
+              <button onClick={() => setShowSearch(true)} className="btn-primary">
+                <Search size={16} /> Find a calculator
+              </button>
+              <Link href="/tools/emi-calculator" className="btn-secondary">
+                Try EMI Calculator <ArrowRight size={16} />
+              </Link>
+            </div>
+
+            <dl className="mt-12 grid grid-cols-3 gap-6 max-w-lg">
+              <Stat value={`${tools.length}+`} label="Calculators" />
+              <Stat value="1.3L+" label="Branches indexed" />
+              <Stat value="₹12L+" label="Monthly searches" />
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      {/* Features */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <Feature
+            icon={Zap}
+            title="Instant, accurate results"
+            description="Every calculator runs client-side with the reducing-balance formula. Results match bank sanction letters to the rupee."
+          />
+          <Feature
+            icon={BarChart3}
+            title="Detailed breakdowns"
+            description="Year-wise and month-wise amortization, interactive sliders, principal vs. interest splits, and downloadable PDF/Excel reports."
+          />
+          <Feature
+            icon={GitCompareArrows}
+            title="Compare scenarios"
+            description="Test multiple tenures, rates, and prepayment plans side-by-side before committing to a loan or investment."
+          />
+        </div>
+      </section>
+
+      {/* All Tools by Category */}
+      <section id="all-tools" className="bg-white border-y border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+          <div className="flex items-end justify-between gap-4 mb-8 flex-wrap">
+            <div>
+              <h2 className="text-3xl font-bold text-slate-900 tracking-tight">
+                All calculators
+              </h2>
+              <p className="mt-1 text-slate-600">
+                {tools.length} tools across {categories.length} categories — pick one to get started.
               </p>
             </div>
-
-            {/* Primary CTA */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <button 
-                onClick={() => setShowSearch(true)}
-                className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition text-center"
-              >
-                Start Calculating Now
-              </button>
-              <button className="px-8 py-3 border-2 border-gray-300 hover:border-blue-600 text-gray-900 hover:text-blue-600 font-semibold rounded-lg transition text-center">
-                Learn More
-              </button>
-            </div>
-
-            {/* Social Share */}
-            <SocialShare title={t.home.title} text={t.home.description} />
-
-            {/* Features Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-              <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition">
-                <div className="text-4xl mb-4">⚡</div>
-                <h3 className="font-black text-lg text-gray-900 mb-2">Instant Results</h3>
-                <p className="text-gray-700 text-sm font-medium">Get accurate EMI calculations instantly with real-time sliders</p>
-              </div>
-              <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition">
-                <div className="text-4xl mb-4">📊</div>
-                <h3 className="font-black text-lg text-gray-900 mb-2">Detailed Analysis</h3>
-                <p className="text-gray-700 text-sm font-medium">View payment schedules, charts, and breakdowns in seconds</p>
-              </div>
-              <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition">
-                <div className="text-4xl mb-4">🔄</div>
-                <h3 className="font-black text-lg text-gray-900 mb-2">Compare Scenarios</h3>
-                <p className="text-gray-700 text-sm font-medium">Compare different loan options to make informed decisions</p>
-              </div>
-            </div>
+            <button
+              onClick={() => setShowSearch(true)}
+              className="btn-secondary text-sm"
+            >
+              <Search size={14} /> Search
+            </button>
           </div>
 
-          {/* All Tools Section */}
-          <div id="all-tools" className="bg-gradient-to-r from-blue-50 to-blue-100 border-y border-gray-200 py-16 my-12">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-2">All Tools & Calculators ({tools.length})</h2>
-              <p className="text-gray-600 mb-8">Complete collection of {tools.length} financial calculators</p>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 min-h-[600px]">
-                {tools && tools.length > 0 ? (
-                  tools.map((tool) => (
-                    <Link
-                      key={tool.id}
-                      href={`/tools/${tool.slug}`}
-                      className="bg-white border border-gray-300 hover:border-blue-600 hover:shadow-lg rounded-lg p-4 text-left transition hover:bg-blue-50"
-                      title={tool.keyword}
-                    >
-                      <h3 className="font-semibold text-gray-900 text-sm leading-tight">{tool.keyword}</h3>
-                      <p className="text-xs text-gray-500 mt-2 bg-gray-100 inline-block px-2 py-1 rounded">{tool.category}</p>
-                    </Link>
-                  ))
-                ) : (
-                  <p className="text-gray-600 col-span-full">Loading {tools.length} calculators...</p>
-                )} 
-              </div>
-            </div>
-          </div>
-
-          {/* Main Content Area */}
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            {/* Quick Links Section */}
-            <div className="mb-16 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Quick Links</h2>
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-                <Link href="/blog" className="bg-white border border-gray-200 hover:border-blue-500 hover:shadow-md rounded-lg p-4 text-center transition" aria-label="Blog: Guides and Tools">
-                  <div className="text-2xl mb-2">📚</div>
-                  <p className="font-semibold text-gray-900 text-sm">Blog & Guides</p>
-                </Link>
-                <Link href="/#all-tools" className="bg-white border border-gray-200 hover:border-blue-500 hover:shadow-md rounded-lg p-4 text-center transition" aria-label="All calculators and tools">
-                  <div className="text-2xl mb-2">🧮</div>
-                  <p className="font-semibold text-gray-900 text-sm">All Calculators</p>
-                </Link>
-                <Link href="/about" className="bg-white border border-gray-200 hover:border-blue-500 hover:shadow-md rounded-lg p-4 text-center transition" aria-label="About EMI Tools">
-                  <div className="text-2xl mb-2">ℹ️</div>
-                  <p className="font-semibold text-gray-900 text-sm">About EMI Tools</p>
-                </Link>
-                <Link href="/contact" className="bg-white border border-gray-200 hover:border-blue-500 hover:shadow-md rounded-lg p-4 text-center transition" aria-label="Contact EMI Tools">
-                  <div className="text-2xl mb-2">📧</div>
-                  <p className="font-semibold text-gray-900 text-sm">Contact EMI Tools</p>
-                </Link>
-                <Link href="/privacy-policy" className="bg-white border border-gray-200 hover:border-blue-500 hover:shadow-md rounded-lg p-4 text-center transition" aria-label="Privacy Policy - EMI Tools">
-                  <div className="text-2xl mb-2">🔒</div>
-                  <p className="font-semibold text-gray-900 text-sm">Privacy Policy</p>
-                </Link>
-                <Link href="/terms" className="bg-white border border-gray-200 hover:border-blue-500 hover:shadow-md rounded-lg p-4 text-center transition" aria-label="Terms and Conditions - EMI Tools">
-                  <div className="text-2xl mb-2">⚖️</div>
-                  <p className="font-semibold text-gray-900 text-sm">Terms & Conditions</p>
-                </Link>
-              </div>
-            </div>
-
-            {/* How It Works + Resources */}
-            <div className="mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">How Does It Work?</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <p className="text-gray-900 font-bold mb-2"><strong>1. Enter Loan Details</strong></p>
-                  <p className="text-gray-600 mb-4">Input the loan amount, interest rate, and tenure using sliders or direct input fields.</p>
-
-                  <p className="text-gray-900 font-bold mb-2"><strong>2. Get Instant Results</strong></p>
-                  <p className="text-gray-600 mb-4">View your monthly EMI, total interest, and total payment amount instantly.</p>
-                </div>
-                <div>
-                  <p className="text-gray-900 font-bold mb-2"><strong>3. Analyze Payment Schedule</strong></p>
-                  <p className="text-gray-600 mb-4">Review detailed payment schedules and visualizations of principal vs interest breakdown.</p>
-
-                  <p className="text-gray-900 font-bold mb-2"><strong>4. Download & Share</strong></p>
-                  <p className="text-gray-600 mb-4">Download your calculation as PDF/Excel or share a link with pre-filled values.</p>
-                </div>
-              </div>
-
-              {/* Resources & References */}
-              <div className="mt-8 bg-gray-50 border border-gray-200 rounded p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Resources & References</h3>
-                <ul className="list-disc pl-5 text-sm text-gray-700 space-y-2">
-                  <li><a href="https://www.investopedia.com/terms/e/emi.asp" target="_blank" rel="noopener noreferrer">What is EMI? — Investopedia</a></li>
-                  <li><a href="https://rbi.org.in/" target="_blank" rel="noopener noreferrer">Reserve Bank of India — Financial Education</a></li>
-                  <li><a href="https://www.investopedia.com/articles/personal-finance/071016/how-calculate-your-emis.asp" target="_blank" rel="noopener noreferrer">How to calculate EMI — Investopedia deep-dive</a></li>
-                </ul>
-
-                <div className="mt-4 bg-white border border-gray-100 rounded p-3">
-                  <h4 className="font-semibold text-sm mb-2">Embed Our Calculator</h4>
-                  <p className="text-xs text-gray-600 mb-2">Add this small iframe to your site to embed our calculator.</p>
-                  <pre className="text-xs bg-gray-100 p-2 rounded overflow-auto"><code>{`<iframe src="${process.env.NEXT_PUBLIC_SITE_URL || 'https://emi-tools-master.vercel.app'}/tools/emi-calculator" width="600" height="700" style="border:0;" loading="lazy"></iframe>`}</code></pre>
-                </div>
-              </div>
-            </div>
-
-            {/* FAQ Accordion */}
-            <div className="mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Frequently Asked Questions</h2>
-              <div className="space-y-4">
-                {FAQ_DATA.map((faq, idx) => (
-                  <div key={idx} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition">
-                    <h3 className="font-bold text-gray-900 mb-2">{faq.q}</h3>
-                    <p className="text-gray-600">{faq.a}</p>
+          <div className="space-y-10">
+            {categories.map((cat) => {
+              const Icon = FEATURE_ICONS[cat] || Wallet;
+              const featuredSlugs = new Set(CATEGORY_FEATURED[cat] || []);
+              const catTools = toolsByCategory[cat] || [];
+              const sorted = [...catTools].sort((a, b) => {
+                const af = featuredSlugs.has(a.slug) ? 0 : 1;
+                const bf = featuredSlugs.has(b.slug) ? 0 : 1;
+                if (af !== bf) return af - bf;
+                return b.monthlySearches - a.monthlySearches;
+              });
+              return (
+                <div key={cat}>
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-blue-50 text-blue-700">
+                      <Icon size={18} />
+                    </span>
+                    <h3 className="text-lg font-semibold text-slate-900">{cat}</h3>
+                    <span className="text-xs text-slate-400 font-medium">
+                      {catTools.length} tool{catTools.length !== 1 ? 's' : ''}
+                    </span>
                   </div>
-                ))}
-              </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
+                    {sorted.map((tool) => (
+                      <Link
+                        key={tool.slug}
+                        href={`/tools/${tool.slug}`}
+                        className="card-elevated p-4 group"
+                      >
+                        <div className="flex items-start justify-between gap-2">
+                          <h4 className="font-semibold text-sm text-slate-900 group-hover:text-blue-700 transition leading-snug">
+                            {tool.keyword}
+                          </h4>
+                          <ArrowRight
+                            size={14}
+                            className="text-slate-300 group-hover:text-blue-600 group-hover:translate-x-0.5 transition shrink-0 mt-0.5"
+                          />
+                        </div>
+                        {tool.description && (
+                          <p className="mt-1.5 text-xs text-slate-500 line-clamp-2">
+                            {tool.description}
+                          </p>
+                        )}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* How it works */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          <div>
+            <h2 className="text-3xl font-bold text-slate-900 tracking-tight">How it works</h2>
+            <p className="mt-2 text-slate-600 max-w-lg">
+              Each calculator is self-contained. Enter your numbers, see results instantly, adjust
+              scenarios, and export the breakdown.
+            </p>
+            <ol className="mt-8 space-y-5">
+              {[
+                {
+                  h: 'Enter loan or investment details',
+                  p: 'Amount, interest rate, tenure — use sliders for quick scenario testing.',
+                },
+                {
+                  h: 'Get instant calculations',
+                  p: 'EMI, total interest, maturity value, and take-home salary update as you type.',
+                },
+                {
+                  h: 'Analyze year-wise breakdowns',
+                  p: 'See principal vs. interest each year, prepayment impact, and tax implications.',
+                },
+                {
+                  h: 'Download or share',
+                  p: 'Export as PDF/Excel, or share a URL that pre-fills all the values.',
+                },
+              ].map((s, i) => (
+                <li key={i} className="flex gap-4">
+                  <span className="shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-600 text-white text-sm font-bold">
+                    {i + 1}
+                  </span>
+                  <div>
+                    <p className="font-semibold text-slate-900">{s.h}</p>
+                    <p className="mt-0.5 text-sm text-slate-600">{s.p}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          <div className="card-elevated p-6 lg:p-8">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="chip chip-success">
+                <CheckCircle2 size={12} strokeWidth={2.5} /> Trusted data sources
+              </span>
+            </div>
+            <h3 className="text-xl font-bold text-slate-900">Why our numbers can be trusted</h3>
+            <p className="mt-2 text-slate-600">
+              Every calculator follows the standard formulas used by Indian banks, RBI, and tax
+              authorities. We do not round aggressively or apply marketing adjustments.
+            </p>
+            <ul className="mt-5 space-y-3 text-sm text-slate-700">
+              <li className="flex gap-2">
+                <CheckCircle2 size={16} className="text-emerald-600 shrink-0 mt-0.5" />
+                <span>
+                  <a
+                    href="https://www.investopedia.com/articles/personal-finance/071016/how-calculate-your-emis.asp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-slate-300 hover:text-blue-700"
+                  >
+                    Standard reducing-balance EMI formula
+                  </a>
+                  {' '}used by every major Indian lender
+                </span>
+              </li>
+              <li className="flex gap-2">
+                <CheckCircle2 size={16} className="text-emerald-600 shrink-0 mt-0.5" />
+                <span>
+                  Live IFSC data sourced from the public{' '}
+                  <a
+                    href="https://github.com/razorpay/ifsc"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-slate-300 hover:text-blue-700"
+                  >
+                    Razorpay IFSC dataset
+                  </a>
+                </span>
+              </li>
+              <li className="flex gap-2">
+                <CheckCircle2 size={16} className="text-emerald-600 shrink-0 mt-0.5" />
+                <span>Tax calculations match the latest Finance Act slabs and deductions</span>
+              </li>
+              <li className="flex gap-2">
+                <CheckCircle2 size={16} className="text-emerald-600 shrink-0 mt-0.5" />
+                <span>No user data stored — calculations run entirely in your browser</span>
+              </li>
+            </ul>
+
+            <div className="mt-6 bg-slate-50 border border-slate-200 rounded-lg p-4">
+              <p className="text-xs font-semibold text-slate-700 mb-2">Embed in your blog</p>
+              <pre className="text-[11px] text-slate-600 bg-white border border-slate-200 rounded p-2 overflow-auto">
+                <code>{`<iframe src="${SITE_URL}/tools/emi-calculator" width="600" height="700" style="border:0;" loading="lazy"></iframe>`}</code>
+              </pre>
             </div>
           </div>
-        </main>
-      </div>
+        </div>
+      </section>
 
-      {/* Search Modal */}
-      <ToolSearch 
-        isOpen={showSearch} 
-        onClose={() => setShowSearch(false)}
-      />
+      {/* FAQ */}
+      <section className="bg-white border-y border-slate-200">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-slate-900 tracking-tight">
+              Frequently asked questions
+            </h2>
+            <p className="mt-2 text-slate-600">
+              Everything you need to know before using the calculators.
+            </p>
+          </div>
+          <div className="space-y-3">
+            {FAQ_DATA.map((faq, i) => (
+              <details
+                key={i}
+                className="group card-elevated p-5 [&_summary::-webkit-details-marker]:hidden"
+              >
+                <summary className="flex items-center justify-between cursor-pointer list-none">
+                  <h3 className="font-semibold text-slate-900">{faq.q}</h3>
+                  <span className="ml-3 shrink-0 inline-flex items-center justify-center w-6 h-6 rounded-full border border-slate-200 text-slate-500 group-open:rotate-45 group-open:border-blue-200 group-open:text-blue-600 transition">
+                    +
+                  </span>
+                </summary>
+                <p className="mt-3 text-slate-600 leading-relaxed">{faq.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      {/* Schema Markup for SEO */}
+      {/* Quick links strip */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+          {[
+            { href: '/blog', icon: BookOpen, label: 'Blog & guides' },
+            { href: '/tools/ifsc-code-finder', icon: Building2, label: 'IFSC finder' },
+            { href: '/tools/emi-calculator', icon: Home, label: 'EMI calculator' },
+            { href: '/about', icon: Info, label: 'About' },
+            { href: '/contact', icon: Mail, label: 'Contact' },
+            { href: '/privacy-policy', icon: Shield, label: 'Privacy' },
+          ].map((l) => {
+            const Icon = l.icon;
+            return (
+              <Link
+                key={l.href}
+                href={l.href}
+                className="card-elevated px-4 py-3 flex items-center gap-3 group"
+              >
+                <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-slate-100 text-slate-600 group-hover:bg-blue-50 group-hover:text-blue-700 transition">
+                  <Icon size={15} />
+                </span>
+                <span className="text-sm font-medium text-slate-800">{l.label}</span>
+              </Link>
+            );
+          })}
+          <Link
+            href="/terms"
+            className="card-elevated px-4 py-3 flex items-center gap-3 group"
+          >
+            <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-slate-100 text-slate-600 group-hover:bg-blue-50 group-hover:text-blue-700 transition">
+              <Scale size={15} />
+            </span>
+            <span className="text-sm font-medium text-slate-800">Terms</span>
+          </Link>
+        </div>
+      </section>
+
+      <ToolSearch isOpen={showSearch} onClose={() => setShowSearch(false)} />
+
       <FAQSchema />
       <SoftwareApplicationSchema />
       <OrganizationSchema />
       <BreadcrumbSchema items={[{ name: 'Home', url: SITE_URL }]} />
     </>
+  );
+}
+
+function Stat({ value, label }: { value: string; label: string }) {
+  return (
+    <div>
+      <dt className="sr-only">{label}</dt>
+      <dd className="text-2xl md:text-3xl font-extrabold text-slate-900">{value}</dd>
+      <dd className="text-xs text-slate-500 font-medium mt-0.5">{label}</dd>
+    </div>
+  );
+}
+
+function Feature({
+  icon: Icon,
+  title,
+  description,
+}: {
+  icon: React.ComponentType<{ size?: number; className?: string }>;
+  title: string;
+  description: string;
+}) {
+  return (
+    <div className="card-elevated p-6">
+      <span className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-gradient-to-br from-blue-600 to-blue-700 text-white shadow-sm mb-4">
+        <Icon size={20} />
+      </span>
+      <h3 className="text-lg font-bold text-slate-900">{title}</h3>
+      <p className="mt-1.5 text-sm text-slate-600 leading-relaxed">{description}</p>
+    </div>
   );
 }

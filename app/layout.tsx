@@ -1,6 +1,7 @@
 import './styles/globals.css'
 import type { Metadata, Viewport } from 'next'
 import Footer from '@/app/components/Footer'
+import SiteHeader from '@/app/components/SiteHeader'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://emi-tools-master.vercel.app';
@@ -215,16 +216,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* AdSense */}
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7888362617210799" crossOrigin="anonymous"></script>
       </head>
-      <body className="bg-gray-50 text-gray-900">
-        <header className="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-4 shadow-lg sticky top-0 z-50" role="banner">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-2xl font-bold" aria-label="Site title">EMI Tools Calculator</div>
-            <p className="text-blue-100 text-sm">Fast & Accurate Loan Calculations</p>
-          </div>
-        </header>
-        <main className="p-4 max-w-7xl mx-auto min-h-screen">{children}</main>
+      <body>
+        <SiteHeader />
+        <main className="min-h-screen">{children}</main>
         <Footer />
-        {/* Vercel Speed Insights (renders site performance card) */}
         <SpeedInsights />
       </body>
     </html>

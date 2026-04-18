@@ -2,6 +2,7 @@
 
 import { useState, useMemo, Suspense } from 'react';
 import dynamic from 'next/dynamic';
+import { Menu as MenuIcon, Search as SearchIcon } from 'lucide-react';
 import Sidebar from '@/app/components/Sidebar';
 import LanguageToggle from '@/app/components/LanguageToggle';
 import ToolSearch from '@/app/components/ToolSearch';
@@ -134,7 +135,7 @@ function ToolPageClientComponent({ tool, faqList = [] }: ToolPageClientProps) {
                 aria-expanded={showSidebar}
                 aria-controls="tools-sidebar"
               >
-                <span aria-hidden>☰</span>
+                <MenuIcon size={18} aria-hidden />
               </button>
 
               {/* Primary page title — H1 should be unique and descriptive */}
@@ -146,7 +147,7 @@ function ToolPageClientComponent({ tool, faqList = [] }: ToolPageClientProps) {
                   className="md:hidden p-2 hover:bg-gray-100 rounded-lg"
                   aria-label="Open search"
                 >
-                  <span aria-hidden>🔍</span>
+                  <SearchIcon size={16} aria-hidden />
                 </button>
 
                 {/* Language toggle component (assumed accessible) */}

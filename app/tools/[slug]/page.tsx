@@ -131,34 +131,27 @@ export default async function ToolPage({ params }: ToolPageProps) {
       <a href="#main" className="sr-only focus:not-sr-only">Skip to content</a>
 
       {/* Visible breadcrumb for users */}
-      <nav aria-label="Breadcrumb" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4" id="breadcrumb">
-        <ol className="flex items-center gap-2 text-sm text-gray-600">
-          <li><Link href="/" className="hover:underline">Home</Link></li>
-          <li>/</li>
-          <li><Link href="/tools" className="hover:underline">Tools</Link></li>
-          <li>/</li>
-          <li aria-current="page" className="font-semibold text-gray-900">{tool.title}</li>
-        </ol>
+      <nav
+        aria-label="Breadcrumb"
+        className="bg-white border-b border-slate-100"
+        id="breadcrumb"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <ol className="flex items-center gap-2 text-[13px] text-slate-500">
+            <li><Link href="/" className="hover:text-blue-700 transition">Home</Link></li>
+            <li className="text-slate-300">/</li>
+            <li><Link href="/#all-tools" className="hover:text-blue-700 transition">Tools</Link></li>
+            <li className="text-slate-300">/</li>
+            <li aria-current="page" className="font-semibold text-slate-800 truncate max-w-[50ch]">
+              {tool.title}
+            </li>
+          </ol>
+        </div>
       </nav>
 
-      {/* Social Share for this tool */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Social Share */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
         <SocialShare title={tool.title} text={tool.description} url={canonicalUrl} />
-
-        {/* Resources & Embed for tool */}
-        <section aria-labelledby="resources" className="mt-6 bg-gray-50 border border-gray-100 rounded p-4">
-          <h2 id="resources" className="text-lg font-semibold mb-2">Resources & References</h2>
-          <ul className="list-disc pl-5 text-sm text-gray-700 space-y-2">
-            <li><a href="https://www.investopedia.com/terms/e/emi.asp" target="_blank" rel="noopener noreferrer">What is EMI? — Investopedia</a></li>
-            <li><a href="https://rbi.org.in/" target="_blank" rel="noopener noreferrer">Reserve Bank of India — Financial Education</a></li>
-            <li><a href="https://www.sebi.gov.in/investors/" target="_blank" rel="noopener noreferrer">SEBI — Investor Education</a></li>
-          </ul>
-
-          <div className="mt-3 bg-white border border-gray-100 rounded p-3">
-            <h3 className="font-semibold text-sm mb-2">Embed this tool</h3>
-            <pre className="text-xs bg-gray-100 p-2 rounded overflow-auto"><code>{`<iframe src="${canonicalUrl}" width="600" height="700" style="border:0;" loading="lazy"></iframe>`}</code></pre>
-          </div>
-        </section>
       </div>
 
       <main id="main">
