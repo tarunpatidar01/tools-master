@@ -1,8 +1,7 @@
-'use client';
-
-import { useMemo, useState } from 'react';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import {
+  Search,
   Zap,
   BarChart3,
   GitCompareArrows,
@@ -11,7 +10,6 @@ import {
   Mail,
   Shield,
   Scale,
-  Search,
   ArrowRight,
   Home,
   Car,
@@ -21,9 +19,11 @@ import {
   Receipt,
   Briefcase,
   Building2,
+  CreditCard,
+  PiggyBank,
   CheckCircle2,
 } from 'lucide-react';
-import ToolSearch from '@/app/components/ToolSearch';
+import ToolSearchLauncher from '@/app/components/ToolSearchLauncher';
 import {
   FAQSchema,
   SoftwareApplicationSchema,
@@ -34,7 +34,7 @@ import { getAllTools, getCategories } from '@/lib/seo';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://emi-tools-master.vercel.app';
 
-const FAQ_DATA = [
+const buildFaqData = (toolCount: number) => [
   {
     q: 'What is EMI?',
     a: 'EMI (Equated Monthly Installment) is a fixed amount you pay to the lender every month. It includes principal repayment and interest on the outstanding balance, spread evenly across the loan tenure.',
@@ -49,7 +49,7 @@ const FAQ_DATA = [
   },
   {
     q: 'Is everything really free?',
-    a: 'Yes. All 31 calculators and tools are 100% free, with no signup, no limits, and no paid tier. Your inputs stay on your device — we do not store calculations.',
+    a: `Yes. All ${toolCount} calculators and tools are 100% free, with no signup, no limits, and no paid tier. Your inputs stay on your device — we do not store calculations.`,
   },
 ];
 
@@ -61,31 +61,45 @@ const FEATURE_ICONS: Record<string, React.ComponentType<{ size?: number; classNa
   Tax: Receipt,
   Salary: Briefcase,
   Banking: Building2,
+  Credit: CreditCard,
+  Retirement: PiggyBank,
 };
 
 const CATEGORY_FEATURED: Record<string, string[]> = {
-  Loan: ['emi-calculator', 'home-loan-emi-calculator', 'personal-loan-calculator'],
+  Loan: ['emi-calculator', 'home-loan-emi-calculator', 'home-loan-prepayment-calculator'],
   Vehicle: ['car-loan-emi-calculator', 'bike-loan-emi-calculator'],
-  Investment: ['sip-calculator', 'lumpsum-investment-calculator', 'mutual-fund-return-calculator'],
-  Savings: ['fd-calculator', 'rd-calculator', 'ppf-calculator'],
+  Investment: ['sip-calculator', 'step-up-sip-calculator', 'swp-calculator', 'retirement-calculator'],
+  Savings: ['ppf-calculator', 'epf-calculator', 'sukanya-samriddhi-yojana-calculator', 'fd-calculator'],
   Tax: ['income-tax-calculator', 'gst-calculator', 'hra-calculator'],
   Salary: ['salary-calculator', 'gratuity-calculator'],
   Banking: ['ifsc-code-finder'],
 };
 
+export const metadata: Metadata = {
+  title: 'EMI Tools — Free EMI, Loan, Tax & Investment Calculators',
+  description:
+    'Free online calculators for loan EMI, SIP, FD, PPF, EPF, income tax, GST and salary — plus branch-level IFSC lookup. Instant results with year-wise breakdowns.',
+  alternates: {
+    canonical: SITE_URL,
+    languages: { 'en-IN': SITE_URL, 'x-default': SITE_URL },
+  },
+  openGraph: {
+    title: 'EMI Tools — Free EMI, Loan, Tax & Investment Calculators',
+    description:
+      'Free online calculators for loan EMI, SIP, FD, PPF, EPF, income tax, GST and salary — plus branch-level IFSC lookup.',
+    url: SITE_URL,
+    type: 'website',
+  },
+};
+
 export default function HomePage() {
-  const [showSearch, setShowSearch] = useState(false);
+  const tools = getAllTools();
+  const categories = getCategories();
 
-  const tools = useMemo(() => getAllTools(), []);
-  const categories = useMemo(() => getCategories(), []);
-
-  const toolsByCategory = useMemo(() => {
-    const groups: Record<string, ReturnType<typeof getAllTools>> = {};
-    categories.forEach((c) => {
-      groups[c] = tools.filter((t) => t.category === c);
-    });
-    return groups;
-  }, [categories, tools]);
+  const toolsByCategory: Record<string, ReturnType<typeof getAllTools>> = {};
+  categories.forEach((c) => {
+    toolsByCategory[c] = tools.filter((t) => t.category === c);
+  });
 
   return (
     <>
@@ -109,11 +123,9 @@ export default function HomePage() {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
-              <button onClick={() => setShowSearch(true)} className="btn-primary">
-                <Search size={16} /> Find a calculator
-              </button>
-              <Link href="/tools/emi-calculator" className="btn-secondary">
-                Try EMI Calculator <ArrowRight size={16} />
+              <ToolSearchLauncher />
+              <Link href="/tools" className="btn-secondary">
+                Browse all calculators <ArrowRight size={16} />
               </Link>
             </div>
 
@@ -159,12 +171,7 @@ export default function HomePage() {
                 {tools.length} tools across {categories.length} categories — pick one to get started.
               </p>
             </div>
-            <button
-              onClick={() => setShowSearch(true)}
-              className="btn-secondary text-sm"
-            >
-              <Search size={14} /> Search
-            </button>
+            <ToolSearchLauncher variant="secondary" label="Search" className="text-sm" />
           </div>
 
           <div className="space-y-10">
@@ -333,7 +340,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="space-y-3">
-            {FAQ_DATA.map((faq, i) => (
+            {buildFaqData(tools.length).map((faq, i) => (
               <details
                 key={i}
                 className="group card-elevated p-5 [&_summary::-webkit-details-marker]:hidden"
@@ -355,6 +362,7 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
           {[
+            { href: '/tools', icon: Search, label: 'All calculators' },
             { href: '/blog', icon: BookOpen, label: 'Blog & guides' },
             { href: '/tools/ifsc-code-finder', icon: Building2, label: 'IFSC finder' },
             { href: '/tools/emi-calculator', icon: Home, label: 'EMI calculator' },
@@ -387,8 +395,6 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
-
-      <ToolSearch isOpen={showSearch} onClose={() => setShowSearch(false)} />
 
       <FAQSchema />
       <SoftwareApplicationSchema />

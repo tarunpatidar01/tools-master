@@ -1,47 +1,40 @@
 {
-  "home": {
-    "title": "EMI & Banking Tools Calculator",
-    "subtitle": "Fast, Accurate EMI & Loan Calculations",
-    "description": "Calculate EMI for home loans, car loans, personal loans, and other banking tools. Free online calculators with detailed amortization schedules and bank-specific calculators.",
-    "searchPlaceholder": "Search tools...",
-    "categories": "Categories",
-    "allTools": "All Tools",
-    "topTools": "Top Tools by Search Volume",
-    "calculator": "Calculator",
-    "results": "Results",
-    "principal": "Principal Amount",
-    "principalHelper": "Enter loan amount in rupees",
-    "interestRate": "Annual Interest Rate",
-    "interestHelper": "Annual rate in percentage",
-    "tenure": "Loan Tenure (Months)",
-    "tenureHelper": "Number of months",
-    "calculate": "Calculate EMI",
-    "monthlyEMI": "Monthly EMI",
-    "totalInterest": "Total Interest",
-    "totalAmount": "Total Amount to Pay",
-    "schedule": "Amortization Schedule",
-    "month": "Month",
-    "emi": "EMI",
-    "principal_col": "Principal",
-    "interest": "Interest",
-    "balance": "Outstanding Balance",
-    "features": "Features",
-    "feature1": "Instant Calculation",
-    "feature2": "Accurate Results",
-    "feature3": "Detailed Schedule",
-    "feature4": "Multiple Tools",
-    "accurate": "Accurate & Fast",
-    "accurateDesc": "Bank-grade EMI calculations using reducing balance method",
-    "multiple": "15+ Tools",
-    "multipleDesc": "Home, car, personal, and bank-specific loan calculators",
-    "responsive": "Mobile Friendly",
-    "responsiveDesc": "Works seamlessly on desktop, tablet, and mobile devices",
-    "free": "100% Free",
-    "freeDesc": "No hidden charges, no registration required to calculate"
+  "nav": {
+    "skipToContent": "Skip to main content",
+    "openSearch": "Open search",
+    "showSidebar": "Show tools menu",
+    "hideSidebar": "Hide tools menu",
+    "closeSidebar": "Close",
+    "toolsNavigation": "Tools and calculators navigation",
+    "toolsList": "Tools list"
   },
-  "footer": {
-    "disclaimer": "© 2026 EMI Tools Calculator. All rights reserved. Calculations are for reference only. Actual EMI may vary based on bank policies.",
-    "privacyPolicy": "Privacy Policy",
-    "termsOfService": "Terms of Service"
+  "sidebar": {
+    "heading": "Tools & Calculators",
+    "eyebrow": "Tools",
+    "allCalculators": "All Calculators",
+    "note": "All tools are free and run entirely in your browser.",
+    "toolCount_one": "{count} tool",
+    "toolCount_other": "{count} tools"
+  },
+  "toolPage": {
+    "aboutHeading": "About this calculator",
+    "aboutBody": "Use the {tool} to quickly estimate results. Enter the inputs and review the calculated output below. This tool is for guidance and educational purposes only.",
+    "calculatorLabel": "Calculator",
+    "loadingCalculator": "Loading calculator...",
+    "resultsHeading": "Understanding the results",
+    "resultsBody": "The results show estimated values based on your inputs. Check the values and adjust inputs if you need different scenarios.",
+    "moreAboutHeading": "More about this tool",
+    "faqHeading": "Frequently asked questions"
+  },
+  "categories": {
+    "Loan": "Loan",
+    "Vehicle": "Vehicle",
+    "Investment": "Investment",
+    "Savings": "Savings",
+    "Tax": "Tax",
+    "Salary": "Salary",
+    "Banking": "Banking",
+    "Credit": "Credit",
+    "Retirement": "Retirement"
   }
 }

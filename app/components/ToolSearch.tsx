@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { searchTools } from '@/lib/seo';
+import { searchToolsMeta } from '@/lib/toolsMeta';
 
 interface ToolSearchProps {
   isOpen: boolean;
@@ -19,7 +19,7 @@ export default function ToolSearch({ isOpen, onClose }: ToolSearchProps) {
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const q = e.target.value;
     setQuery(q);
-    setResults(q.trim().length > 0 ? (searchTools(q) as ToolSummary[]) : []);
+    setResults(searchToolsMeta(q) as ToolSummary[]);
   };
 
   const handleSelect = (slug: string) => {

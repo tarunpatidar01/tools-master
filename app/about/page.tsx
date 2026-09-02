@@ -1,4 +1,20 @@
-'use client';
+import type { Metadata } from 'next';
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://emi-tools-master.vercel.app';
+
+export const metadata: Metadata = {
+  title: 'About EMI Tools — Who We Are & How We Calculate',
+  description:
+    'Learn who builds EMI Tools, the formulas behind our loan, tax and investment calculators, and how we keep every result free and accurate.',
+  alternates: { canonical: `${SITE_URL}/about` },
+  openGraph: {
+    title: 'About EMI Tools — Who We Are & How We Calculate',
+    description:
+      'Learn who builds EMI Tools, the formulas behind our loan, tax and investment calculators, and how we keep every result free and accurate.',
+    url: `${SITE_URL}/about`,
+    type: 'website',
+  },
+};
 
 import Link from 'next/link';
 

@@ -1,4 +1,20 @@
-'use client';
+import type { Metadata } from 'next';
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://emi-tools-master.vercel.app';
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy — EMI Tools',
+  description:
+    'How EMI Tools handles your data. Calculations run entirely in your browser; we never store the figures you enter.',
+  alternates: { canonical: `${SITE_URL}/privacy-policy` },
+  openGraph: {
+    title: 'Privacy Policy — EMI Tools',
+    description:
+      'How EMI Tools handles your data. Calculations run entirely in your browser; we never store the figures you enter.',
+    url: `${SITE_URL}/privacy-policy`,
+    type: 'website',
+  },
+};
 
 import Link from 'next/link';
 

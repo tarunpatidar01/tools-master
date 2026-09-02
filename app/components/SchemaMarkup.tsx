@@ -65,10 +65,7 @@ export const SoftwareApplicationSchema = () => {
       availability: 'https://schema.org/InStock',
       url: SITE_URL,
     },
-    image: [
-      `${SITE_URL}/og-image.jpg`,
-      `${SITE_URL}/og-image-emi-calculator.svg`,
-    ],
+    image: `${SITE_URL}/opengraph-image`,
     author: {
       '@type': 'Organization',
       name: 'EMI Tools',
@@ -98,9 +95,9 @@ export const OrganizationSchema = () => {
     url: SITE_URL,
     logo: {
       '@type': 'ImageObject',
-      url: `${SITE_URL}/apple-touch-icon.png`,
+      url: `${SITE_URL}/icon.svg`,
     },
-    image: `${SITE_URL}/og-image.jpg`,
+    image: `${SITE_URL}/opengraph-image`,
     description: 'Free EMI calculator for loans with year-wise breakdown, PDF export, and detailed amortization schedules',
     contactPoint: {
       '@type': 'ContactPoint',
@@ -176,7 +173,7 @@ export const ArticleSchema = ({
       name: 'EMI Tools',
       logo: {
         '@type': 'ImageObject',
-        url: `${SITE_URL}/apple-touch-icon.png`,
+        url: `${SITE_URL}/icon.svg`,
       },
     },
     datePublished: datePublished,

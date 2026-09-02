@@ -12,9 +12,12 @@ import {
   Receipt,
   Briefcase,
   Building2,
+  CreditCard,
+  PiggyBank,
   Tag,
 } from 'lucide-react';
-import { getAllTools, getCategories } from '@/lib/seo';
+import { getAllToolsMeta, getMetaCategories } from '@/lib/toolsMeta';
+import { translate, translateCategory, type Language } from '@/lib/i18n';
 
 const CATEGORY_ICONS: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
   Loan: Wallet,
@@ -24,16 +27,20 @@ const CATEGORY_ICONS: Record<string, React.ComponentType<{ size?: number; classN
   Tax: Receipt,
   Salary: Briefcase,
   Banking: Building2,
+  Credit: CreditCard,
+  Retirement: PiggyBank,
 };
 
-export default function Sidebar() {
-  const tools = getAllTools();
-  const categories = getCategories();
+export default function Sidebar({ language = 'en' }: { language?: Language }) {
+  const tools = getAllToolsMeta();
+  const categories = getMetaCategories();
   const pathname = usePathname();
+  const t = (path: string, vars?: Record<string, string | number>) =>
+    translate(language, path, vars);
 
   const [collapsed, setCollapsed] = useState<Set<string>>(new Set());
 
-  type Tool = ReturnType<typeof getAllTools>[0];
+  type Tool = ReturnType<typeof getAllToolsMeta>[0];
 
   const grouped = categories.reduce((acc, cat) => {
     acc[cat] = tools.filter((t) => t.category === cat);
@@ -55,10 +62,10 @@ export default function Sidebar() {
         <div className="flex items-center justify-between">
           <div>
             <p className="text-[11px] uppercase tracking-wider text-slate-400 font-semibold">
-              Tools
+              {t('sidebar.eyebrow')}
             </p>
             <p className="text-lg font-bold text-slate-900 leading-tight">
-              All Calculators
+              {t('sidebar.allCalculators')}
             </p>
           </div>
           <span className="chip">{tools.length}</span>
@@ -81,7 +88,7 @@ export default function Sidebar() {
                   <span className="inline-flex items-center justify-center w-6 h-6 rounded-md bg-blue-50 text-blue-700">
                     <Icon size={13} />
                   </span>
-                  <span>{cat}</span>
+                  <span>{translateCategory(language, cat)}</span>
                   <span className="text-[11px] text-slate-400 font-medium">
                     {catTools.length}
                   </span>
@@ -107,7 +114,7 @@ export default function Sidebar() {
                               : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
                           }`}
                         >
-                          {tool.keyword}
+                          {language === 'hi' && tool.hindi ? tool.hindi : tool.keyword}
                         </Link>
                       </li>
                     );
@@ -121,7 +128,7 @@ export default function Sidebar() {
 
       <div className="px-4 py-4 border-t border-slate-100 bg-slate-50/60">
         <p className="text-[11px] text-slate-500 leading-relaxed">
-          All tools are free and run entirely in your browser.
+          {t('sidebar.note')}
         </p>
       </div>
     </aside>

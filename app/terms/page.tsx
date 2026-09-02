@@ -1,4 +1,20 @@
-'use client';
+import type { Metadata } from 'next';
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://emi-tools-master.vercel.app';
+
+export const metadata: Metadata = {
+  title: 'Terms of Service — EMI Tools',
+  description:
+    'The terms that govern your use of EMI Tools calculators, including accuracy disclaimers and acceptable use.',
+  alternates: { canonical: `${SITE_URL}/terms` },
+  openGraph: {
+    title: 'Terms of Service — EMI Tools',
+    description:
+      'The terms that govern your use of EMI Tools calculators, including accuracy disclaimers and acceptable use.',
+    url: `${SITE_URL}/terms`,
+    type: 'website',
+  },
+};
 
 import Link from 'next/link';
 

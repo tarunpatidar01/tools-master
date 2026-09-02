@@ -1,9 +1,8 @@
-import { Analytics } from '@vercel/analytics/next';
 import { notFound } from 'next/navigation';
-import { Suspense } from 'react';
 import Link from 'next/link';
 import { getToolBySlug, getRelatedTools } from '@/lib/seo';
 import ToolPageClient from './ToolPageClient';
+import CalculatorFor from './CalculatorFor';
 import SocialShare from '@/app/components/SocialShare';
 
 interface ToolPageProps {
@@ -25,24 +24,45 @@ export default async function ToolPage({ params }: ToolPageProps) {
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
+    '@id': `${canonicalUrl}#breadcrumb`,
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Tools', item: `${SITE_URL}/tools` },
-      { '@type': 'ListItem', position: 3, name: tool.title, item: canonicalUrl },
+      { '@type': 'ListItem', position: 2, name: 'All calculators', item: `${SITE_URL}/tools` },
+      { '@type': 'ListItem', position: 3, name: tool.keyword, item: canonicalUrl },
     ],
   };
 
   const webPageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
+    '@id': canonicalUrl,
     url: canonicalUrl,
     name: tool.title,
     description: tool.description,
-    mainEntity: {
-      '@type': 'WebPageElement',
-      name: tool.title,
-    },
+    inLanguage: 'en-IN',
+    isPartOf: { '@id': `${SITE_URL}/#website` },
     breadcrumb: { '@id': `${canonicalUrl}#breadcrumb` },
+  };
+
+  // Marks the page as an actual usable free tool, not just an article about one.
+  const appSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    '@id': `${canonicalUrl}#app`,
+    name: tool.keyword,
+    url: canonicalUrl,
+    description: tool.description,
+    applicationCategory: 'FinanceApplication',
+    operatingSystem: 'Any modern web browser',
+    browserRequirements: 'Requires JavaScript',
+    inLanguage: 'en-IN',
+    isAccessibleForFree: true,
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'INR',
+    },
+    provider: { '@id': `${SITE_URL}/#organization` },
   };
 
   // Prepare FAQ list and server-side FAQ JSON-LD for better SEO (server-rendered)
@@ -112,20 +132,14 @@ export default async function ToolPage({ params }: ToolPageProps) {
 
   return (
     <>
-      {/* SEO Structured Data (server-rendered) */}
-      <link rel="canonical" href={canonicalUrl} />
-      <link rel="alternate" hrefLang="en-IN" href={canonicalUrl} />
-      <link rel="alternate" hrefLang="x-default" href={SITE_URL} />
+      {/* Structured data. Canonical, hreflang and OG tags are emitted by the
+          metadata export in ./metadata.ts — duplicating them here produced two
+          conflicting canonical links per page. */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(appSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
-
-      {/* Open Graph / Twitter image alt meta tags for better image SEO */}
-      <meta property="og:image" content={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://emi-tools-master.vercel.app'}/og-image-emi-calculator.svg`} />
-      <meta property="og:image:alt" content={`${tool.title} - EMI calculator`} />
-      <meta name="twitter:image" content={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://emi-tools-master.vercel.app'}/og-image-emi-calculator.svg`} />
-      <meta name="twitter:image:alt" content={`${tool.title} - EMI calculator`} />
 
       {/* Accessibility: Skip link */}
       <a href="#main" className="sr-only focus:not-sr-only">Skip to content</a>
@@ -140,10 +154,10 @@ export default async function ToolPage({ params }: ToolPageProps) {
           <ol className="flex items-center gap-2 text-[13px] text-slate-500">
             <li><Link href="/" className="hover:text-blue-700 transition">Home</Link></li>
             <li className="text-slate-300">/</li>
-            <li><Link href="/#all-tools" className="hover:text-blue-700 transition">Tools</Link></li>
+            <li><Link href="/tools" className="hover:text-blue-700 transition">All calculators</Link></li>
             <li className="text-slate-300">/</li>
             <li aria-current="page" className="font-semibold text-slate-800 truncate max-w-[50ch]">
-              {tool.title}
+              {tool.keyword}
             </li>
           </ol>
         </div>
@@ -155,10 +169,15 @@ export default async function ToolPage({ params }: ToolPageProps) {
       </div>
 
       <main id="main">
-        <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading calculator...</div>}>
-          <ToolPageClient tool={tool} faqList={faqList} key={slug} />
-          <Analytics />
-        </Suspense>
+        {/* No Suspense boundary here on purpose. <Analytics /> from
+            @vercel/analytics/next calls useSearchParams(), which forces its
+            nearest Suspense boundary into a client-side-rendering bailout. With
+            the calculator inside that same boundary, every tool page hydrated
+            to a permanent "Loading calculator..." fallback and the calculator
+            itself stayed display:none. Analytics now lives in the root layout. */}
+        <ToolPageClient tool={tool} faqList={faqList} key={slug}>
+          <CalculatorFor slug={slug} toolName={tool.keyword} />
+        </ToolPageClient>
 
         {relatedTools.length > 0 && (
           <section

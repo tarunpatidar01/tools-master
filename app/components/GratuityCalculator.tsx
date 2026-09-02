@@ -25,8 +25,11 @@ export default function GratuityCalculator({ toolName }: GratuityCalculatorProps
     }
 
     const last = lastMonthSalary || (basicSalary + dearness);
+    // Payment of Gratuity Act: (15 x last drawn salary x years of service) / 26.
+    // The "x 15" (15 days' wages for each completed year) was missing, which
+    // understated every result by a factor of 15.
     const salaryFor26Days = (last / 26);
-    const gratuity = salaryFor26Days * yearsOfService;
+    const gratuity = (15 * last * yearsOfService) / 26;
     const maxGratuity = 2000000; // ₹20 lakhs max
 
     return {

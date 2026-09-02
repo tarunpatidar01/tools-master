@@ -7,7 +7,8 @@
     "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint",
-    "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx --fix ."
+    "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx --fix .",
+    "prebuild": "node scripts/generate-tools-meta.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^1.6.1",

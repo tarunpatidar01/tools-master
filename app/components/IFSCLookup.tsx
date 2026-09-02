@@ -229,10 +229,17 @@ function ByBankTab() {
   const [cityFilter, setCityFilter] = useState('');
   const [branchFilter, setBranchFilter] = useState('');
 
-  const [branches, setBranches] = useState<BranchRow[] | null>(null);
-  const [loadingBranches, setLoadingBranches] = useState(false);
-  const [branchError, setBranchError] = useState<string | null>(null);
-  const [selected, setSelected] = useState<BranchRow | null>(null);
+  // Branch results and the user's row selection are both keyed by the
+  // bank+state they belong to. Keeping the key alongside the data lets loading,
+  // error and selection state be *derived* rather than reset with synchronous
+  // setState calls inside the fetch effect, which cascaded an extra render on
+  // every bank or state change.
+  const [branchResult, setBranchResult] = useState<{
+    key: string;
+    rows: BranchRow[] | null;
+    error: string | null;
+  } | null>(null);
+  const [selection, setSelection] = useState<{ key: string; row: BranchRow } | null>(null);
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
@@ -266,16 +273,19 @@ function ByBankTab() {
     return index[bankCode].states;
   }, [bankCode, index]);
 
+  // Everything below is derived from the current bank+state key, so clearing a
+  // dropdown immediately drops stale branches without touching state.
+  const requestKey = bankCode && state ? `${bankCode}|${state}` : '';
+  const resultIsCurrent = !!requestKey && branchResult?.key === requestKey;
+  const branches = resultIsCurrent ? branchResult!.rows : null;
+  const branchError = resultIsCurrent ? branchResult!.error : null;
+  const loadingBranches = !!requestKey && !resultIsCurrent;
+  const selected = selection?.key === requestKey ? selection.row : null;
+
   useEffect(() => {
-    if (!bankCode || !state) {
-      setBranches(null);
-      setSelected(null);
-      return;
-    }
+    if (!requestKey) return;
+
     let cancelled = false;
-    setLoadingBranches(true);
-    setBranchError(null);
-    setSelected(null);
     fetch(`/data/ifsc/${bankCode}.json`)
       .then((r) => {
         if (!r.ok) throw new Error(`branches ${r.status}`);
@@ -283,19 +293,24 @@ function ByBankTab() {
       })
       .then((j: { branches: BranchRow[] }) => {
         if (cancelled) return;
-        setBranches(j.branches.filter((b) => b.STATE === state));
+        setBranchResult({
+          key: requestKey,
+          rows: j.branches.filter((b) => b.STATE === state),
+          error: null,
+        });
       })
       .catch(() => {
-        if (!cancelled)
-          setBranchError('Could not load branches for this bank. Please try again.');
-      })
-      .finally(() => {
-        if (!cancelled) setLoadingBranches(false);
+        if (cancelled) return;
+        setBranchResult({
+          key: requestKey,
+          rows: null,
+          error: 'Could not load branches for this bank. Please try again.',
+        });
       });
     return () => {
       cancelled = true;
     };
-  }, [bankCode, state]);
+  }, [requestKey, bankCode, state]);
 
   const filteredBranches = useMemo(() => {
     if (!branches) return [];
@@ -447,7 +462,7 @@ function ByBankTab() {
                 {filteredBranches.map((b) => (
                   <button
                     key={b.IFSC}
-                    onClick={() => setSelected(b)}
+                    onClick={() => setSelection({ key: requestKey, row: b })}
                     className={`w-full text-left p-3 hover:bg-blue-50 transition ${
                       selected?.IFSC === b.IFSC ? 'bg-blue-50' : ''
                     }`}

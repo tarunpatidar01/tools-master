@@ -69,13 +69,23 @@ export default function IncomeCalculator({ toolName }: IncomeCalculatorProps) {
       }
     }
 
-    // Add Medicare cess (4% on total income)
-    const medicareCess = taxableIncome > 1000000 ? grossIncome * 0.04 : 0;
-    const totalTax = tax + medicareCess;
+    // Section 87A rebate (old regime): tax is fully rebated when taxable income
+    // is at or below Rs 5,00,000, capped at Rs 12,500. Without this the
+    // calculator charged tax to people who legally owe nothing.
+    const rebate87A = taxableIncome <= 500000 ? Math.min(tax, 12500) : 0;
+    const taxAfterRebate = Math.max(0, tax - rebate87A);
+
+    // Health & Education cess is 4% of the TAX payable, not 4% of income, and
+    // it applies at every income level once tax is due. The old formula
+    // (grossIncome * 0.04, only above Rs 10L taxable) overstated the bill by
+    // roughly Rs 66,000 on a Rs 20L income.
+    const medicareCess = taxAfterRebate * 0.04;
+    const totalTax = taxAfterRebate + medicareCess;
 
     return {
       taxableIncome,
-      tax,
+      tax: taxAfterRebate,
+      rebate87A,
       medicareCess,
       totalTax,
       taxSlab: taxSlabDetails,

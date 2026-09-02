@@ -57,9 +57,9 @@ export default function PpfCalculator({ toolName }: PpfCalculatorProps) {
             <input
               type="number"
               value={annualDeposit}
-              onChange={(e) => setAnnualDeposit(Number(e.target.value) || 0)}
+              onChange={(e) => setAnnualDeposit(Math.min(150000, Number(e.target.value) || 0))}
               min="500"
-              max="1500000"
+              max="150000"
               className="w-full pl-8 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
           </div>

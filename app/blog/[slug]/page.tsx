@@ -62,7 +62,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       '@type': 'Organization',
       name: 'EMI Tools',
       url: SITE_URL,
-      logo: { '@type': 'ImageObject', url: `${SITE_URL}/apple-touch-icon.png` },
+      logo: { '@type': 'ImageObject', url: `${SITE_URL}/icon.svg` },
     },
     mainEntityOfPage: canonical,
   };

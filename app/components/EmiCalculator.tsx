@@ -2,8 +2,6 @@
 
 import React, { useMemo, useState, useCallback } from 'react';
 import { calculateEMI, formatCurrency, EMIResult } from '@/lib/emi';
-import jsPDF from 'jspdf';
-import * as XLSX from 'xlsx';
 
 interface EmiCalculatorProps {
   toolName?: string;
@@ -81,7 +79,8 @@ function EmiCalculatorComponent({ toolName, initialRate = 8.5 }: EmiCalculatorPr
   }, [result, months]);
 
   // Download as PDF
-  const downloadPDF = useCallback(() => {
+  const downloadPDF = useCallback(async () => {
+    const { default: jsPDF } = await import('jspdf');
     const doc = new jsPDF();
     const pageHeight = doc.internal.pageSize.getHeight();
     const pageWidth = doc.internal.pageSize.getWidth();
@@ -217,7 +216,8 @@ function EmiCalculatorComponent({ toolName, initialRate = 8.5 }: EmiCalculatorPr
   }, [principal, annualRate, months, result, yearWiseSummary]);
 
   // Download as Excel
-  const downloadExcel = useCallback(() => {
+  const downloadExcel = useCallback(async () => {
+    const XLSX = await import('xlsx');
     const workbook = XLSX.utils.book_new();
 
     // Summary Sheet
@@ -296,7 +296,7 @@ function EmiCalculatorComponent({ toolName, initialRate = 8.5 }: EmiCalculatorPr
     <div className="w-full bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {toolName && (
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">{toolName}</h1>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">{toolName}</h2>
         )}
         
         {/* Main Calculator Section */}

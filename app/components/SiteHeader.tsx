@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { Calculator, Menu, X } from 'lucide-react';
 
 const NAV_LINKS = [
-  { label: 'Calculators', href: '/#all-tools' },
+  { label: 'Calculators', href: '/tools' },
   { label: 'Blog', href: '/blog' },
   { label: 'IFSC Finder', href: '/tools/ifsc-code-finder' },
   { label: 'About', href: '/about' },

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Calculator, CheckCircle2 } from 'lucide-react';
+import { getAllTools } from '@/lib/seo';
 
 const popularCalculators = [
   { name: 'EMI Calculator', slug: 'emi-calculator' },
@@ -10,14 +11,15 @@ const popularCalculators = [
 ];
 
 const moreTools = [
-  { name: 'FD Calculator', slug: 'fd-calculator' },
-  { name: 'PPF Calculator', slug: 'ppf-calculator' },
+  { name: 'EPF Calculator', slug: 'epf-calculator' },
+  { name: 'Sukanya Samriddhi', slug: 'sukanya-samriddhi-yojana-calculator' },
+  { name: 'Retirement Planner', slug: 'retirement-calculator' },
   { name: 'Income Tax', slug: 'income-tax-calculator' },
-  { name: 'GST Calculator', slug: 'gst-calculator' },
   { name: 'IFSC Finder', slug: 'ifsc-code-finder' },
 ];
 
 const helpLinks = [
+  { name: 'All Calculators', href: '/tools' },
   { name: 'Blog & Guides', href: '/blog' },
   { name: 'About Us', href: '/about' },
   { name: 'Contact Us', href: '/contact' },
@@ -31,12 +33,13 @@ const FEATURES = [
   'PDF and Excel export',
   'Share with pre-filled values',
   '1,32,000+ IFSC branches',
-  '31 financial calculators',
   'Mobile-friendly UI',
   '100% free, no signup',
 ];
 
 export default function Footer() {
+  const toolCount = getAllTools().length;
+
   return (
     <footer className="bg-slate-900 text-slate-300 mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
@@ -77,7 +80,7 @@ export default function Footer() {
             What you get
           </h4>
           <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2.5">
-            {FEATURES.map((f) => (
+            {[...FEATURES, `${toolCount} financial calculators`].map((f) => (
               <li key={f} className="flex items-start gap-2 text-sm text-slate-400">
                 <CheckCircle2 size={15} className="text-emerald-400 shrink-0 mt-0.5" />
                 <span>{f}</span>

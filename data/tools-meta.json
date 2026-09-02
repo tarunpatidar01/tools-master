@@ -1,0 +1,392 @@
+[
+  {
+    "id": 1,
+    "slug": "emi-calculator",
+    "keyword": "EMI Calculator",
+    "hindi": "ईएमआई कैलकुलेटर",
+    "category": "Loan",
+    "title": "EMI Calculator – Calculate Loan EMI Online | Updated Interest Rates",
+    "description": "Free EMI calculator to calculate equated monthly installments instantly with accurate interest rates. Get detailed amortization schedule & interest breakdown.",
+    "monthlySearches": 74000
+  },
+  {
+    "id": 2,
+    "slug": "home-loan-emi-calculator",
+    "keyword": "Home Loan EMI Calculator",
+    "hindi": "होम लोन ईएमआई कैलकुलेटर",
+    "category": "Loan",
+    "title": "Home Loan EMI Calculator – Calculate House Loan Monthly Payment",
+    "description": "Calculate home loan EMI online with this free calculator. Get instant monthly payment estimates, interest breakdown, and amortization schedule for your home purchase.",
+    "monthlySearches": 49000
+  },
+  {
+    "id": 4,
+    "slug": "personal-loan-emi-calculator",
+    "keyword": "Personal Loan EMI Calculator",
+    "hindi": "पर्सनल लोन ईएमआई कैलकुलेटर",
+    "category": "Loan",
+    "title": "Personal Loan EMI Calculator – Calculate Monthly Personal Loan Payment",
+    "description": "Calculate personal loan EMI with our free online calculator. Get instant monthly payment, total interest, and complete amortization schedule for any loan amount.",
+    "monthlySearches": 18000
+  },
+  {
+    "id": 5,
+    "slug": "sbi-emi-calculator",
+    "keyword": "SBI EMI Calculator",
+    "hindi": "एसबीआई ईएमआई कैलकुलेटर",
+    "category": "Banking",
+    "title": "SBI EMI Calculator – Calculate SBI Loan Payment Online",
+    "description": "Calculate EMI for SBI loans including home, car, personal, and education loans. Get instant monthly payment estimates with SBI interest rates and tenure options.",
+    "monthlySearches": 12100
+  },
+  {
+    "id": 6,
+    "slug": "education-loan-emi-calculator",
+    "keyword": "Education Loan EMI Calculator",
+    "hindi": "शिक्षा लोन ईएमआई कैलकुलेटर",
+    "category": "Loan",
+    "title": "Education Loan EMI Calculator – Calculate Student Loan Payment",
+    "description": "Calculate education loan EMI for pursuing higher education. Get instant EMI estimates for engineering, MBA, and other professional courses.",
+    "monthlySearches": 22000
+  },
+  {
+    "id": 7,
+    "slug": "gold-loan-emi-calculator",
+    "keyword": "Gold Loan EMI Calculator",
+    "hindi": "गोल्ड लोन ईएमआई कैलकुलेटर",
+    "category": "Loan",
+    "title": "Gold Loan EMI Calculator – Calculate Gold Loan Payment Online",
+    "description": "Calculate gold loan EMI against your gold ornaments. Get instant EMI estimates based on current gold prices and interest rates.",
+    "monthlySearches": 19000
+  },
+  {
+    "id": 8,
+    "slug": "vehicle-loan-calculator",
+    "keyword": "Vehicle Loan Calculator",
+    "hindi": "वाहन लोन कैलकुलेटर",
+    "category": "Vehicle",
+    "title": "Vehicle Loan Calculator – Calculate Auto Loan EMI Online",
+    "description": "Calculate vehicle loan EMI for any car, bike, or two-wheeler. Get instant monthly payment estimates with current interest rates.",
+    "monthlySearches": 15000
+  },
+  {
+    "id": 9,
+    "slug": "axis-bank-loan-emi-calculator",
+    "keyword": "Axis Bank Loan EMI Calculator",
+    "hindi": "एक्सिस बैंक लोन ईएमआई कैलकुलेटर",
+    "category": "Banking",
+    "title": "Axis Bank Loan EMI Calculator – Calculate Loan Payment Online",
+    "description": "Calculate EMI for Axis Bank loans including home, car, personal, and education loans. Get instant payment estimates with Axis Bank interest rates.",
+    "monthlySearches": 14000
+  },
+  {
+    "id": 10,
+    "slug": "simple-interest-calculator",
+    "keyword": "Simple Interest Calculator",
+    "hindi": "साधारण ब्याज कैलकुलेटर",
+    "category": "Loan",
+    "title": "Simple Interest Calculator – Calculate SI Online",
+    "description": "Calculate simple interest instantly with our free online calculator. Perfect for deposits, loans, and financial planning.",
+    "monthlySearches": 11000
+  },
+  {
+    "id": 11,
+    "slug": "compound-interest-calculator",
+    "keyword": "Compound Interest Calculator",
+    "hindi": "चक्रवृद्धि ब्याज कैलकुलेटर",
+    "category": "Loan",
+    "title": "Compound Interest Calculator – Calculate CI Online",
+    "description": "Calculate compound interest instantly with our free calculator. Perfect for investments, savings, and loan planning.",
+    "monthlySearches": 13000
+  },
+  {
+    "id": 12,
+    "slug": "bike-loan-emi-calculator",
+    "keyword": "Bike Loan EMI Calculator",
+    "hindi": "बाइक लोन ईएमआई कैलकुलेटर",
+    "category": "Vehicle",
+    "title": "Bike Loan EMI Calculator – Calculate Two-Wheeler Loan Payment",
+    "description": "Calculate bike loan EMI for motorcycles and scooters. Get instant monthly payment estimates with current interest rates.",
+    "monthlySearches": 16500
+  },
+  {
+    "id": 13,
+    "slug": "hdfc-bank-loan-emi-calculator",
+    "keyword": "HDFC Bank Loan EMI Calculator",
+    "hindi": "एचडीएफसी बैंक लोन ईएमआई कैलकुलेटर",
+    "category": "Banking",
+    "title": "HDFC Bank Loan EMI Calculator – Calculate Loan Payment Online",
+    "description": "Calculate EMI for HDFC Bank loans including home, personal, car, and education loans. Get instant payment estimates online.",
+    "monthlySearches": 12500
+  },
+  {
+    "id": 14,
+    "slug": "icici-bank-loan-emi-calculator",
+    "keyword": "ICICI Bank Loan EMI Calculator",
+    "hindi": "आईसीआईसीआई बैंक लोन ईएमआई कैलकुलेटर",
+    "category": "Banking",
+    "title": "ICICI Bank Loan EMI Calculator – Calculate Loan Payment Online",
+    "description": "Calculate EMI for ICICI Bank loans including home, car, personal loans. Get instant payment estimates with current ICICI interest rates.",
+    "monthlySearches": 10500
+  },
+  {
+    "id": 15,
+    "slug": "loan-amount-calculator",
+    "keyword": "Loan Amount Calculator",
+    "hindi": "लोन राशि कैलकुलेटर",
+    "category": "Loan",
+    "title": "Loan Amount Calculator – Calculate Maximum Loan Eligibility",
+    "description": "Calculate maximum loan amount you can borrow based on income. Get instant loan eligibility estimation.",
+    "monthlySearches": 9500
+  },
+  {
+    "id": 16,
+    "slug": "loan-eligibility-calculator",
+    "keyword": "Loan Eligibility Calculator",
+    "hindi": "लोन पात्रता कैलकुलेटर",
+    "category": "Loan",
+    "title": "Loan Eligibility Calculator – Check Your Loan Amount",
+    "description": "Calculate your loan eligibility instantly based on income and financial profile. Get estimated loan amount you can qualify for.",
+    "monthlySearches": 12000
+  },
+  {
+    "id": 18,
+    "slug": "credit-card-emi-calculator",
+    "keyword": "Credit Card EMI Calculator",
+    "hindi": "क्रेडिट कार्ड ईएमआई कैलकुलेटर",
+    "category": "Credit",
+    "title": "Credit Card EMI Calculator – Calculate Card EMI Online",
+    "description": "Calculate credit card EMI for purchases. Get monthly payment, total interest, and EMI duration. Compare different EMI tenure options.",
+    "monthlySearches": 18000
+  },
+  {
+    "id": 20,
+    "slug": "lumpsum-investment-calculator",
+    "keyword": "Lumpsum Investment Calculator",
+    "hindi": "एकमुश्त निवेश कैलकुलेटर",
+    "category": "Investment",
+    "title": "Lumpsum Investment Calculator – Calculate Returns on Investment",
+    "description": "Calculate returns on your lumpsum investments. Get future value, compound interest, and total gains from one-time investment.",
+    "monthlySearches": 15000
+  },
+  {
+    "id": 21,
+    "slug": "mutual-fund-return-calculator",
+    "keyword": "Mutual Fund Return Calculator",
+    "hindi": "म्यूचुअल फंड रिटर्न कैलकुलेटर",
+    "category": "Investment",
+    "title": "Mutual Fund Return Calculator – Calculate Fund Returns",
+    "description": "Calculate mutual fund returns and investment growth. Get projected values, annual returns, and CAGR analysis.",
+    "monthlySearches": 22000
+  },
+  {
+    "id": 23,
+    "slug": "rd-calculator",
+    "keyword": "RD Calculator",
+    "hindi": "आरडी कैलकुलेटर",
+    "category": "Savings",
+    "title": "RD Calculator – Calculate Recurring Deposit Maturity Amount",
+    "description": "Calculate recurring deposit maturity value. Get monthly RD returns and maturity amount for different tenures.",
+    "monthlySearches": 18000
+  },
+  {
+    "id": 25,
+    "slug": "nps-calculator",
+    "keyword": "NPS Calculator",
+    "hindi": "एनपीएस कैलकुलेटर",
+    "category": "Retirement",
+    "title": "NPS Calculator – Calculate National Pension Scheme Returns",
+    "description": "Calculate NPS retirement corpus and expected pension amount. Get comprehensive NPS planning for your retirement.",
+    "monthlySearches": 20000
+  },
+  {
+    "id": 29,
+    "slug": "gratuity-calculator",
+    "keyword": "Gratuity Calculator",
+    "hindi": "ग्रेच्युटी कैलकुलेटर",
+    "category": "Salary",
+    "title": "Gratuity Calculator – Calculate Gratuity Amount",
+    "description": "Calculate gratuity amount on retirement. Get gratuity payout based on years of service and salary.",
+    "monthlySearches": 16000
+  },
+  {
+    "id": 30,
+    "slug": "hra-calculator",
+    "keyword": "HRA Calculator",
+    "hindi": "एचआरए कैलकुलेटर",
+    "category": "Salary",
+    "title": "HRA Calculator – Calculate House Rent Allowance",
+    "description": "Calculate taxable HRA and tax deduction. Get maximum HRA exemption as per income tax rules.",
+    "monthlySearches": 22000
+  },
+  {
+    "id": 3,
+    "slug": "car-loan-emi-calculator",
+    "keyword": "Car Loan EMI Calculator",
+    "hindi": "कार लोन ईएमआई कैलकुलेटर",
+    "category": "Vehicle",
+    "title": "Car Loan EMI Calculator – Calculate Auto Loan Payment Online",
+    "description": "Free car loan EMI calculator to estimate your monthly car payment instantly. Calculate EMI for different car models, down payments, and interest rates easily.",
+    "monthlySearches": 27000
+  },
+  {
+    "id": 17,
+    "slug": "personal-loan-calculator",
+    "keyword": "Personal Loan Calculator",
+    "hindi": "व्यक्तिगत लोन कैलकुलेटर",
+    "category": "Loan",
+    "title": "Personal Loan Calculator – Calculate EMI & Interest",
+    "description": "Calculate personal loan EMI, total interest, and repayment schedule instantly. Compare different loan amounts and tenures.",
+    "monthlySearches": 32000
+  },
+  {
+    "id": 19,
+    "slug": "sip-calculator",
+    "keyword": "SIP Calculator",
+    "hindi": "एसआईपी कैलकुलेटर",
+    "category": "Investment",
+    "title": "SIP Calculator – Calculate Systematic Investment Plan Returns",
+    "description": "Calculate your SIP returns instantly. Get future value, total investment, and gains. Understand wealth creation through SIP.",
+    "monthlySearches": 28000
+  },
+  {
+    "id": 22,
+    "slug": "fd-calculator",
+    "keyword": "FD Calculator",
+    "hindi": "एफडी कैलकुलेटर",
+    "category": "Savings",
+    "title": "FD Calculator – Calculate Fixed Deposit Maturity Amount",
+    "description": "Calculate fixed deposit maturity value and interest earned. Get FD returns instantly for different interest rates and tenures.",
+    "monthlySearches": 35000
+  },
+  {
+    "id": 24,
+    "slug": "ppf-calculator",
+    "keyword": "PPF Calculator",
+    "hindi": "पीपीएफ कैलकुलेटर",
+    "category": "Savings",
+    "title": "PPF Calculator – Calculate Public Provident Fund Returns",
+    "description": "Calculate PPF maturity value and annual interest. Get detailed PPF investment growth for long-term wealth creation.",
+    "monthlySearches": 25000
+  },
+  {
+    "id": 26,
+    "slug": "income-tax-calculator",
+    "keyword": "Income Tax Calculator",
+    "hindi": "आय कर कैलकुलेटर",
+    "category": "Tax",
+    "title": "Income Tax Calculator – Calculate Tax on Your Income",
+    "description": "Calculate income tax liability with deductions and exemptions. Get detailed tax calculation for FY 2024-25.",
+    "monthlySearches": 45000
+  },
+  {
+    "id": 27,
+    "slug": "gst-calculator",
+    "keyword": "GST Calculator",
+    "hindi": "जीएसटी कैलकुलेटर",
+    "category": "Tax",
+    "title": "GST Calculator – Calculate GST Amount on Price",
+    "description": "Calculate GST easily. Get price with tax, tax amount, and reverse GST calculations instantly.",
+    "monthlySearches": 38000
+  },
+  {
+    "id": 28,
+    "slug": "salary-calculator",
+    "keyword": "Salary Calculator",
+    "hindi": "सैलरी कैलकुलेटर",
+    "category": "Salary",
+    "title": "Salary Calculator – Calculate In-Hand Salary from CTC",
+    "description": "Calculate in-hand salary from CTC. Get net salary after deductions and taxes. Breakdown of salary components.",
+    "monthlySearches": 42000
+  },
+  {
+    "id": 101,
+    "slug": "ifsc-code-finder",
+    "keyword": "IFSC Code Finder",
+    "hindi": "आईएफएससी कोड फाइंडर",
+    "category": "Banking",
+    "title": "IFSC Code Finder — Look up Any Bank Branch Details",
+    "description": "Find bank, branch, address, MICR, NEFT/RTGS/IMPS/UPI status, and contact from any 11-digit IFSC code. Fast, free, covers every Indian bank branch.",
+    "monthlySearches": 500000
+  },
+  {
+    "id": 102,
+    "slug": "epf-calculator",
+    "keyword": "EPF Calculator",
+    "hindi": "ईपीएफ कैलकुलेटर",
+    "category": "Savings",
+    "title": "EPF Calculator — Employee Provident Fund Maturity & Interest",
+    "description": "Calculate your EPF corpus at retirement with employer contribution, EPS diversion, annual salary hikes and the current 8.25% EPFO interest rate.",
+    "monthlySearches": 60500
+  },
+  {
+    "id": 103,
+    "slug": "sukanya-samriddhi-yojana-calculator",
+    "keyword": "Sukanya Samriddhi Yojana Calculator",
+    "hindi": "सुकन्या समृद्धि योजना कैलकुलेटर",
+    "category": "Savings",
+    "title": "Sukanya Samriddhi Yojana Calculator — SSY Maturity Amount",
+    "description": "Calculate the SSY maturity amount for your daughter at 8.2% interest. See year-wise growth across the 15-year deposit period and 21-year maturity.",
+    "monthlySearches": 49500
+  },
+  {
+    "id": 104,
+    "slug": "swp-calculator",
+    "keyword": "SWP Calculator",
+    "hindi": "एसडब्ल्यूपी कैलकुलेटर",
+    "category": "Investment",
+    "title": "SWP Calculator — Systematic Withdrawal Plan Monthly Income",
+    "description": "Calculate how long your mutual fund corpus lasts under a systematic withdrawal plan. See total withdrawn, remaining balance and the safe withdrawal amount.",
+    "monthlySearches": 40500
+  },
+  {
+    "id": 105,
+    "slug": "cagr-calculator",
+    "keyword": "CAGR Calculator",
+    "hindi": "सीएजीआर कैलकुलेटर",
+    "category": "Investment",
+    "title": "CAGR Calculator — Compound Annual Growth Rate of Investments",
+    "description": "Calculate the compound annual growth rate between any two values. Compare investments held for different periods and see the doubling time at that rate.",
+    "monthlySearches": 33100
+  },
+  {
+    "id": 106,
+    "slug": "step-up-sip-calculator",
+    "keyword": "Step-Up SIP Calculator",
+    "hindi": "स्टेप-अप एसआईपी कैलकुलेटर",
+    "category": "Investment",
+    "title": "Step-Up SIP Calculator — Top-Up SIP Returns with Annual Increase",
+    "description": "Calculate returns on a step-up SIP that rises every year with your salary. Compare the final corpus against a flat SIP and see the extra wealth created.",
+    "monthlySearches": 27100
+  },
+  {
+    "id": 107,
+    "slug": "home-loan-prepayment-calculator",
+    "keyword": "Home Loan Prepayment Calculator",
+    "hindi": "होम लोन प्रीपेमेंट कैलकुलेटर",
+    "category": "Loan",
+    "title": "Home Loan Prepayment Calculator — Interest Saved & Tenure Cut",
+    "description": "Calculate how much interest a part payment saves and how many years it cuts off your home loan. Compare a one-time lump sum against paying extra every month.",
+    "monthlySearches": 22200
+  },
+  {
+    "id": 108,
+    "slug": "retirement-calculator",
+    "keyword": "Retirement Calculator",
+    "hindi": "रिटायरमेंट कैलकुलेटर",
+    "category": "Investment",
+    "title": "Retirement Calculator — Corpus Needed & Monthly SIP to Get There",
+    "description": "Calculate the retirement corpus you need after inflation and the monthly SIP required to build it. Accounts for existing savings and post-retirement returns.",
+    "monthlySearches": 18100
+  },
+  {
+    "id": 109,
+    "slug": "inflation-calculator",
+    "keyword": "Inflation Calculator",
+    "hindi": "मुद्रास्फीति कैलकुलेटर",
+    "category": "Savings",
+    "title": "Inflation Calculator — Future Cost & Purchasing Power of Money",
+    "description": "Calculate what today’s money will be worth in the future and what your goals will cost after inflation. Year-by-year breakdown at any inflation rate.",
+    "monthlySearches": 14800
+  }
+]

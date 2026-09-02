@@ -2,6 +2,13 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
+  // Next.js picks up a stray lockfile in the home directory otherwise.
+  outputFileTracingRoot: __dirname,
+  experimental: {
+    // Rewrites `import { Icon } from 'lucide-react'` to per-icon deep imports
+    // so pages only bundle the icons they actually render.
+    optimizePackageImports: ['lucide-react'],
+  },
   typescript: {
     ignoreBuildErrors: false,
   },
@@ -50,15 +57,46 @@ const nextConfig: NextConfig = {
           key: 'Referrer-Policy',
           value: 'strict-origin-when-cross-origin',
         },
-        // Performance headers
         {
-          key: 'Cache-Control',
-          value: 'public, max-age=31536000, immutable',
+          key: 'Permissions-Policy',
+          value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
         },
         // SEO headers
         {
           key: 'Link',
           value: '</sitemap.xml>; rel="sitemap", </robots.txt>; rel="robots"',
+        },
+      ],
+    },
+    {
+      // HTML must stay revalidatable. A blanket `immutable, max-age=31536000`
+      // on /:path* previously froze every page in the browser cache for a year,
+      // so content and pricing updates never reached returning visitors.
+      source: '/((?!_next/static|data/ifsc).*)',
+      headers: [
+        {
+          key: 'Cache-Control',
+          value: 'public, max-age=0, must-revalidate, s-maxage=3600, stale-while-revalidate=86400',
+        },
+      ],
+    },
+    {
+      // Content-hashed build output — safe to cache forever.
+      source: '/_next/static/:path*',
+      headers: [
+        {
+          key: 'Cache-Control',
+          value: 'public, max-age=31536000, immutable',
+        },
+      ],
+    },
+    {
+      // Bank branch datasets are versioned by content and rarely change.
+      source: '/data/ifsc/:path*',
+      headers: [
+        {
+          key: 'Cache-Control',
+          value: 'public, max-age=86400, s-maxage=604800, stale-while-revalidate=604800',
         },
       ],
     },
